@@ -9,9 +9,8 @@
 title: Joseph Sintum's Blog
 email: joseph24jay@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Notes on building software and robots.
+  Scripted with love by Joseph Sintum.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://josephsintum.github.io" # the base hostname & protocol for your site
 twitter_username: josephsintum
@@ -20,4 +19,4 @@ github_username:  josephsintum
 # Build settings
 markdown: kramdown
 
-theme: jekyll-theme-cayman
+theme: jekyll-theme-cayman    
