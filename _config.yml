@@ -19,3 +19,5 @@ github_username:  josephsintum
 
 # Build settings
 markdown: kramdown
+
+theme: jekyll-theme-cayman
