@@ -6,29 +6,22 @@
 
 
 // Our variables
-$base-font-family: 'Space Mono', monospace,"Helvetica Neue", Helvetica, Arial, cursive;
+$base-font-family: 'Poiret One',"Helvetica Neue", Helvetica, Arial, cursive;
+$base-font-family: 'Space Mono', monospace,"Helvetica Neue", Helvetica, Arial, sans-serif;
 $head-font-family: 'Work Sans',"Helvetica Neue", Helvetica, Arial, sans-serif;
 
-$base-font-size:   18px;
+$base-font-size:   16px;
 
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.8;
+$base-line-height: 1.6;
+
 $spacing-unit:     30px;
-$text-color:       rgba(0, 0, 0, 0.8);
+
+$text-color:       #666;
 $background-color: #fdfdfd;
-
-
-
-// Select a brand-color for your website. Keep it at the end if the list
-$brand-color:      #1fad83;
-$brand-color:      #7b59c0;
-$brand-color:      #282828;
-$brand-color:      #b65611;
-$brand-color:      #d43552;
-$brand-color:      #3d8fd1; //This color is applied currently.
-
-
+$brand-color:      #3892b5;
+$comp-color:       #A7D3A6;
 $grey-color:       #666;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
@@ -58,5 +51,5 @@ $on-laptop:        800px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "style"
+        "syntax-highlighting"
 ;
