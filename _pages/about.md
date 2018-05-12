@@ -12,7 +12,7 @@ I am Joseph Sintum...
 
 Well, I live in a little city Buea in Cameroon the heart of <a href="http://smconf.org/" target="_blank">**Silicon Mountain**</a>.
 
-I am a software developer and currently working a frontend developer at <a href="https://iknite.studio">Iknite Studio</a>. Out of work, I build software and robots for fun.s
+I am a software developer and currently working as a frontend developer at <a href="https://iknite.studio">Iknite Studio</a>. Out of work, I build software and robots for fun.
 
 I am a self taught programmer, proficient in programming with Javascript, ReactJS, and good with Python.
 
