@@ -34,11 +34,11 @@ Open you terminal and run
 sudo apt install jekyll
 ```
 
-That's it you are done (Note: You don't need to have Ruby installed). 
+That's it you are done (Note: You don't need to have Ruby installed).
 
-Run 
+Run
 
-``` shell
+``` bash
 jekyll --help
 ```
 
@@ -46,7 +46,7 @@ to see list of command.
 
 Lets create your "first" Jekyll site in the terminal.
 
-``` shell
+``` bash
 jekyll new your-first-site
 cd your-first-site
 jekyll serve
