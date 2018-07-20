@@ -1,14 +1,13 @@
 source "https://rubygems.org"
+gemspec
 
-gem "autoprefixer-rails"
-gem "html-proofer"
-gem "image_optim"
-gem "jekyll"
-gem "jekyll-assets"
-gem "jekyll-paginate"
-gem "jekyll-sitemap"
-gem "jemoji"
-gem "mini_magick"
-gem "sass"
-gem "sprockets"
-gem "uglifier"
+# Ensures the proper Jekyll version is running.
+gem "jekyll", "3.5.2"
+
+# Plugins
+group :jekyll_plugins do
+   gem "jekyll-feed", "~> 0.9.2"
+   gem 'jekyll-archives'
+   gem 'jekyll-paginate'
+   
+end

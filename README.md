@@ -1,96 +1,215 @@
-![](_assets/images/documentation/chalk-intro@2x.png)
+# ![Fundamental Logotype](http://svgshare.com/i/2V8.svg)
 
-Chalk is a high quality, completely customizable, performant and 100% free blog template for Jekyll.
+[![Gem Version](https://badge.fury.io/rb/fundamental.svg)](https://badge.fury.io/rb/fundamental)
 
-## Overview
+See latest changes in [changelog.md](https://github.com/theomjones/fundamental/blob/master/changelog.md)
 
-Features:
-  - About page.
-  - Automatic RSS feed.
-  - Automatic sitemap.
-  - Automatic time to read post indicator.
-  - Cross browser support (supports all modern browsers).
-  - Custom 404 page.
-  - Custom code highlighting.
-  - Customizable pagination.
-  - Dark and Light theme.
-  - Easy setup and deploying.
-  - Enlarge images on click.
-  - Filter on tags.
-  - Frequently updated with new versions.
-  - Many social media links supported.
-  - Media embed for videos.
-  - PageSpeed optimized.
-  - Proper sharing links for posts on Facebook, Twitter and Google Plus.
-  - SEO optimized.
-  - Support for local fonts.
-  - Support for emoji's.
+Fundamental is a clean, fully responsive, lightweight Jekyll theme for blogging. No frameworks. It uses system fonts, so no external stylesheets are loaded. The CSS is just 2Kb gzipped.
 
-Integrations
-  - [Disqus](https://disqus.com/)
-  - [Google Analytics](https://analytics.google.com/analytics/web/)
-  - [Google Fonts](https://fonts.google.com/)
-  - [SVG Icons](https://icomoon.io/)
+View the [demo here](https://blog.theomjones.com).
 
-Used tools
-  - [Autoprefixer](https://github.com/postcss/autoprefixer)
-  - [Circle CI](https://circleci.com/)
-  - [Html-proofer](https://github.com/gjtorikian/html-proofer)
-  - [Jekyll](https://jekyllrb.com/)
-  - [Jekyll Assets](https://github.com/jekyll/jekyll-assets)
-  - [Jekyll Sitemap](https://github.com/jekyll/jekyll-sitemap)
-  - [HTML5 Boilerplate](https://html5boilerplate.com/) (Influenced by)
-  - [Kickster](https://kickster.nielsenramon.com/)
-  - [Retina.js](https://imulus.github.io/retinajs/)
-  - [STACSS](https://stacss.nielsenramon.com/)
-  - [Travis](https://travis-ci.org/)
-  - [Yarn](https://yarnpkg.com)
-  - [Zooming](https://github.com/kingdido999/zooming/)
+## Features
+
+- Tag support
+- Archive support
+- Breadcrumbs
+- Editable color palette via: (`_variables.scss`)
+- Automatic header navigation
+- Syntax highlighting
+- Social Buttons
+- Bio Section
+- Pagination ***new** (please rename index.md to index.html, see [changelog.md](https://github.com/theomjones/fundamental/blob/master/changelog.md)) for more information.
+
+![Screen Cap](http://i.imgur.com/jTFtqri.png)
+
+
+## Installation
+
+##### Via Direct Download:
+
+[Download](https://github.com/theomjones/fundamental-blank/archive/master.zip) or [clone](https://github.com/theomjones/fundamental-blank/) the `fundamental-blank` repository. All you have to do from here is run `bundle install` and then `bundle update`. You're good to go!
+
+**Or...**
+
+Add this line to your Jekyll site's `Gemfile`:
+
+```ruby
+gem "fundamental"
+```
+
+And add this line to your Jekyll site's `_config.yml`:
+
+```yaml
+theme: fundamental
+```
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+   $ gem install fundamental
 
 ## Usage
 
-### Installation
+### Getting Started
 
-If you haven't installed the following tools then go ahead and do so (make sure you have [Homebrew](https://brew.sh/) installed):
+After installing you should have a `config.yml` file in your base directory. Copy the contents of the repo [config.yml](https://github.com/theomjones/fundamental/blob/master/_config.yml) into your own config file. This will supply you with all the required configurations. You can edit them from here.
 
-    brew install ruby
-    brew install npm
+Jekyll gives you an `index.md` file as your homepage. Copy this into it to get started, the front matter will be explained below:  **!! Something to note**, Fundamental does not currently support categories (they're coming!). The default page Jekyll produces will break breadcrumbs (for now).
+> !! Change the index.md extension to `.html` to allow pagination to work.
 
-On windows, install Ruby and Node with the installers found here:
+	---
+	layout: home
+	title: Home
+	---
 
-  - [Ruby](https://rubyinstaller.org/)
-  - [Node.js](https://nodejs.org/en/download/)
+If you want to add the 'Archive' file you see in the demo. Create an `/archive` directory in your base directory. Then create an `index.md` inside it. Ensure it has the `layout: site-archive`. This layout displays all the posts in the site.
 
-Next setup your environment:
+##### Plugins
+Fundamemtal uses these plugins. When you have installed the Fundamental gem, run `bundle install` to install the required plugins. They can be turned on and off in your configuration file.
 
-    npm run setup
+1. [jekyll-feed](https://github.com/jekyll/jekyll-feed)
+2. [jekyll-archives](https://github.com/jekyll/jekyll-archives)
+3. [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag)
+3. [jekyll-paginate](https://jekyllrb.com/docs/pagination/)
 
-### Development
+#### Navigation
+The top navigation loops through the sites pages that have `menu: true` in the front matter. This makes it easy to add new pages to your site. You can also order the pages by setting the value of `order`.
 
-Run Jekyll:
+For instance: `order: 2` will place this item second (to the right of the first item).
 
-    npm run local
+The homepage is linked in the naviagtion statically by default. It can't be removed.
 
-## Deploy to GitHub Pages
+#### Config
+The usual configuration settings can be found at the top of `config.yml`.
 
-Before you deploy, commit your changes to any working branch except the `gh-pages` one and run the following command:
+You can turn the themes components off and on by setting these to `true` or `false`. These are fairly self explanatory, the social ones can also be turned on or off independently.
 
-    npm run publish
+```yaml
+enabled:
+  breadcrumbs: true
+  tags: true
+  # Enable RSS menu item
+  rss: false
+  seo: true
+  # Share buttons are only on desktop (user use the share menu on mobile).
+  social:
+    enabled: true
+    twitter: true
+    facebook: true
+    messenger: true
+    whatsapp: true
+```
 
-**Important note**: Chalk does not support the standard way of Jekyll hosting on GitHub Pages. You need to deploy your working branch (can be any branch, for xxx.github.io users: use another branch than `master`) with the `npm run publish` command. Reason for this is because Chalk uses Jekyll plugins that aren't supported by GitHub pages. The `npm run publish` command will automatically build the entire project, then push it to the `gh-pages` branch of your repo. The script creates that branch for you so no need to create it yourself. Also, if you are developing a **project site**, you must set the `baseurl` in `_config.yml` to the name of your repository.
+##### Bio Section
 
-You can find more info on how to use the `gh-pages` branch and a custom domain [here](https://help.github.com/articles/quick-start-setting-up-a-custom-domain/).
+You can copy this code into your `config.yml` file. `enabled` can be set to either true or false (as per plugins). You can then edit the fields how you like. The `img_url` can be linked to any image, locally or remote, `false` === a default icon which inherits the colour from `socialBtnsColor`.
 
-[View this](https://github.com/nielsenramon/kickster#automated-deployment-with-circle-ci) for more info about automated deployment with Circle CI.
+    bio:
+        enabled: true
+        heading: 'Your bio title'
+        subheading: 'Your bio subheading'
+        img_url: false #put a url to an image in here or use the icon with false.
+        body: >
+          In this blog I'm documenting my ever evolving knowledge in
+          making things for the web. I'll touch on topics like UI, UX,
+          JavaScript, CSS and any other technologies I come across.
 
-## License
+This appears as a slide out menu from a fixed circular icon in the bottom right corner.
 
-MIT License
+#### Layouts
+For blog posts use the `post` layout (this is already set as default via config file, unless changed.) For normal pages use the `page` layout. Naturally, the home layout is used for the home page which is where the post-loop (blog) lives. All of these layouts inherit from the `default` layout, which contains the head and footer includes.
+
+The other layouts are for the `jekyll-archives` plugin.
+
+###### File Structure
+
+  	├── _layouts
+  	│   ├── archive.html
+  	│   ├── default.html
+    |   ├── home.html
+  	│   ├── month.html
+  	│   ├── page.html
+  	│   ├── post.html
+  	|   ├── site-archive.html
+  	│   └── tag_page.html
+
+
+---
+
+#### Includes
+The includes are fairly self explanatory aside from info/item. `info.html` is the post information include in the `post` layout. Item is the blog item that gets outputted on the homepage. `tag-cloud.html` is the recurrent tag list you see on the homepage/throughout the sites pages.
+There's a few svg includes as well that are just buttons/icons.
+######File structure
+
+
+    ├── _includes
+    │   ├── bio.html
+    │   ├── bio.svg
+    │   ├── breadcrumbs.html
+    │   ├── comments.html
+    │   ├── facebook.svg
+    │   ├── footer.html
+    │   ├── head.html
+    │   ├── header.html
+    │   ├── info.html
+    │   ├── item.html
+    │   ├── messenger.svg
+    │   ├── share.html
+    │   ├── tag-cloud.html
+    │   ├── twitter.svg
+    │   └── whatsapp.svg
+
+
+---
+
+
+#### Sass
+Sass is split into logical sections. The `main.scss` file is in `/assets/`.
+To overwrite these files, add one with the equivalent name to your `_sass` directory (make one if it doesn't already exist). Jekyll will look in here before defaulting back to the theme files.
+
+##### Sass Folder Structure
+
+	  ├── _sass
+	  │   ├── _blog.scss
+	  │   ├── _footer.scss
+	  │   ├── _fundamentals.scss
+	  │   ├── _globals.scss
+	  │   ├── _header.scss
+	  │   ├── _post.scss
+	  │   ├── _syntax.scss
+	  │   ├── _tables.scss
+	  │   ├── _typography.scss
+	  │   └── _variables.scss
+
+###### Variables
+
+The first file to customise would be `_variables.scss`, you're probably best [copying it from the repo](https://github.com/theomjones/fundamental/blob/master/_sass/_variables.scss) and editing it. You can overwrite any of these variables with your own. There are four palette variables:
+
+- `$base: #f5f2f2;` - the body background colour.
+- `$textColor: #444;`
+- `$accent: #4845DF;` - the purple colour
+- `$tertiary: lighten($accent, 5%);` - lighter version of accent
+
+`$font` uses a system font stack. Change this to whatever you wish.
+`$font: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;`
+
+TODO: Separate palette from other variables. For easier custom colours.
 
 ## Contributing
 
-1. Fork it (https://github.com/[my-github-username]/chalk/fork)
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+Bug reports and pull requests are welcome on [GitHub](https://github.com/theomjones/fundamental). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+## License
+
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+## More Screenshots
+### Blog Post
+![Blog Screen Cap](http://i.imgur.com/39WA9LJ.png)
+
+### 404 Page
+![404 Screen Cap](http://i.imgur.com/G68JKgd.png)
+[You can get this 404 page from the repo to use in your site.](https://github.com/theomjones/fundamental/blob/master/404.html) Just copy it into your main directory.
