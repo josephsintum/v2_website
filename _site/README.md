@@ -1,1 +1,0 @@
-# josephsintum.github.io
