@@ -4,7 +4,9 @@ Personal website and projects: [josephsintum.github.io](https://josephsintum.git
 
 ## Stack
 
-- React.js
-- GatsbyJS
-- Grommet
-- Github Pages
+-   Typescript
+-   React.js
+-   GatsbyJS
+-   Styled Component
+-   Styled System
+-   Github Pages
