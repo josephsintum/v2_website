@@ -9,9 +9,19 @@ import {
 	LayoutProps,
 	flexbox,
 	FlexboxProps,
+	border,
+	BorderProps,
+	typography,
+	TypographyProps,
 } from "styled-system"
 
-interface BoxProps extends LayoutProps, SpaceProps, ColorProps, FlexboxProps {}
+export interface BoxProps
+	extends LayoutProps,
+		SpaceProps,
+		ColorProps,
+		FlexboxProps,
+		BorderProps,
+		TypographyProps {}
 
 /** Box is a simple building block*/
 const Box = styled.div<BoxProps>(
@@ -22,7 +32,9 @@ const Box = styled.div<BoxProps>(
 	space,
 	color,
 	layout,
-	flexbox
+	flexbox,
+	border,
+	typography
 )
 
 export default Box
@@ -39,7 +51,15 @@ export const Container = styled(Box)<BoxProps>(
 
 export const Row = styled(Box)<BoxProps>(
 	css({
-		display: "flex",
+		display: ["block", "flex"],
 		width: "100%",
+	})
+)
+
+export const Col = styled(Box)<BoxProps>(
+	css({
+		display: "block",
+		flexGrow: 1,
+		flexShrink: 1,
 	})
 )
