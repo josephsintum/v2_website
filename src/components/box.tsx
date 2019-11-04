@@ -1,23 +1,45 @@
-import styled, { StyledProps } from "styled-components"
+import styled from "styled-components"
+import css from "@styled-system/css"
 import {
 	color,
+	ColorProps,
 	space,
+	SpaceProps,
 	layout,
 	LayoutProps,
-	SpaceProps,
-	ColorProps,
+	flexbox,
+	FlexboxProps,
 } from "styled-system"
 
-interface Props extends LayoutProps, SpaceProps, ColorProps {}
+interface BoxProps extends LayoutProps, SpaceProps, ColorProps, FlexboxProps {}
 
-const Box = styled.div<Props>(
-	{
+/** Box is a simple building block*/
+const Box = styled.div<BoxProps>(
+	css({
 		boxSizing: "border-box",
 		minWidth: 0,
-	},
+	}),
 	space,
 	color,
-	layout
+	layout,
+	flexbox
 )
 
 export default Box
+
+/** Container is a layout fixed width div and with changes with the breakpoint */
+export const Container = styled(Box)<BoxProps>(
+	css({
+		maxWidth: [null, 640, 768, 1024, 1024, 1280],
+		px: 2,
+		mx: "auto",
+		width: "100%",
+	})
+)
+
+export const Row = styled(Box)<BoxProps>(
+	css({
+		display: "flex",
+		width: "100%",
+	})
+)
