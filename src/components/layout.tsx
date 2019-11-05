@@ -1,5 +1,4 @@
 import React from "react"
-import { Normalize } from "styled-normalize"
 import styled, { ThemeProvider } from "styled-components"
 import theme from "./theme"
 
@@ -21,11 +20,8 @@ const Main = styled.main`
 const Layout = ({ children }: LayoutProps) => (
 	<ThemeProvider theme={theme}>
 		<AppContainer>
-			<Normalize />
 			<GlobalStyles />
-
 			<Main>{children}</Main>
-
 			<Footer />
 		</AppContainer>
 	</ThemeProvider>

@@ -1,13 +1,35 @@
 import { createGlobalStyle } from "styled-components"
+import css from "@styled-system/css"
 
-const GlobalStyles = createGlobalStyle({
-	body: {
-		color: "#222",
-		fontFamily: "Space Mono, monospace",
-		fontWeight: 400,
-		lineHeight: "1.5em",
-		// -moz-osx-font-smoothing: grayscale,
-	},
-})
+const GlobalStyles = createGlobalStyle(
+	css({
+		"*": {
+			boxSizing: "border-box",
+		},
+		html: {
+			fontSize: 3,
+			fontFamily: "body",
+			color: "text",
+			backgroundColor: "white",
+			WebkitFontSmoothing: "antialiased",
+			MozOsxFontSmoothing: "grayscale",
+			textRendering: "optimizeLegibility",
+			lineHeight: "1.2",
+		},
+		body: {
+			margin: 0,
+		},
+		"input, button, select, textarea": {
+			fontFamily: "inherit",
+			fontSize: "inherit",
+			fontWeight: "normal",
+			color: "inherit",
+		},
+		svg: {
+			verticalAlign: "middle",
+			display: "block",
+		},
+	})
+)
 
 export default GlobalStyles

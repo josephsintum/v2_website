@@ -13,6 +13,7 @@ import {
 	BorderProps,
 	typography,
 	TypographyProps,
+	compose,
 } from "styled-system"
 
 export interface BoxProps
@@ -24,17 +25,19 @@ export interface BoxProps
 		TypographyProps {}
 
 /** Box is a simple building block*/
-const Box = styled.div<BoxProps>(
+const Box = styled("div")<BoxProps>(
 	css({
 		boxSizing: "border-box",
 		minWidth: 0,
 	}),
-	space,
-	color,
-	layout,
-	flexbox,
-	border,
-	typography
+	compose(
+		space,
+		color,
+		layout,
+		flexbox,
+		border,
+		typography
+	)
 )
 
 export default Box
