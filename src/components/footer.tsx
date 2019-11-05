@@ -1,22 +1,17 @@
 import React from "react"
-import styled from "styled-components"
+import { Row, Col } from "./box"
+import Text from "./text"
 
-const FooterContainer = styled.footer``
-
-const Copyright = styled.p({
-	textAlign: "center",
-	fontSize: "0.8rem",
-	margin: "2rem 0",
-})
-
-const Footer = () => {
+const Footer = props => {
 	return (
-		<FooterContainer>
-			<Copyright>
-				© {new Date().getFullYear()} — Designed & developed by Joseph
-				Sintum
-			</Copyright>
-		</FooterContainer>
+		<Row>
+			<Col>
+				<Text as="p" textAlign="center">
+					© {new Date().getFullYear()} — Designed & developed by
+					Joseph Sintum
+				</Text>
+			</Col>
+		</Row>
 	)
 }
 
