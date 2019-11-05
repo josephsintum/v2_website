@@ -9,8 +9,8 @@ export default {
 		highlight: "hsla(205, 100%, 40%, 0.125)",
 	},
 	fonts: {
-		body: "Space mono, monospace",
-		heading: "inherit",
+		body: "Roboto, Helvetica Neue",
+		heading: "Space mono, monospace",
 		monospace: "Space Mono, monospace",
 	},
 	fontSizes: [10, 12, 14, 16, 20, 24, 34, 48, 60, 96],
@@ -24,9 +24,6 @@ export default {
 		heading: 1.25,
 	},
 	space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
-	sizes: {
-		avatar: 48,
-	},
 	radii: {
 		default: 4,
 		circle: 99999,
@@ -34,7 +31,6 @@ export default {
 	shadows: {
 		card: "0 0 4px rgba(0, 0, 0, .125)",
 	},
-	// rebass variants
 	text: {
 		heading: {
 			fontFamily: "heading",
@@ -50,53 +46,6 @@ export default {
 		caps: {
 			textTransform: "uppercase",
 			letterSpacing: "0.1em",
-		},
-	},
-	variants: {
-		avatar: {
-			width: "avatar",
-			height: "avatar",
-			borderRadius: "circle",
-		},
-		card: {
-			p: 2,
-			bg: "background",
-			boxShadow: "card",
-		},
-		link: {
-			color: "primary",
-		},
-		nav: {
-			fontSize: 1,
-			fontWeight: "bold",
-			display: "inline-block",
-			p: 2,
-			color: "inherit",
-			textDecoration: "none",
-			":hover,:focus,.active": {
-				color: "primary",
-			},
-		},
-	},
-	buttons: {
-		primary: {
-			fontSize: 3,
-			color: "background",
-			bg: "primary",
-			borderRadius: "default",
-			fontWeight: "bold",
-		},
-		secondary: {
-			variant: "buttons.primary",
-			color: "background",
-			bg: "secondary",
-		},
-		outline: {
-			variant: "buttons.primary",
-			color: "text",
-			bg: "transparent",
-			borderWidth: 2,
-			borderColor: "text",
 		},
 	},
 }
