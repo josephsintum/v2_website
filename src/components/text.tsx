@@ -16,7 +16,10 @@ export interface TextProps
 	extends SpaceProps,
 		ColorProps,
 		BorderProps,
-		TypographyProps {}
+		TypographyProps {
+	// use for external link with prop `as="a"`
+	href?: string
+}
 
 /** Text */
 const Text = styled("span")<TextProps>(
@@ -29,7 +32,7 @@ const Text = styled("span")<TextProps>(
 )
 
 /** Text */
-export const Title = styled("span")<TextProps>(
+export const Title = styled(Text)<TextProps>(
 	compose(
 		space,
 		color,
@@ -37,7 +40,7 @@ export const Title = styled("span")<TextProps>(
 		typography
 	),
 	css({
-		fontFamily: "heading"
+		fontFamily: "heading",
 	})
 )
 
