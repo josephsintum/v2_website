@@ -2,6 +2,7 @@ import React from "react"
 import { Row, Col } from "./box"
 import Text, { Title } from "./text"
 
+// TODO: work on types
 const Clock = props => {
 	const [date, setDate] = React.useState(new Date())
 
@@ -21,7 +22,7 @@ const Clock = props => {
 
 const Footer = props => {
 	return (
-		<Row>
+		<Row my={5}>
 			<Col>
 				<Text as="p" textAlign="center">
 					© {new Date().getFullYear()} — Designed & developed by
@@ -29,7 +30,7 @@ const Footer = props => {
 				</Text>
 			</Col>
 			<Col>
-				<Text fontSize="3" as="p">
+				<Text as="p" textAlign="center">
 					<Text
 						color="secondary"
 						as="a"
