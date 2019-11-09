@@ -17,7 +17,6 @@ export interface TextProps
 		ColorProps,
 		BorderProps,
 		TypographyProps {
-	// use for external link with prop `as="a"`
 }
 
 /** TextSystemStyle is compose style fn from styled system */

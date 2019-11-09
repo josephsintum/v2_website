@@ -1,6 +1,7 @@
 import React from "react"
 import { Row, Col } from "./box"
 import Text, { Title } from "./text"
+import { ALink } from "../components/link"
 
 // TODO: work on types
 const Clock = props => {
@@ -31,13 +32,7 @@ const Footer = props => {
 			</Col>
 			<Col>
 				<Text as="p" textAlign="center">
-					<Text
-						color="secondary"
-						as="a"
-						href="mailto:josephsintum@gmail.com"
-					>
-						Hire Me
-					</Text>{" "}
+					<ALink href="mailto:josephsintum@gmail.com">Hire Me</ALink>{" "}
 					Time is running out <Clock />
 				</Text>
 			</Col>
