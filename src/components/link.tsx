@@ -23,13 +23,12 @@ export const Link = styled(GatsbyLink)<LinkProps>(
 		transition:
 			"background-position 120ms ease-in-out, padding 120ms ease-in-out",
 		"&:hover": {
-			color: "primary",
 			py: "1",
 			backgroundImage: `linear-gradient(
                 transparent 0%,
                 transparent calc(50% - 8px),
-                #dbe4ff calc(50% - 8px),
-                #dbe4ff 100%
+                #dbe4ff99 calc(50% - 8px),
+                #dbe4ff99 100%
               )`,
 			backgroundPosition: "0 100%",
 		},
