@@ -18,27 +18,22 @@ export interface TextProps
 		BorderProps,
 		TypographyProps {
 	// use for external link with prop `as="a"`
-	href?: string
 }
 
-/** Text */
-const Text = styled("span")<TextProps>(
-	compose(
-		space,
-		color,
-		border,
-		typography
-	)
+/** TextSystemStyle is compose style fn from styled system */
+export const TextSystemStyle = compose(
+	space,
+	color,
+	border,
+	typography
 )
 
 /** Text */
+const Text = styled("span")<TextProps & { href?: string }>(TextSystemStyle)
+
+/** Text */
 export const Title = styled(Text)<TextProps>(
-	compose(
-		space,
-		color,
-		border,
-		typography
-	),
+	TextSystemStyle,
 	css({
 		fontFamily: "heading",
 	})
