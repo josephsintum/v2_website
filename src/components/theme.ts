@@ -23,7 +23,6 @@ export default {
 		reds: ["#e03131"],
 		secondary: "#30c",
 		secondarys: ["#30c", "yellow"],
-
 		highlight: "hsla(205, 100%, 40%, 0.125)",
 	},
 	fonts: {

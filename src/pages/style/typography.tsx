@@ -1,5 +1,5 @@
 import React from "react"
-import Box, { Container, Row, Col } from "../../components/box"
+import Box, { Container, Row } from "../../components/box"
 import Text, { Title } from "../../components/text"
 import Layout from "../../components/layout"
 import theme from "../../components/theme"
@@ -17,7 +17,7 @@ const TypeRow = (props: TypeRowProps) => {
 		<>
 			{fontSizes.map(
 				(fontSize: number[] | number, index: string | number) => (
-					<Row py={4} key={index}>
+					<Row py={3} key={index}>
 						<Box width={[null, 1 / 8]}>
 							<Text>{index}</Text>
 						</Box>

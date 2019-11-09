@@ -14,12 +14,8 @@ export default () => (
 			<Title as="h3" fontSize={6}>
 				Subtitle
 			</Title>
-			<Text>
-				Hello world
-			</Text>
-			<Box>
-                
-            </Box>
+			<Text>Hello world</Text>
+			<Box></Box>
 		</Container>
 	</Layout>
 )
