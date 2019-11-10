@@ -51,6 +51,6 @@ export const BaseALink = styled("a")<LinkProps>(
 	BoxStyleCompose,
 	css({
 		color: "text",
-		textDecoration: "none",
+		textDecoration: "none", 
 	})
 )
