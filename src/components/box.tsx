@@ -24,20 +24,23 @@ export interface BoxProps
 		BorderProps,
 		TypographyProps {}
 
+/** This is compose style fn from styled system */
+export const BoxStyleCompose = compose(
+	space,
+	color,
+	layout,
+	flexbox,
+	border,
+	typography
+)
+
 /** Box is a simple building block*/
 const Box = styled("div")<BoxProps>(
 	css({
 		boxSizing: "border-box",
 		minWidth: 0,
 	}),
-	compose(
-		space,
-		color,
-		layout,
-		flexbox,
-		border,
-		typography
-	)
+	BoxStyleCompose
 )
 
 export default Box

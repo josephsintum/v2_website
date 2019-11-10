@@ -34,7 +34,23 @@ const linkStyle = css({
 /** ALink is a styled <a href="..."> */
 export const ALink = styled("a")<LinkProps>(TextSystemStyle, linkStyle)
 
-/** Link is a styled Gatsby Link wrapper and it is intented only for internal links.\
+/** Link is a styled Gatsby Link wrapper and it is intented only for internal links.
  * For links to pages on other domains or pages on the same domain not handled by the current Gatsby site, use the normal <ALink href="..."> element.
  */
 export const Link = styled(GatsbyLink)<LinkProps>(TextSystemStyle, linkStyle)
+
+export const BaseLink = styled(GatsbyLink)<LinkProps>(
+	TextSystemStyle,
+	css({
+		color: "text",
+		textDecoration: "none",
+	})
+)
+
+export const BaseALink = styled("a")<LinkProps>(
+	TextSystemStyle,
+	css({
+		color: "text",
+		textDecoration: "none",
+	})
+)
