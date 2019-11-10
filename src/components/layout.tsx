@@ -6,6 +6,7 @@ import theme from "./theme"
 
 import GlobalStyles from "./global-styles"
 import Footer from "./footer"
+import Header from "../components/header"
 
 const AppContainer = styled(Row)(
 	css({
@@ -24,6 +25,7 @@ const Layout = ({ children }: LayoutProps) => (
 	<ThemeProvider theme={theme}>
 		<AppContainer>
 			<GlobalStyles />
+			<Header />
 			<Main>{children}</Main>
 			<Footer />
 		</AppContainer>
