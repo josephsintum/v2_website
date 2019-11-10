@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-typescript-minimal",
+  "name": "Portfolio",
   "private": true,
-  "description": "A minimal, bare bones Typescript starter for Gatsby",
+  "description": "Joseph Sintum's Portfolio",
   "version": "0.1.0",
-  "author": "@benbarber",
+  "author": "@josephsintum",
   "dependencies": {
     "@styled-system/css": "^5.0.23",
     "gatsby": "^2.13.64",
@@ -44,11 +44,11 @@
     "typescript": "^3.3.3333"
   },
   "keywords": [
-    "gatsby",
-    "typescript",
-    "minimal",
-    "starter",
-    "styled-components"
+    "joseph",
+    "josephsintum",
+    "portfolio",
+    "work",
+    "styled-system"
   ],
   "license": "MIT",
   "scripts": {
@@ -62,9 +62,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/benbarber/gatsby-typescript-minimal"
+    "url": "https://github.com/josephsintum/josephsintum.github.io"
   },
   "bugs": {
-    "url": "https://github.com/benbarber/gatsby-typescript-minimal/issues"
+    "url": "https://github.com/josephsintum/josephsintum.github.io/issues"
   }
 }
