@@ -3,6 +3,7 @@ import Box, { Container, Row } from "../../components/box"
 import Text, { Title } from "../../components/text"
 import Layout from "../../components/layout"
 import theme from "../../components/theme"
+import SEO from "../../components/seo"
 
 interface TypeRowProps {
 	fontSizes: number[] | number
@@ -36,6 +37,7 @@ const TypeRow = (props: TypeRowProps) => {
 
 export default () => (
 	<Layout>
+		<SEO title="Typography" />
 		<Container>
 			<Title as="h1" fontSize={8} my={6}>
 				Typography

@@ -3,6 +3,7 @@ import Box, { Container, Row, Col } from "../../components/box"
 import Text, { Title } from "../../components/text"
 import Layout from "../../components/layout"
 import theme from "../../components/theme"
+import SEO from "../../components/seo"
 
 // TODO update types for lightOrDark Method
 /** lightOrDark checks if a color is light and returns true */
@@ -90,6 +91,7 @@ const BorderBox = props => (
 
 export default () => (
 	<Layout>
+		<SEO title="Color" />
 		<Container>
 			<Title as="h1" fontSize={8} my={6}>
 				Color
@@ -130,6 +132,45 @@ export default () => (
 			</Title>
 			<BorderBox>
 				<ColorPalette colors={theme.colors.grays} paletteName="grays" />
+			</BorderBox>
+			{/* red section */}
+			<Title as="h3" fontSize={6}>
+				Red
+			</Title>
+			<BorderBox>
+				<ColorPalette colors={theme.colors.red} paletteName="red" />
+			</BorderBox>
+			<BorderBox>
+				<ColorPalette colors={theme.colors.reds} paletteName="red" />
+			</BorderBox>
+			{/* red section */}
+			<Title as="h3" fontSize={6}>
+				Green
+			</Title>
+			<BorderBox>
+				<ColorPalette colors={theme.colors.green} paletteName="green" />
+			</BorderBox>
+			<BorderBox>
+				<ColorPalette
+					colors={theme.colors.greens}
+					paletteName="greens"
+				/>
+			</BorderBox>
+			{/* yellow section */}
+			<Title as="h3" fontSize={6}>
+				Yellow
+			</Title>
+			<BorderBox>
+				<ColorPalette
+					colors={theme.colors.yellow}
+					paletteName="yellow"
+				/>
+			</BorderBox>
+			<BorderBox>
+				<ColorPalette
+					colors={theme.colors.yellows}
+					paletteName="yellow"
+				/>
 			</BorderBox>
 		</Container>
 	</Layout>
