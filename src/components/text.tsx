@@ -16,8 +16,7 @@ export interface TextProps
 	extends SpaceProps,
 		ColorProps,
 		BorderProps,
-		TypographyProps {
-}
+		TypographyProps {}
 
 /** TextSystemStyle is compose style fn from styled system */
 export const TextSystemStyle = compose(

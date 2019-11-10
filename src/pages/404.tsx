@@ -14,7 +14,7 @@ const NotFoundPage = () => (
 				404
 			</Title>
 			<Text>The page you were looking for could not be found.</Text>
-			<br/>
+			<br />
 			<Link to="/">Return Home</Link>
 		</Container>
 	</Layout>
