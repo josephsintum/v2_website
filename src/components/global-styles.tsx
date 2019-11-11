@@ -14,7 +14,6 @@ const GlobalStyles = createGlobalStyle(
 			WebkitFontSmoothing: "antialiased",
 			MozOsxFontSmoothing: "grayscale",
 			textRendering: "optimizeLegibility",
-			lineHeight: "1.2",
 		},
 		body: {
 			margin: 0,

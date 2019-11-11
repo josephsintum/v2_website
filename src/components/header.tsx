@@ -1,6 +1,6 @@
 import React from "react"
 import Box, { Container } from "./box"
-import { BaseALink, BaseLink, ALink } from "../components/link"
+import { BaseALink, BaseLink } from "../components/link"
 import styled from "styled-components"
 import css from "@styled-system/css"
 
@@ -23,16 +23,21 @@ export const BrandLink = styled(BaseLink)(
 )
 
 export const NavLink = styled(BaseLink)(
-	css({ py: 3, mx: 3, display: "flex", alignItems: "center" })
+	css({
+		py: 3,
+		mx: 3,
+		display: "flex",
+		alignItems: "center",
+	})
 )
 
 const activeStyle = {
 	borderBottomColor: "black",
-	borderBottomWidth: 3,
+	borderBottomWidth: 2,
 	borderBottomStyle: "solid",
 }
 
-export default props => (
+export default () => (
 	<Container>
 		<Nav py={3} width="100%">
 			<BrandLink to="/">* JOSEPH SINTUM</BrandLink>
@@ -44,13 +49,13 @@ export default props => (
 					Styles
 				</NavLink>
 				<BaseALink
-					href="http://google.com"
+					href="https://github.com/josephsintum/"
 					py={3}
 					mx={3}
 					display="flex"
 					alignItems="center"
 				>
-					Resume
+					Resume *
 				</BaseALink>
 			</>
 		</Nav>
