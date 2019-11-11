@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "../components/link"
 import Layout from "../components/layout"
-import { Container, Row, Col } from "../components/box"
+import { Container } from "../components/box"
 import Text, { Title } from "../components/text"
 import SEO from "../components/seo"
 

@@ -20,7 +20,7 @@ const linkStyle = css({
 	transition:
 		"background-position 120ms ease-in-out, padding 120ms ease-in-out",
 	"&:hover": {
-		py: "1",
+		py: 2,
 		backgroundImage: `linear-gradient(
             transparent 0%,
             transparent calc(50% - 8px),

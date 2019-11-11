@@ -26,7 +26,7 @@ export const BrandLink = styled(BaseLink)(
 export const NavLink = styled(BaseLink)(
 	css({
 		py: 3,
-		mx: 3,
+		mx: 4,
 		display: "flex",
 		alignItems: "center",
 	})

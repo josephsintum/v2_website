@@ -8,7 +8,7 @@ const IndexPage = () => (
 	<Layout>
 		<SEO title="Home" />
 		<Container>
-			<Box py={4} my={6}>
+			<Box py={5} my={7}>
 				<Title as="h1" fontSize={[6]}>
 					Joseph Sintum
 					<br />

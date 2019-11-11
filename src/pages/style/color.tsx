@@ -81,10 +81,10 @@ const ColorPalette = (props: ColorPaletteProps) => {
 const BorderBox = props => (
 	<Box
 		borderColor="grays.4"
-		borderWidth={1}
+		borderWidth={2}
 		borderStyle="solid"
 		borderRadius="default"
-		mb={5}
+		mb={6}
 		{...props}
 	/>
 )
