@@ -1,35 +1,17 @@
 import styled from "styled-components"
 import css from "@styled-system/css"
-import {
-	variant,
-	color,
-	ColorProps,
-	space,
-	SpaceProps,
-	layout,
-	LayoutProps,
-	flexbox,
-	FlexboxProps,
-	border,
-	BorderProps,
-	typography,
-	TypographyProps,
-	compose,
-} from "styled-system"
+import { BoxProps, BoxStyleCompose } from "./box"
+import { variant } from "styled-system"
 
-interface ButtonProps
-	extends LayoutProps,
-		SpaceProps,
-		ColorProps,
-		FlexboxProps,
-		BorderProps,
-		TypographyProps {
+interface ButtonProps extends BoxProps {
 	variant?: "primary" | "secondary" | "outline"
 	siz?: "small" | "large"
 }
 
+export const BaseButton = styled("button")<BoxProps>(BoxStyleCompose)
+
 /** Button  */
-export const Button = styled.button<ButtonProps>(
+export const Button = styled(BaseButton)<ButtonProps>(
 	css({
 		boxSizing: "border-box",
 		minWidth: 0,
@@ -37,6 +19,10 @@ export const Button = styled.button<ButtonProps>(
 		py: 3,
 		borderRadius: "default",
 		fontWeight: "bold",
+		color: "white",
+		bg: "black",
+		borderWidth: 2,
+		borderColor: "black",
 	}),
 	variant({
 		variants: {
@@ -54,7 +40,7 @@ export const Button = styled.button<ButtonProps>(
 				color: "text",
 				bg: "transparent",
 				borderWidth: 2,
-				borderColor: "text",
+				borderColor: "black",
 			},
 		},
 	}),
@@ -72,13 +58,5 @@ export const Button = styled.button<ButtonProps>(
 				fontSize: 4,
 			}),
 		},
-	}),
-	compose(
-		space,
-		color,
-		layout,
-		flexbox,
-		border,
-		typography
-	)
+	})
 )
