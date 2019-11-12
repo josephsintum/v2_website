@@ -1,9 +1,9 @@
-import React from "react"
-import Box, { Container } from "./box"
+import React, { useState } from "react"
+import Box, { Container, BoxProps } from "./box"
 import { BaseALink, BaseLink } from "../components/link"
-import Text from "../components/text"
 import styled from "styled-components"
 import css from "@styled-system/css"
+import Burger from "./burger"
 
 export const Nav = styled(Box)(
 	css({
@@ -32,36 +32,27 @@ export const NavLink = styled(BaseLink)(
 	})
 )
 
-export const Burger = styled("button")(
+export interface MenuProps extends BoxProps {
+	open: boolean
+}
+
+export const Menu = styled(Box)<MenuProps>(
 	css({
-		position: "absolute",
-		top: 4,
-		right: 5,
-		display: "flex",
+		display: ["flex", "none"],
 		flexDirection: "column",
-		justifyContent: "space-around",
-		size: 5,
-		background: "transparent",
-		border: "none",
-		cursor: "pointer",
-		padding: 3,
+		justifyContent: "center",
+		height: "100vh",
+		textAlign: "left",
+		p: 5,
+		position: "absolute",
+		top: 0,
+		right: 0,
+		transition: "transform 0.3s ease-in-out",
+		bg: "primarys.0",
 		zIndex: 10,
-		borderRadius: "circle",
-
-		"&:focus": {
-			outline: "none",
-		},
-
-		div: {
-			width: 4,
-			height: 1,
-			background: "black",
-			borderRadius: "default",
-			transition: "all 0.3s linear",
-			position: "relative",
-			transformOrigin: "1px",
-		},
-	})
+	}),
+	// TODO: handle transform with props 
+	{ transform: ({open}) => (open ? "translateX(0)" : "translateX(100%)") }
 )
 
 const activeStyle = {
@@ -73,34 +64,51 @@ const activeStyle = {
 	borderTopStyle: "solid",
 }
 
-export default () => (
-	<Container>
-		<Nav py={3} width="100%">
-			<BrandLink to="/">* JOSEPH SINTUM</BrandLink>
-			<Box display={["none", "flex"]}>
-				<NavLink to="/" activeStyle={activeStyle}>
-					Portfolio
-				</NavLink>
-				<NavLink to="/style" activeStyle={activeStyle}>
-					Styles
-				</NavLink>
-				<BaseALink
-					href="https://github.com/josephsintum/"
-					py={3}
-					mx={3}
-					display="flex"
-					alignItems="center"
-				>
-					Resume *
-				</BaseALink>
-			</Box>
-			<Box display={["flex", "none"]}>
-				<Burger>
-					<div />
-					<div />
-					<div />
-				</Burger>
-			</Box>
-		</Nav>
-	</Container>
-)
+export default () => {
+	const [open, setOpen] = useState(false)
+
+	return (
+		<Container>
+			<Nav py={3} width="100%">
+				<BrandLink to="/">* JOSEPH SINTUM</BrandLink>
+				<Box display={["none", "flex"]}>
+					<NavLink to="/" activeStyle={activeStyle}>
+						Portfolio
+					</NavLink>
+					<NavLink to="/style" activeStyle={activeStyle}>
+						Styles
+					</NavLink>
+					<BaseALink
+						href="https://github.com/josephsintum/"
+						py={3}
+						mx={3}
+						display="flex"
+						alignItems="center"
+					>
+						Resume
+					</BaseALink>
+				</Box>
+				<Box display={["flex", "none"]}>
+					<Burger open={open} onClick={() => setOpen(!open)}/>
+					<Menu open={open} setOpen={setOpen}>
+						<NavLink to="/" activeStyle={activeStyle}>
+							Portfolio
+						</NavLink>
+						<NavLink to="/style" activeStyle={activeStyle}>
+							Styles
+						</NavLink>
+						<BaseALink
+							href="https://github.com/josephsintum/"
+							py={3}
+							mx={4}
+							display="flex"
+							alignItems="center"
+						>
+							Resume
+						</BaseALink>
+					</Menu>
+				</Box>
+			</Nav>
+		</Container>
+	)
+}
