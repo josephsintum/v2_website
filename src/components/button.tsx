@@ -4,8 +4,7 @@ import { BoxProps, BoxStyleCompose } from "./box"
 import { variant } from "styled-system"
 
 interface ButtonProps extends BoxProps {
-	variant?: "primary" | "secondary" | "outline"
-	siz?: "small" | "large"
+	variant?: "primary" | "outline" | "text"
 }
 
 export const BaseButton = styled("button")<BoxProps>(BoxStyleCompose)
@@ -15,48 +14,62 @@ export const Button = styled(BaseButton)<ButtonProps>(
 	css({
 		boxSizing: "border-box",
 		minWidth: 0,
-		px: 4,
-		py: 3,
-		borderRadius: "default",
-		fontWeight: "bold",
-		color: "white",
-		bg: "black",
 		borderWidth: 2,
-		borderColor: "black",
+		borderStyle: "solid",
+		textTransform: "uppercase",
+		":focus": {
+			outline: "none",
+		},
+		":disabled": {
+			bg: "grays.2",
+			color: "grays.6",
+			borderColor: "grays.2",
+		},
 	}),
 	variant({
 		variants: {
 			primary: {
-				fontSize: 3,
-				color: "background",
+				color: "white",
 				bg: "primary",
-				px: [1, 2, 3],
-			},
-			secondary: {
-				color: "background",
-				bg: "secondary",
+				borderColor: "primary",
 			},
 			outline: {
 				color: "text",
 				bg: "transparent",
 				borderWidth: 2,
 				borderColor: "black",
+				":disabled": {
+					bg: "transparent",
+					color: "grays.6",
+					borderColor: "grays.2",
+				},
 			},
-		},
-	}),
-	variant({
-		prop: "siz",
-		variants: {
-			small: {
-				px: 2,
-				py: 1,
-				fontSize: 2,
+			text: {
+				color: "text",
+				bg: "transparent",
+				borderColor: "transparent",
+				":hover": {
+					bg: "primarys.1",
+				},
+				":focus": {
+					bg: "primarys.2",
+				},
+				":disabled": {
+					bg: "transparent",
+					color: "grays.6",
+					borderColor: "transparent",
+				},
 			},
-			large: css({
-				px: 5,
-				py: 3,
-				fontSize: 4,
-			}),
 		},
 	})
 )
+
+Button.defaultProps = {
+	color: "white",
+	bg: "black",
+	borderColor: "black",
+	borderRadius: "default",
+	fontWeight: "bold",
+	px: 4,
+	py: 3,
+}
