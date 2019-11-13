@@ -41,14 +41,15 @@ export default {
 		highlight: "hsla(205, 100%, 40%, 0.125)",
 	},
 	fonts: {
-		body: "Space Mono, monospace",
-		heading: "Space Mono, monospace",
-		monospace: "Space Mono, monospace",
+		body: "Work sans, Sans-serif",
+		heading: "Roboto Mono",
+		monospace: "Roboto Mono",
 	},
 	fontSizes: [10, 12, 14, 16, 20, 24, 34, 48, 60, 96],
 	fontWeights: {
 		body: 400,
 		heading: 700,
+		medium: 600,
 		bold: 700,
 	},
 	lineHeights: {
