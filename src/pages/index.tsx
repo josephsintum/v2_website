@@ -60,6 +60,18 @@ const IndexPage = () => (
 				</Row>
 			</Container>
 		</Box>
+		<Box>
+			<Container py={6}>
+				<Row>
+					<Col width={[null, 1 / 2]} pr={[null, 4]}>
+						<Title as="h2" fontSize={[6]}>
+							Say hi
+						</Title>
+						<Text>joseph24jay@gmail.com</Text>
+					</Col>
+				</Row>
+			</Container>
+		</Box>
 	</Layout>
 )
 
