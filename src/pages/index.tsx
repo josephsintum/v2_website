@@ -11,14 +11,9 @@ const IndexPage = () => (
 		<Container>
 			<Box py={[7, 8]}>
 				<Title as="h1" fontSize={[6]}>
-					Joseph Sintum
+					I am Joseph Sintum
 					<br />I create beautiful things with code
 				</Title>
-				<Text>
-					I am a frontend Developer based in the Bay Area.
-					<br /> I build React.JS and Typescript apps. Currently
-					learning Golang and love reading books.
-				</Text>
 			</Box>
 		</Container>
 		<Box bg="primarys.0">
@@ -29,11 +24,12 @@ const IndexPage = () => (
 							About me
 						</Title>
 						<Text>
-							I am a frontend developer based in the Bay Area. I
+							I am a self-taught Full Stack JavaScript Bay Area. I
 							have been programming for 3 years with lots of
-							experience in developing and maintaining web apps in
-							Javascript, Typescript and React.
-							<br />
+							experience in developing and maintaining Javascript,
+							Typescript and React apps.
+						</Text>
+						<Text>
 							I love minimal design and drawing.
 							<br />
 							I am currently learning Golang.
@@ -54,7 +50,7 @@ const IndexPage = () => (
 						<Text>Backend</Text>
 						<Text color="primary">
 							Express, Passport, Auth0
-							<br /> Prisma Graphql
+							<br /> NodeJS, Prisma Graphql
 						</Text>
 					</Col>
 				</Row>
