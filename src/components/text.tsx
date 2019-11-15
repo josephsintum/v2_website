@@ -5,7 +5,7 @@ import css from "@styled-system/css"
 export interface TextProps extends BoxProps {}
 
 /** Text */
-const Text = styled("span")<TextProps>(BoxStyleCompose)
+const Text = styled("p")<TextProps>(BoxStyleCompose)
 
 /** Text */
 export const Title = styled(Text)<TextProps>(
