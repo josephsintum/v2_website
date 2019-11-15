@@ -51,8 +51,8 @@ export const Menu = styled(Box)<MenuProps>(
 		bg: "primarys.0",
 		zIndex: 10,
 	}),
-	// TODO: handle transform with props 
-	{ transform: ({open}) => (open ? "translateX(0)" : "translateX(100%)") }
+	// TODO: handle transform with props
+	{ transform: ({ open }) => (open ? "translateX(0)" : "translateX(100%)") }
 )
 
 const activeStyle = {
@@ -69,7 +69,7 @@ export default () => {
 
 	return (
 		<Container>
-			<Nav py={3} width="100%">
+			<Nav py={5} width="100%">
 				<BrandLink to="/">* JOSEPH SINTUM</BrandLink>
 				<Box display={["none", "flex"]}>
 					<NavLink to="/" activeStyle={activeStyle}>
@@ -89,8 +89,8 @@ export default () => {
 					</BaseALink>
 				</Box>
 				<Box display={["flex", "none"]}>
-					<Burger open={open} onClick={() => setOpen(!open)}/>
-					<Menu open={open} setOpen={setOpen}>
+					<Burger open={open} onClick={() => setOpen(!open)} />
+					{/* <Menu open={open} setOpen={setOpen}>
 						<NavLink to="/" activeStyle={activeStyle}>
 							Portfolio
 						</NavLink>
@@ -99,14 +99,14 @@ export default () => {
 						</NavLink>
 						<BaseALink
 							href="https://github.com/josephsintum/"
-							py={3}
+							py={3}~
 							mx={4}
 							display="flex"
 							alignItems="center"
 						>
 							Resume
 						</BaseALink>
-					</Menu>
+					</Menu> */}
 				</Box>
 			</Nav>
 		</Container>
