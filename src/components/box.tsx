@@ -48,7 +48,7 @@ export default Box
 /** Container is a layout fixed width div and with changes with the breakpoint */
 export const Container = styled(Box)<BoxProps>(
 	css({
-		maxWidth: [null, 640, 768, 1024, 1024, 1280],
+		maxWidth: ["90%", "80%", "70%", 960],
 		px: 2,
 		mx: "auto",
 		width: "100%",

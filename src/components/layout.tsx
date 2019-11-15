@@ -1,6 +1,6 @@
 import React from "react"
 import styled, { ThemeProvider } from "styled-components"
-import { Row } from "../components/box"
+import Box, { Row } from "../components/box"
 import css from "@styled-system/css"
 import theme from "./theme"
 
@@ -8,14 +8,13 @@ import GlobalStyles from "./global-styles"
 import Footer from "./footer"
 import Header from "../components/header"
 
-const AppContainer = styled(Row)(
+const AppContainer = styled(Box)(
 	css({
 		minHeight: "100vh",
-		flexDirection: "column",
 	})
 )
 
-const Main = styled(Row)(
+const Main = styled(Box)(
 	css({
 		position: "relative",
 	})
