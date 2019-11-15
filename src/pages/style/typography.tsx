@@ -19,15 +19,26 @@ const TypeRow = (props: TypeRowProps) => {
 			{fontSizes.map(
 				(fontSize: number[] | number, index: string | number) => (
 					<Row py={3} key={index}>
-						<Box width={[null, 1 / 8]}>
-							<Text>{index}</Text>
-						</Box>
-						<Box width={[null, 1 / 8]}>
-							<Text>{fontSize}px</Text>
-						</Box>
-						<Box>
-							<Text fontSize={fontSize}>Space Mono</Text>
-						</Box>
+						<Row width={[null, 1 / 8]}>
+							<Text as="span" display="flex" alignItems="center">
+								{index}
+							</Text>
+						</Row>
+						<Row width={[null, 1 / 8]}>
+							<Text as="span" display="flex" alignItems="center">
+								{fontSize}px
+							</Text>
+						</Row>
+						<Row>
+							<Text
+								as="span"
+								fontSize={fontSize}
+								display="flex"
+								alignItems="center"
+							>
+								Space Mono
+							</Text>
+						</Row>
 					</Row>
 				)
 			)}
@@ -39,24 +50,16 @@ export default () => (
 	<Layout>
 		<SEO title="Typography" />
 		<Container>
-			<Title as="h1" fontSize={8} my={6}>
+			<Title fontSize={8} my={6}>
 				Typography
 			</Title>
 
-			<Title as="h3" fontSize={6}>
-				Font Family
-			</Title>
-			<Text mb="5" as="p">
-				Space Mono
-			</Text>
+			<Title fontSize={6}>Font Family</Title>
+			<Text mb="5">Montserrat</Text>
 
-			<Title as="h3" fontSize={6}>
-				Font Sizes
-			</Title>
+			<Title fontSize={6}>Font Sizes</Title>
 			<TypeRow fontSizes={theme.fontSizes} />
-			<Title as="h3" fontSize={6}>
-				Font Weight
-			</Title>
+			<Title fontSize={6}>Font Weight</Title>
 			<Text>Working on it</Text>
 		</Container>
 	</Layout>

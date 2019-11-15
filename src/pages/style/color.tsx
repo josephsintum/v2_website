@@ -59,7 +59,7 @@ const ColorPalette = (props: ColorPaletteProps) => {
 				<Row
 					textAlign="center"
 					bg={color}
-					py={4}
+					py={3}
 					key={index}
 					color={lightOrDark(color) ? "black" : "white"}
 				>
@@ -80,11 +80,12 @@ const ColorPalette = (props: ColorPaletteProps) => {
 
 const BorderBox = props => (
 	<Box
-		borderColor="grays.4"
-		borderWidth={2}
+		borderColor="grays.2"
+		borderWidth={1}
 		borderStyle="solid"
 		borderRadius="default"
 		mb={6}
+		overflow="hidden"
 		{...props}
 	/>
 )
@@ -93,27 +94,21 @@ export default () => (
 	<Layout>
 		<SEO title="Color" />
 		<Container>
-			<Title as="h1" fontSize={8} my={6}>
+			<Title fontSize={8} my={6}>
 				Color
 			</Title>
 			{/* black section */}
-			<Title as="h3" fontSize={6}>
-				Black
-			</Title>
+			<Title fontSize={6}>Black</Title>
 			<BorderBox>
 				<ColorPalette colors={theme.colors.black} paletteName="black" />
 			</BorderBox>
 			{/* white section */}
-			<Title as="h3" fontSize={6}>
-				White
-			</Title>
+			<Title fontSize={6}>White</Title>
 			<BorderBox>
 				<ColorPalette colors={theme.colors.white} paletteName="white" />
 			</BorderBox>
 			{/* primary section */}
-			<Title as="h3" fontSize={6}>
-				Primary
-			</Title>
+			<Title fontSize={6}>Primary</Title>
 			<BorderBox>
 				<ColorPalette
 					colors={theme.colors.primary}
@@ -127,16 +122,12 @@ export default () => (
 				/>
 			</BorderBox>
 			{/* gray section */}
-			<Title as="h3" fontSize={6}>
-				Gray
-			</Title>
+			<Title fontSize={6}>Gray</Title>
 			<BorderBox>
 				<ColorPalette colors={theme.colors.grays} paletteName="grays" />
 			</BorderBox>
 			{/* red section */}
-			<Title as="h3" fontSize={6}>
-				Red
-			</Title>
+			<Title fontSize={6}>Red</Title>
 			<BorderBox>
 				<ColorPalette colors={theme.colors.red} paletteName="red" />
 			</BorderBox>
@@ -144,9 +135,7 @@ export default () => (
 				<ColorPalette colors={theme.colors.reds} paletteName="red" />
 			</BorderBox>
 			{/* red section */}
-			<Title as="h3" fontSize={6}>
-				Green
-			</Title>
+			<Title fontSize={6}>Green</Title>
 			<BorderBox>
 				<ColorPalette colors={theme.colors.green} paletteName="green" />
 			</BorderBox>
@@ -157,9 +146,7 @@ export default () => (
 				/>
 			</BorderBox>
 			{/* yellow section */}
-			<Title as="h3" fontSize={6}>
-				Yellow
-			</Title>
+			<Title fontSize={6}>Yellow</Title>
 			<BorderBox>
 				<ColorPalette
 					colors={theme.colors.yellow}

@@ -9,12 +9,10 @@ export default () => (
 	<Layout>
 		<SEO title="Style" />
 		<Container>
-			<Title as="h1" fontSize={8} my={6}>
+			<Title fontSize={8} my={6}>
 				Style
 			</Title>
-			<Title as="h3" fontSize={6}>
-				#workingProgress
-			</Title>
+			<Title fontSize={6}>#workingProgress</Title>
 			<Link to="/style/color">Color</Link>
 			<br />
 			<Link to="/style/typography">Typography</Link>

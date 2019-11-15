@@ -7,13 +7,11 @@ import theme from "../../components/theme"
 export default () => (
 	<Layout>
 		<Container>
-			<Title as="h1" fontSize={8} my={6}>
+			<Title fontSize={8} my={6}>
 				Sample
 			</Title>
 			{/* black section */}
-			<Title as="h3" fontSize={6}>
-				Subtitle
-			</Title>
+			<Title fontSize={6}>Subtitle</Title>
 			<Text>Hello world</Text>
 			<Box></Box>
 		</Container>

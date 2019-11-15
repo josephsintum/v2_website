@@ -5,10 +5,10 @@ import css from "@styled-system/css"
 export interface TextProps extends BoxProps {}
 
 /** Text */
-const Text = styled("p")<TextProps>(BoxStyleCompose)
+const Text = styled.p<TextProps>(BoxStyleCompose)
 
 /** Text */
-export const Title = styled(Text)<TextProps>(
+export const Title = styled.h1<TextProps>(
 	BoxStyleCompose,
 	css({
 		fontFamily: "heading",

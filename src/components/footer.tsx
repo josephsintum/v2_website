@@ -4,7 +4,7 @@ import Text from "./text"
 
 export default props => (
 	<Box my={6}>
-		<Text as="p" textAlign="center">
+		<Text textAlign="center">
 			© {new Date().getFullYear()} — Designed & Developed by Joseph Sintum
 		</Text>
 	</Box>

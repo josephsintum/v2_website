@@ -10,7 +10,7 @@ const IndexPage = () => (
 		<SEO title="Home" />
 		<Container>
 			<Box py={[7, 8]}>
-				<Title as="h1" fontSize={[6]}>
+				<Title fontSize={[6]}>
 					I am Joseph Sintum
 					<br />I create beautiful things with code
 				</Title>
@@ -20,9 +20,7 @@ const IndexPage = () => (
 			<Container py={6}>
 				<Row>
 					<Col width={[null, 1 / 2]} pr={[null, 4]}>
-						<Title as="h2" fontSize={[6]}>
-							About me
-						</Title>
+						<Title fontSize={[6]}>About me</Title>
 						<Text>
 							I am a self-taught Full Stack JavaScript Bay Area. I
 							have been programming for 3 years with lots of
@@ -38,9 +36,7 @@ const IndexPage = () => (
 					</Col>
 
 					<Col width={[null, 1 / 2]}>
-						<Title as="h2" fontSize={[6]}>
-							Skills
-						</Title>
+						<Title fontSize={[6]}>Skills</Title>
 						<Text> Frontend Development</Text>
 						<Text color="primary">
 							Javascript, HTML, SCSS
@@ -60,9 +56,7 @@ const IndexPage = () => (
 			<Container py={6}>
 				<Row>
 					<Col width={[null, 1 / 2]} pr={[null, 4]}>
-						<Title as="h2" fontSize={[6]}>
-							Say hi
-						</Title>
+						<Title fontSize={[6]}>Say hi</Title>
 						<Text>joseph24jay@gmail.com</Text>
 					</Col>
 				</Row>
