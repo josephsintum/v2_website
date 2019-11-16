@@ -94,21 +94,21 @@ export default () => (
 	<Layout>
 		<SEO title="Color" />
 		<Container>
-			<Title fontSize={8} my={6}>
+			<Title fontSize="h3" my={6}>
 				Color
 			</Title>
 			{/* black section */}
-			<Title fontSize={6}>Black</Title>
+			<Title fontSize="h5">Black</Title>
 			<BorderBox>
 				<ColorPalette colors={theme.colors.black} paletteName="black" />
 			</BorderBox>
 			{/* white section */}
-			<Title fontSize={6}>White</Title>
+			<Title fontSize="h5">White</Title>
 			<BorderBox>
 				<ColorPalette colors={theme.colors.white} paletteName="white" />
 			</BorderBox>
 			{/* primary section */}
-			<Title fontSize={6}>Primary</Title>
+			<Title fontSize="h5">Primary</Title>
 			<BorderBox>
 				<ColorPalette
 					colors={theme.colors.primary}
@@ -122,12 +122,12 @@ export default () => (
 				/>
 			</BorderBox>
 			{/* gray section */}
-			<Title fontSize={6}>Gray</Title>
+			<Title fontSize="h5">Gray</Title>
 			<BorderBox>
 				<ColorPalette colors={theme.colors.grays} paletteName="grays" />
 			</BorderBox>
 			{/* red section */}
-			<Title fontSize={6}>Red</Title>
+			<Title fontSize="h5">Red</Title>
 			<BorderBox>
 				<ColorPalette colors={theme.colors.red} paletteName="red" />
 			</BorderBox>
@@ -135,7 +135,7 @@ export default () => (
 				<ColorPalette colors={theme.colors.reds} paletteName="red" />
 			</BorderBox>
 			{/* red section */}
-			<Title fontSize={6}>Green</Title>
+			<Title fontSize="h5">Green</Title>
 			<BorderBox>
 				<ColorPalette colors={theme.colors.green} paletteName="green" />
 			</BorderBox>
@@ -146,7 +146,7 @@ export default () => (
 				/>
 			</BorderBox>
 			{/* yellow section */}
-			<Title fontSize={6}>Yellow</Title>
+			<Title fontSize="h5">Yellow</Title>
 			<BorderBox>
 				<ColorPalette
 					colors={theme.colors.yellow}

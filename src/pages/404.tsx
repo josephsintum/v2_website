@@ -10,7 +10,7 @@ const NotFoundPage = () => (
 		<SEO title="404: Not found" />
 
 		<Container my="auto">
-			<Title fontSize={[9]}>404</Title>
+			<Title fontSize="h1">404</Title>
 			<Text>The page you were looking for could not be found.</Text>
 			<br />
 			<Link to="/">Return Home</Link>

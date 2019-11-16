@@ -3,14 +3,14 @@ import Box, { Container, Row, Col } from "../components/box"
 import Text, { Title } from "../components/text"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Link } from "../components/link"
+import { ALink } from "../components/link"
 
 const IndexPage = () => (
 	<Layout>
 		<SEO title="Home" />
 		<Container>
-			<Box py={[7, 8]}>
-				<Title fontSize={[6]}>
+			<Box py={[7]}>
+				<Title fontSize={["h4", "h3"]}>
 					I am Joseph Sintum
 					<br />I create beautiful things with code
 				</Title>
@@ -20,7 +20,7 @@ const IndexPage = () => (
 			<Container py={6}>
 				<Row>
 					<Col width={[null, 1 / 2]} pr={[null, 4]}>
-						<Title fontSize={[6]}>About me</Title>
+						<Title fontSize="h5">About me</Title>
 						<Text>
 							I am a self-taught Full Stack JavaScript Bay Area. I
 							have been programming for 3 years with lots of
@@ -36,7 +36,7 @@ const IndexPage = () => (
 					</Col>
 
 					<Col width={[null, 1 / 2]}>
-						<Title fontSize={[6]}>Skills</Title>
+						<Title fontSize="h5">Skills</Title>
 						<Text> Frontend Development</Text>
 						<Text color="primary">
 							Javascript, HTML, SCSS
@@ -56,8 +56,8 @@ const IndexPage = () => (
 			<Container py={6}>
 				<Row>
 					<Col width={[null, 1 / 2]} pr={[null, 4]}>
-						<Title fontSize={[6]}>Say hi</Title>
-						<Text>joseph24jay@gmail.com</Text>
+						<Title fontSize="h3">Say hi</Title>
+						<ALink href="mailto:joseph24jay@gmail.com">joseph24jay@gmail.com</ALink>
 					</Col>
 				</Row>
 			</Container>
