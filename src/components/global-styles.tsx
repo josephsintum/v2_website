@@ -7,7 +7,7 @@ const GlobalStyles = createGlobalStyle(
 			boxSizing: "border-box",
 		},
 		html: {
-			fontSize: 3,
+			fontSize: "body",
 			fontFamily: "body",
 			color: "text",
 			backgroundColor: "white",
