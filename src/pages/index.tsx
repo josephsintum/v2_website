@@ -57,7 +57,9 @@ const IndexPage = () => (
 				<Row>
 					<Col width={[null, 1 / 2]} pr={[null, 4]}>
 						<Title fontSize="h3">Say hi</Title>
-						<ALink href="mailto:joseph24jay@gmail.com">joseph24jay@gmail.com</ALink>
+						<ALink href="mailto:joseph24jay@gmail.com">
+							joseph24jay@gmail.com
+						</ALink>
 					</Col>
 				</Row>
 			</Container>
