@@ -1,16 +1,16 @@
 import styled from "styled-components"
 import css from "@styled-system/css"
-import { BoxProps, BoxStyleCompose } from "./box"
+import { BoxProps, BoxStyleCompose } from "../box"
 import { variant } from "styled-system"
 
 interface ButtonProps extends BoxProps {
 	variant?: "primary" | "outline" | "text"
 }
 
-export const BaseButton = styled("button")<BoxProps>(BoxStyleCompose)
+export const BasicButton = styled("button")<BoxProps>(BoxStyleCompose)
 
 /** Button  */
-export const Button = styled(BaseButton)<ButtonProps>(
+export const Button = styled(BasicButton)<ButtonProps>(
 	css({
 		boxSizing: "border-box",
 		minWidth: 0,
