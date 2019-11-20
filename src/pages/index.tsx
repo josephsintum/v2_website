@@ -3,7 +3,6 @@ import Box, { Container, Row, Col } from "../components/box"
 import Text, { Title } from "../components/text"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { ALink } from "../components/link"
 
 const IndexPage = () => (
 	<Layout>
@@ -48,18 +47,6 @@ const IndexPage = () => (
 							Express, Passport, Auth0
 							<br /> NodeJS, Prisma Graphql
 						</Text>
-					</Col>
-				</Row>
-			</Container>
-		</Box>
-		<Box>
-			<Container py={6}>
-				<Row>
-					<Col width={[null, 1 / 2]} pr={[null, 4]}>
-						<Title fontSize="h3">Say hi</Title>
-						<ALink href="mailto:joseph24jay@gmail.com">
-							joseph24jay@gmail.com
-						</ALink>
 					</Col>
 				</Row>
 			</Container>

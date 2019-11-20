@@ -18,7 +18,7 @@ export default () => (
 			<Row>
 				<Col p={3}>
 					<Card>
-						<CardMedia bgImage="url(https://images.unsplash.com/photo-1499084732479-de2c02d45fcc)" />
+						<CardMedia imageUrl="https://images.unsplash.com/photo-1499084732479-de2c02d45fcc" />
 						<CardSection>
 							<Title fontSize="h6">Our Changing Planet</Title>
 							<Text fontSize="subtitle">by Kurt Wagner</Text>
@@ -36,7 +36,7 @@ export default () => (
 				</Col>
 				<Col p={3}>
 					<Card>
-						<CardMedia bgImage="url(https://images.unsplash.com/photo-1574093180049-73055d3ababd)" />
+						<CardMedia imageUrl="https://images.unsplash.com/photo-1574093180049-73055d3ababd" />
 						<CardSection>
 							<Title fontSize="h6">Our Changing Planet</Title>
 							<Text fontSize="subtitle">by Kurt Wagner</Text>
@@ -59,7 +59,7 @@ export default () => (
 							<Title fontSize="h6">Our Changing Planet</Title>
 							<Text fontSize="subtitle">by Kurt Wagner</Text>
 						</CardSection>
-						<CardMedia bgImage="url(https://images.unsplash.com/photo-1574174227799-c3697c71352a)" />
+						<CardMedia imageUrl="https://images.unsplash.com/photo-1574174227799-c3697c71352a" />
 						<CardSection>
 							<Text color="gray">
 								Visit ten places on our planet that are

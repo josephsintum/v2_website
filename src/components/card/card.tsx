@@ -46,9 +46,11 @@ export const CardSection = styled(Box)(
 )
 
 export interface CardMediaProps extends BoxProps {
-	bgImage: string
+	/** image URL */
+	imageUrl: string
 }
 
+/** CardMedia takes imageUrl and displays image with height = 56.25% of width */
 export const CardMedia = styled(Box)<CardMediaProps>(
 	css({
 		width: "100%",
@@ -64,7 +66,7 @@ export const CardMedia = styled(Box)<CardMediaProps>(
 		},
 	}),
 	props => ({
-		backgroundImage: props.bgImage,
+		backgroundImage: `url(${props.imageUrl})`,
 	})
 )
 
