@@ -13,6 +13,8 @@ import {
 	BorderProps,
 	typography,
 	TypographyProps,
+	position,
+	PositionProps,
 	compose,
 } from "styled-system"
 
@@ -22,7 +24,8 @@ export interface BoxProps
 		ColorProps,
 		FlexboxProps,
 		BorderProps,
-		TypographyProps {}
+		TypographyProps,
+		PositionProps {}
 
 /** This is compose style fn from styled system */
 export const BoxStyleCompose = compose(
@@ -31,7 +34,8 @@ export const BoxStyleCompose = compose(
 	layout,
 	flexbox,
 	border,
-	typography
+	typography,
+	position
 )
 
 /** Box is a simple building block*/
