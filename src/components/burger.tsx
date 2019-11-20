@@ -2,11 +2,11 @@ import React, { useState } from "react"
 import { BoxProps } from "./box"
 import styled from "styled-components"
 import css from "@styled-system/css"
-import { BaseButton } from "../components/button"
+import { BasicButton } from "./button/button"
 
 export interface BurgerProps extends BoxProps {}
 
-export const StyledBurger = styled(BaseButton)<BurgerProps>(
+export const StyledBurger = styled(BasicButton)<BurgerProps>(
 	css({
 		position: "absolute",
 		top: 4,

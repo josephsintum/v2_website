@@ -3,7 +3,7 @@ import css from "@styled-system/css"
 import { BoxProps, BoxStyleCompose } from "../box"
 import { variant } from "styled-system"
 
-interface ButtonProps extends BoxProps {
+export interface ButtonProps extends BoxProps {
 	variant?: "primary" | "outline" | "text"
 }
 
