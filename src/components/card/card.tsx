@@ -28,8 +28,8 @@ export const CardButton = styled(Button)(css({}))
 
 CardButton.defaultProps = {
 	p: 2,
-    variant: "text",
-    mr: 3
+	variant: "text",
+	mr: 3,
 }
 
 export const CardSection = styled(Box)(
