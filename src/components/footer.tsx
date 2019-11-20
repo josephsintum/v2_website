@@ -1,11 +1,11 @@
 import React from "react"
-import Box from "./box"
-import Text from "./text"
+import { Container } from "./box"
+import { Title } from "./text"
+import { ALink } from "./link"
 
-export default props => (
-	<Box my={6}>
-		<Text textAlign="center">
-			© {new Date().getFullYear()} — Designed & Developed by Joseph Sintum
-		</Text>
-	</Box>
+export default () => (
+	<Container my={6}>
+		<Title>Let's work together</Title>
+		<ALink href="mailto:joseph24jay@gmail.com">joseph24jay@gmail.com</ALink>
+	</Container>
 )
