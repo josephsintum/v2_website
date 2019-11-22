@@ -28,6 +28,10 @@ const GlobalStyles = createGlobalStyle(
 			verticalAlign: "middle",
 			display: "block",
 		},
+		hr: {
+			mb: 5,
+			borderColor: "black",
+		},
 	})
 )
 
