@@ -12,8 +12,8 @@ const linkStyle = css({
 	backgroundImage: `linear-gradient(
         transparent 0%,
         transparent calc(50% - 8px),
-        #dbe4ff calc(50% - 8px),
-        #dbe4ff 100%
+        #bac8ff99 calc(50% - 8px),
+        #bac8ff99 100%
       )`,
 	backgroundSize: "100% 200%",
 	backgroundPosition: "0 0",
@@ -24,12 +24,14 @@ const linkStyle = css({
 		backgroundImage: `linear-gradient(
             transparent 0%,
             transparent calc(50% - 8px),
-            #dbe4ff99 calc(50% - 8px),
-            #dbe4ff99 100%
+            #bac8ff99 calc(50% - 8px),
+            #bac8ff99 100%
           )`,
 		backgroundPosition: "0 100%",
 	},
 })
+
+// TODO update types of links to require href
 
 /** ALink is a styled <a href="..."> */
 export const ALink = styled("a")<LinkProps>(BoxStyleCompose, linkStyle)

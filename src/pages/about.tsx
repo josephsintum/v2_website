@@ -1,5 +1,5 @@
 import React from "react"
-import Box, { Container, Row, Col } from "../components/box"
+import Box, { Container } from "../components/box"
 import Text, { Title } from "../components/text"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
