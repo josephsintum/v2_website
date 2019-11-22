@@ -72,12 +72,16 @@ export default () => {
 			<Nav py={5} width="100%">
 				<BrandLink to="/">* JOSEPH SINTUM</BrandLink>
 				<Box display={["none", "flex"]}>
+					<NavLink to="/about" activeStyle={activeStyle}>
+						About
+					</NavLink>
 					<NavLink to="/" activeStyle={activeStyle}>
 						Portfolio
 					</NavLink>
 					<NavLink to="/style" activeStyle={activeStyle}>
 						Styles
 					</NavLink>
+
 					<BaseALink
 						href="https://github.com/josephsintum/"
 						py={3}

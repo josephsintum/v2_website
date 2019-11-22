@@ -3,15 +3,18 @@ import Box, { Container, Row, Col } from "../components/box"
 import Text, { Title } from "../components/text"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { ALink } from "../components/link"
 
 export default () => (
 	<Layout>
 		<SEO title="About" />
 
-		<Container py={6}>
+		<Container py={7}>
 			<Box m="auto" maxWidth={680} justifyContent="center">
 				<Box mb={5}>
-					<Title>About me</Title>
+					<Title fontSize="h3" mb={6}>
+						About
+					</Title>
 					<Text>
 						I am a self-taught Full Stack JavaScript Bay Area. I
 						have been programming for 3 years with lots of
@@ -19,10 +22,26 @@ export default () => (
 						Typescript and React apps.
 					</Text>
 					<Text>
-						I love minimal design and drawing.
-						<br />
-						I am currently learning Golang.
-						<br />I love reading books and drinking tea.
+						I am working at San Jose City College as Web Master. My
+						time is spent maintaining and updating the San Jose City
+						College{" "}
+						<ALink href="http://www.sjcc.edu/" target="_blank">
+							School
+						</ALink>{" "}
+						and{" "}
+						<ALink
+							href="http://www.sjccjaguars.com/"
+							target="_blank"
+						>
+							Athletics
+						</ALink>{" "}
+						websites, contributing to open source projects and just
+						learning new technologies.
+					</Text>
+					<Text>
+						Out of work, I spend my time reading reading books,
+						drawing, drinking tea or coffee and just learning
+						languages like Golang or French. C'est tres amusant.
 					</Text>
 				</Box>
 				<hr />
@@ -38,7 +57,7 @@ export default () => (
 					<Text color="primary">
 						Express, Passport, Auth0
 						<br /> NodeJS, Prisma Graphql
-					</Text>{" "}
+					</Text>
 				</Box>
 			</Box>
 		</Container>
