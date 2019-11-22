@@ -67,6 +67,7 @@ const activeStyle = {
 export default () => {
 	const [open, setOpen] = useState(false)
 
+	// TODO check url match validation
 	return (
 		<Container>
 			<Nav py={5} width="100%">
@@ -74,6 +75,9 @@ export default () => {
 				<Box display={["none", "flex"]}>
 					<NavLink to="/about" activeStyle={activeStyle}>
 						About
+					</NavLink>
+					<NavLink to="/experience/" activeStyle={activeStyle}>
+						Experience
 					</NavLink>
 					<NavLink to="/" activeStyle={activeStyle}>
 						Portfolio
