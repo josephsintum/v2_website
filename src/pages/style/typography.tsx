@@ -47,7 +47,7 @@ export default () => (
 			<Title mb={5}>Font Family</Title>
 			<Box mb={5}>
 				<Text>Heading:</Text>
-				<Title color="primary">Roboto Mono</Title>
+				<Title color="primary">Montserrat</Title>
 			</Box>
 			<Box mb={5}>
 				<Text>Body:</Text>

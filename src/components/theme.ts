@@ -42,8 +42,8 @@ export default {
 	},
 	fonts: {
 		body: "Work Sans",
-		heading: "Roboto Mono",
-		monospace: "Roboto Mono",
+		heading: "Montserrat",
+		monospace: "monospace",
 	},
 	fontSizes: {
 		overline: 12,
