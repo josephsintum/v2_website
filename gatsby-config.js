@@ -50,9 +50,9 @@ module.exports = {
 			options: {
 				fonts: [
 					`Montserrat\::300,300i,500,500i,700,700i,900,900i`,
-					`Work Sans\:300,400,500,700,900`
+					`Work Sans\:300,400,500,700,900`,
 				],
-				display: 'swap'
+				display: "swap",
 			},
 		},
 		// this (optional) plugin enables Progressive Web App + Offline functionality
