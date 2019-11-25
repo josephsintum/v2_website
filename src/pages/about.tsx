@@ -1,5 +1,5 @@
 import React from "react"
-import Box, { Container } from "../components/box"
+import Box, { Container, Row, Col } from "../components/box"
 import Text, { Title } from "../components/text"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -46,18 +46,68 @@ export default () => (
 				</Box>
 				<hr />
 				<Box>
-					<Title fontSize="h5">Skills</Title>
-					<Text> Frontend Development</Text>
-					<Text color="primary">
-						Javascript, HTML, SCSS
-						<br /> React, Redux, Styled Components, GraphQL
-						<br /> Adobe XD, Figma, Design Systems
-					</Text>
-					<Text>Backend</Text>
-					<Text color="primary">
-						Express, Passport, Auth0
-						<br /> NodeJS, Prisma Graphql
-					</Text>
+					<Title fontSize="h6">Books</Title>
+					<Row color="grey" fontSize="caption">
+						<Col width={1 / 2}>
+							<Text>BOOK</Text>
+						</Col>
+						<Col width={1 / 4}>
+							<Text>GENRE</Text>
+						</Col>
+						<Col width={1 / 4}>
+							<Text>STATUS</Text>
+						</Col>
+					</Row>
+					<Row bg="primarys.0" py={4}>
+						<Col width={1 / 2}>
+							<Text fontWeight={500} mb={2}>
+								12 Rules for life
+							</Text>
+							<Text mb={0} fontSize="caption">
+								Jordan Peterson
+							</Text>
+						</Col>
+						<Col width={1 / 4}>
+							<Text>Self-help</Text>
+						</Col>
+						<Col width={1 / 4}>
+							<Text>reading</Text>
+						</Col>
+					</Row>
+					<Row py={4}>
+						<Col width={1 / 2}>
+							<Text fontWeight={500} mb={2}>
+								Crime and Punishment
+							</Text>
+							<Text mb={0} fontSize="caption">
+								Fyodor Dostoyevsky
+							</Text>
+						</Col>
+						<Col width={1 / 4}>
+							<Text>Crime Fiction, Psychological Fiction </Text>
+						</Col>
+						<Col width={1 / 4}>
+							<Text>reading</Text>
+						</Col>
+					</Row>
+					<Row bg="primarys.0" py={4}>
+						<Col width={1 / 2}>
+							<Text fontWeight={500} mb={2}>
+								1984
+							</Text>
+							<Text mb={0} fontSize="caption">
+								George Orwell
+							</Text>
+						</Col>
+						<Col width={1 / 4}>
+							<Text>
+								Science, Dystopian, Social, Political fiction
+							</Text>
+						</Col>
+						<Col width={1 / 4}>
+							<Text>done</Text>
+						</Col>
+					</Row>
 				</Box>
 			</Box>
 		</Container>

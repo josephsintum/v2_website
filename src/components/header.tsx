@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import Box, { Container, BoxProps } from "./box"
-import { BaseALink, BaseLink } from "../components/link"
+import { BaseLink } from "../components/link"
 import styled from "styled-components"
 import css from "@styled-system/css"
 import Burger from "./burger"
@@ -18,7 +18,7 @@ export const BrandLink = styled(BaseLink)(
 		alignItems: "center",
 		mr: "auto",
 		p: 3,
-		fontWeight: 900,
+		fontWeight: 700,
 		letterSpacing: 2,
 	})
 )

@@ -62,14 +62,14 @@ export const Container = styled(Box)<BoxProps>(
 export const Row = styled(Box)<BoxProps>(
 	css({
 		display: ["block", "flex"],
-		width: "100%",
+		flexWrap: "wrap",
+		mx: -4,
 	})
 )
 
 export const Col = styled(Box)<BoxProps>(
 	css({
 		display: "block",
-		flexGrow: 1,
-		flexShrink: 1,
+		px: 4,
 	})
 )
