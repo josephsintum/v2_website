@@ -1,5 +1,5 @@
 import React from "react"
-import Box, { Container} from "../components/box"
+import Box, { Container } from "../components/box"
 import Text, { Title } from "../components/text"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -24,7 +24,7 @@ const IndexPage = () => (
 				<br />
 				<Link to="/portfolio">Portfolio</Link>
 				<br />
-				<Link to="https://github.com/josephsintum">Github</Link>
+				<ALink to="https://github.com/josephsintum">Github</ALink>
 				<br />
 				<ALink href="https://www.linkedin.com/in/josephsintum/">
 					LinkedIn
