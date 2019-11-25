@@ -24,7 +24,7 @@ const IndexPage = () => (
 				<br />
 				<Link to="/portfolio">Portfolio</Link>
 				<br />
-				<ALink to="https://github.com/josephsintum">Github</ALink>
+				<ALink href="https://github.com/josephsintum">Github</ALink>
 				<br />
 				<ALink href="https://www.linkedin.com/in/josephsintum/">
 					LinkedIn
