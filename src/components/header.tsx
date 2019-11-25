@@ -18,7 +18,7 @@ export const BrandLink = styled(BaseLink)(
 		alignItems: "center",
 		mr: "auto",
 		p: 3,
-		fontWeight: "bold",
+		fontWeight: 900,
 		letterSpacing: 2,
 	})
 )
@@ -71,7 +71,7 @@ export default () => {
 	return (
 		<Container>
 			<Nav py={5} width="100%">
-				<BrandLink to="/">* JOSEPH SINTUM</BrandLink>
+				<BrandLink to="/">JOSEPH SINTUM</BrandLink>
 				<Box display={["none", "flex"]}>
 					<NavLink to="/about" activeStyle={activeStyle}>
 						About
@@ -79,22 +79,12 @@ export default () => {
 					<NavLink to="/experience/" activeStyle={activeStyle}>
 						Experience
 					</NavLink>
-					<NavLink to="/" activeStyle={activeStyle}>
+					<NavLink to="/Portfolio" activeStyle={activeStyle}>
 						Portfolio
 					</NavLink>
 					<NavLink to="/style" activeStyle={activeStyle}>
 						Styles
 					</NavLink>
-
-					<BaseALink
-						href="https://github.com/josephsintum/"
-						py={3}
-						mx={3}
-						display="flex"
-						alignItems="center"
-					>
-						Resume
-					</BaseALink>
 				</Box>
 				<Box display={["flex", "none"]}>
 					<Burger open={open} onClick={() => setOpen(!open)} />

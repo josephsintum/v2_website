@@ -9,10 +9,10 @@ import Header from "../components/header"
 
 const Layout = ({ children }: LayoutProps) => (
 	<ThemeProvider theme={theme}>
-		<Box minHeight="100vh">
+		<Box minHeight="100vh" display="flex" flexDirection="column">
 			<GlobalStyles />
 			<Header />
-			<Box position="relative">{children}</Box>
+			<Box>{children}</Box>
 			<Footer />
 		</Box>
 	</ThemeProvider>
