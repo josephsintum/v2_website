@@ -103,7 +103,50 @@ export default () => (
 						<Text fontSize="caption" color="gray">
 							OCT 2019 - PRESENT
 						</Text>
-						<Text>Work in progress</Text>
+						<Text>
+							<ALink to="http://iknite.studio/">
+								Iknite Studio
+							</ALink>{" "}
+							is a design company in Cameroon, Africa
+							<br />
+							<ul>
+								<li>
+									Implement and maintain content management
+									systems (primarily WordPress and Drupal),
+									including installation, configuration,
+									troubleshooting, and creation of custom SLS
+									plugins and content types.
+								</li>
+								<li>
+									Develop and deploy upgrade/migration plans
+									for content management systems from local
+									environment to staging to production using
+									Git and a private repo to cloud
+									environments.
+								</li>
+								<li>
+									Work with content management team to ensure
+									the website functions properly for SEO and
+									SEM as well as the proper display of data
+								</li>
+								<li>
+									Design and marketing materials development:
+									enhance our brand presence (eBooks, flyers,
+									booth design, web banners, PowerPoints,
+									sales collateral, infographics, videos,
+									etc.)
+								</li>
+								<li>
+									Development expertise with custom post
+									types, custom fields, plugins and themes for
+									high-traffic Wordpress site
+								</li>
+								<li>
+									Created PPC campaigns to run on Google
+									AdWords and other ad networks
+								</li>
+							</ul>
+						</Text>
 					</Box>
 				</Box>
 				<hr />
