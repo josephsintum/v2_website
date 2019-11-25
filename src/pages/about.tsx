@@ -5,6 +5,35 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { ALink } from "../components/link"
 
+interface bookListTypes
+	extends Array<{
+		title: string
+		author: string
+		genre: string
+		status?: boolean | 0 | 1
+	}> {}
+
+const bookList: bookListTypes = [
+	{
+		title: "12 Rules for life",
+		author: "Jordan Peterson",
+		genre: "self-help",
+		status: false,
+	},
+	{
+		title: "Crime and Punishment",
+		author: "Fyodor Dostoyevsky",
+		genre: "Crime Fiction, Psychological Fiction",
+		status: false,
+	},
+	{
+		title: "1984",
+		author: "George Orwell		",
+		genre: "Science, Dystopian, Social, Political fiction",
+		status: true,
+	},
+]
+
 export default () => (
 	<Layout>
 		<SEO title="About" />
@@ -46,68 +75,44 @@ export default () => (
 				</Box>
 				<hr />
 				<Box>
-					<Title fontSize="h6">Books</Title>
-					<Row color="grey" fontSize="caption">
-						<Col width={1 / 2}>
-							<Text>BOOK</Text>
-						</Col>
-						<Col width={1 / 4}>
-							<Text>GENRE</Text>
-						</Col>
-						<Col width={1 / 4}>
-							<Text>STATUS</Text>
-						</Col>
-					</Row>
-					<Row bg="primarys.0" py={4}>
-						<Col width={1 / 2}>
-							<Text fontWeight={500} mb={2}>
-								12 Rules for life
-							</Text>
-							<Text mb={0} fontSize="caption">
-								Jordan Peterson
-							</Text>
-						</Col>
-						<Col width={1 / 4}>
-							<Text>Self-help</Text>
-						</Col>
-						<Col width={1 / 4}>
-							<Text>reading</Text>
-						</Col>
-					</Row>
-					<Row py={4}>
-						<Col width={1 / 2}>
-							<Text fontWeight={500} mb={2}>
-								Crime and Punishment
-							</Text>
-							<Text mb={0} fontSize="caption">
-								Fyodor Dostoyevsky
-							</Text>
-						</Col>
-						<Col width={1 / 4}>
-							<Text>Crime Fiction, Psychological Fiction </Text>
-						</Col>
-						<Col width={1 / 4}>
-							<Text>reading</Text>
-						</Col>
-					</Row>
-					<Row bg="primarys.0" py={4}>
-						<Col width={1 / 2}>
-							<Text fontWeight={500} mb={2}>
-								1984
-							</Text>
-							<Text mb={0} fontSize="caption">
-								George Orwell
-							</Text>
-						</Col>
-						<Col width={1 / 4}>
-							<Text>
-								Science, Dystopian, Social, Political fiction
-							</Text>
-						</Col>
-						<Col width={1 / 4}>
-							<Text>done</Text>
-						</Col>
-					</Row>
+					<Title fontSize="h6" mb={5}>
+						Books
+					</Title>
+					<Box display={["none", "block"]}>
+						<Row color="grey" fontSize="caption">
+							<Col width={1 / 2}>
+								<Text>BOOK</Text>
+							</Col>
+							<Col width={1 / 4}>
+								<Text>GENRE</Text>
+							</Col>
+							<Col width={1 / 4}>
+								<Text>STATUS</Text>
+							</Col>
+						</Row>
+					</Box>
+					{bookList.map((book, index: number) => (
+						<Row
+							bg={index % 2 == 0 ? "primarys.0" : "white"}
+							py={4}
+							key={`book_${index}`}
+						>
+							<Col width={[null, 1 / 2]}>
+								<Text fontWeight={500} mb={2}>
+									{book.title}
+								</Text>
+								<Text mb={0} fontSize="caption">
+									{book.author}
+								</Text>
+							</Col>
+							<Col width={[null, 1 / 4]}>
+								<Text mb={0}>{book.genre}</Text>
+							</Col>
+							<Col width={[null, 1 / 4]}>
+								<Text>{book.status ? "done" : "reading"}</Text>
+							</Col>
+						</Row>
+					))}
 				</Box>
 			</Box>
 		</Container>
