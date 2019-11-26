@@ -36,13 +36,13 @@ const bookList: bookListTypes = [
 
 export default () => (
 	<Layout>
-		<SEO title="About" />
+		<SEO title="Portfolio" />
 
 		<Container py={7}>
 			<Box m="auto" maxWidth={680} justifyContent="center">
 				<Box mb={5}>
 					<Title fontSize="h3" fontWeight={900} mb={6}>
-						About
+						Portfolio
 					</Title>
 					<Text>
 						I am a self-taught Full Stack JavaScript Bay Area. I
