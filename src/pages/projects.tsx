@@ -36,42 +36,15 @@ const bookList: bookListTypes = [
 
 export default () => (
 	<Layout>
-		<SEO title="Portfolio" />
+		<SEO title="Projects" />
 
 		<Container py={7}>
 			<Box m="auto" maxWidth={680} justifyContent="center">
 				<Box mb={5}>
 					<Title fontSize="h3" fontWeight={900} mb={6}>
-						Portfolio
+						Projects
 					</Title>
-					<Text>
-						I am a self-taught Full Stack JavaScript Bay Area. I
-						have been programming for 3 years with lots of
-						experience in developing and maintaining Javascript,
-						Typescript and React apps.
-					</Text>
-					<Text>
-						I am working at San Jose City College as Web Master. My
-						time is spent maintaining and updating the San Jose City
-						College{" "}
-						<ALink href="http://www.sjcc.edu/" target="_blank">
-							School
-						</ALink>{" "}
-						and{" "}
-						<ALink
-							href="http://www.sjccjaguars.com/"
-							target="_blank"
-						>
-							Athletics
-						</ALink>{" "}
-						websites, contributing to open source projects and just
-						learning new technologies.
-					</Text>
-					<Text>
-						Out of work, I spend my time reading reading books,
-						drawing, drinking tea or coffee and just learning
-						languages like Golang or French. C'est tres amusant.
-					</Text>
+					<Text>Lorem ipsum about projects</Text>
 				</Box>
 				<hr />
 				<Box>

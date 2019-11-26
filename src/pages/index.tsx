@@ -22,7 +22,7 @@ const IndexPage = () => (
 				<br />
 				<Link to="/experience">My Experience</Link>
 				<br />
-				<Link to="/portfolio">Portfolio</Link>
+				<Link to="/projects">Projects</Link>
 				<br />
 				<ALink href="https://github.com/josephsintum">Github</ALink>
 				<br />

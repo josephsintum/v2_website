@@ -79,8 +79,8 @@ export default () => {
 					<NavLink to="/experience/" activeStyle={activeStyle}>
 						Experience
 					</NavLink>
-					<NavLink to="/Portfolio" activeStyle={activeStyle}>
-						Portfolio
+					<NavLink to="/projects" activeStyle={activeStyle}>
+						Projects
 					</NavLink>
 					<NavLink to="/style" activeStyle={activeStyle}>
 						Styles

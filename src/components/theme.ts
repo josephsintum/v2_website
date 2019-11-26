@@ -58,10 +58,12 @@ export default {
 		h1: 96,
 	},
 	fontWeights: {
-		heading: 700,
-		body: 400,
-		medium: 600,
+		heading: 900,
+		light: 300,
+		normal: 400,
+		medium: 500,
 		bold: 700,
+		bolder: 900,
 	},
 	lineHeights: {
 		body: 1.5,
@@ -85,7 +87,7 @@ export default {
 		},
 		display: {
 			fontFamily: "heading",
-			fontWeight: "heading",
+			fontWeight: "normal",
 			lineHeight: "heading",
 			fontSize: [5, 6, 7],
 		},

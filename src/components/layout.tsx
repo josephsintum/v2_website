@@ -12,7 +12,7 @@ const Layout = ({ children }: LayoutProps) => (
 		<Box minHeight="100vh" display="flex" flexDirection="column">
 			<GlobalStyles />
 			<Header />
-			<Box>{children}</Box>
+			{children}
 			<Footer />
 		</Box>
 	</ThemeProvider>
