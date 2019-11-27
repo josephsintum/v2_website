@@ -29,6 +29,10 @@ const IndexPage = () => (
 				<ALink href="https://www.linkedin.com/in/josephsintum/">
 					LinkedIn
 				</ALink>
+				<br />
+				<ALink href="https://github.com/josephsintum/josephsintum.github.io">
+					Source Code
+				</ALink>
 			</Box>
 		</Container>
 	</Layout>
