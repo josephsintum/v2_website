@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import Box, { Container, BoxProps } from "./box"
-import { BaseLink } from "../components/link"
+import { BaseLink, BaseALink } from "../components/link"
 import styled from "styled-components"
 import css from "@styled-system/css"
 import Burger from "./burger"
@@ -24,6 +24,15 @@ export const BrandLink = styled(BaseLink)(
 )
 
 export const NavLink = styled(BaseLink)(
+	css({
+		py: 3,
+		mx: 4,
+		display: "flex",
+		alignItems: "center",
+	})
+)
+
+export const NavALink = styled(BaseALink)(
 	css({
 		py: 3,
 		mx: 4,
@@ -82,9 +91,9 @@ export default () => {
 					<NavLink to="/projects" activeStyle={activeStyle}>
 						Projects
 					</NavLink>
-					<NavLink to="/style" activeStyle={activeStyle}>
-						Styles
-					</NavLink>
+					<NavALink href="mailto:josephsintum@gmail.com">
+						Contact
+					</NavALink>
 				</Box>
 				<Box display={["flex", "none"]}>
 					<Burger open={open} onClick={() => setOpen(!open)} />
