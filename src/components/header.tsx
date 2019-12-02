@@ -1,9 +1,9 @@
-import React, { useState } from "react"
+import React from "react"
 import Box, { Container, BoxProps } from "./box"
 import { BaseLink, BaseALink } from "../components/link"
 import styled from "styled-components"
 import css from "@styled-system/css"
-import Burger from "./burger"
+import { Burger } from "./nav/burger"
 
 export const Nav = styled(Box)(
 	css({
@@ -59,9 +59,9 @@ export const Menu = styled(Box)<MenuProps>(
 		transition: "transform 0.3s ease-in-out",
 		bg: "primarys.0",
 		zIndex: 10,
-	}),
+	})
 	// TODO: handle transform with props
-	{ transform: ({ open }) => (open ? "translateX(0)" : "translateX(100%)") }
+	// { transform: ({ open }) => (open ? "translateX(0)" : "translateX(100%)") }
 )
 
 const activeStyle = {
@@ -74,8 +74,6 @@ const activeStyle = {
 }
 
 export default () => {
-	const [open, setOpen] = useState(false)
-
 	// TODO check url match validation
 	return (
 		<Container>
@@ -96,7 +94,7 @@ export default () => {
 					</NavALink>
 				</Box>
 				<Box display={["flex", "none"]}>
-					<Burger open={open} onClick={() => setOpen(!open)} />
+					<Burger />
 					{/* <Menu open={open} setOpen={setOpen}>
 						<NavLink to="/" activeStyle={activeStyle}>
 							Portfolio

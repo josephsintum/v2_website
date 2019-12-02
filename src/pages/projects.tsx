@@ -3,7 +3,6 @@ import Box, { Container, Row, Col } from "../components/box"
 import Text, { Title } from "../components/text"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { ALink } from "../components/link"
 
 interface bookListTypes
 	extends Array<{
