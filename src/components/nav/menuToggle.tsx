@@ -1,35 +1,33 @@
 import * as React from "react"
 import { motion } from "framer-motion"
 import styled from "styled-components"
+import css from "@styled-system/css"
 
 const Path = props => (
 	<motion.path
 		fill="transparent"
-		strokeWidth="3"
-		stroke="hsl(0, 0%, 18%)"
-		strokeLinecap="round"
+		strokeWidth="2"
+		stroke="#000"
+		strokeLinecap="square"
 		{...props}
 	/>
 )
 
-const StyledButton = styled.button({
+const StyledBurgerButton = styled.button({
 	outline: "none",
 	border: "none",
-	select: "none",
 	cursor: "pointer",
-	position: "absolute",
-	top: "32px",
-	right: "15px",
-	width: "50px",
-	padding: "8px",
-	// height: "50px",
+	userSelect: "none",
+	padding: "16px",
 	borderRadius: "50%",
 	background: "transparent",
+	zIndex: 10,
+	position: "relative",
 })
 
-export const MenuToggle = ({ toggle }) => (
-	<StyledButton onClick={toggle}>
-		<svg width="23" height="23" viewBox="0 0 23 23">
+export const BurgerButton = ({ toggle }) => (
+	<StyledBurgerButton onClick={toggle}>
+		<svg width="20" height="20" viewBox="0 0 20 20">
 			<Path
 				variants={{
 					closed: { d: "M 2 2.5 L 20 2.5" },
@@ -51,5 +49,29 @@ export const MenuToggle = ({ toggle }) => (
 				}}
 			/>
 		</svg>
-	</StyledButton>
+	</StyledBurgerButton>
+)
+
+export const variants = {
+	open: { opacity: 1, display: "block" },
+	closed: { opacity: 0, display: "none" },
+}
+
+export const StyledMenu = styled(motion.div)(
+	css({
+		height: "100%",
+		width: "60%",
+		bg: "primarys.2",
+		position: "fixed",
+		top: 0,
+		right: 0,
+		zIndex: 2,
+		overflowX: "hidden",
+		px: 2,
+		py: 4,
+	})
+)
+
+export const Drawer = ({ toggle }) => (
+	<StyledMenu variants={variants} onClick={toggle} />
 )

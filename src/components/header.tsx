@@ -95,23 +95,6 @@ export default () => {
 				</Box>
 				<Box display={["flex", "none"]}>
 					<Burger />
-					{/* <Menu open={open} setOpen={setOpen}>
-						<NavLink to="/" activeStyle={activeStyle}>
-							Portfolio
-						</NavLink>
-						<NavLink to="/style" activeStyle={activeStyle}>
-							Styles
-						</NavLink>
-						<BaseALink
-							href="https://github.com/josephsintum/"
-							py={3}~
-							mx={4}
-							display="flex"
-							alignItems="center"
-						>
-							Resume
-						</BaseALink>
-					</Menu> */}
 				</Box>
 			</Nav>
 		</Container>
