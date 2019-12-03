@@ -53,14 +53,14 @@ export const BurgerButton = ({ toggle }) => (
 )
 
 export const variants = {
-	open: { opacity: 1, display: "block" },
-	closed: { opacity: 0, display: "none" },
+	open: { right: 0 },
+	closed: { right: "-256px" },
 }
 
 export const StyledMenu = styled(motion.div)(
 	css({
 		height: "100%",
-		width: "60%",
+		width: 8,
 		bg: "primarys.2",
 		position: "fixed",
 		top: 0,
