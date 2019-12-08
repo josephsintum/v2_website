@@ -32,6 +32,9 @@ const GlobalStyles = createGlobalStyle(
 			mb: 5,
 			borderColor: "black",
 		},
+		"::selection": {
+			bg: "primarys.1",
+		},
 	})
 )
 

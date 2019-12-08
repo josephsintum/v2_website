@@ -44,15 +44,21 @@ export const Link = styled(GatsbyLink)<LinkProps>(BoxStyleCompose, linkStyle)
 export const BaseLink = styled(GatsbyLink)<LinkProps>(
 	BoxStyleCompose,
 	css({
-		color: "text",
 		textDecoration: "none",
 	})
 )
 
+BaseLink.defaultProps = {
+	color: "text",
+}
+
 export const BaseALink = styled("a")<LinkProps>(
 	BoxStyleCompose,
 	css({
-		color: "text",
 		textDecoration: "none",
 	})
 )
+
+BaseALink.defaultProps = {
+	color: "text",
+}

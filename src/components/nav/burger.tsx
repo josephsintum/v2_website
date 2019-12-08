@@ -11,7 +11,12 @@ const StyledMotionDiv = styled(motion.div)(
 	})
 )
 
-export const Burger = () => {
+// export interface BurgerProps {
+// 	children?: React.ReactChildren,
+
+// }
+
+export const Burger = props => {
 	const [isOpen, toggleOpen] = useCycle(false, true)
 
 	return (
@@ -21,7 +26,7 @@ export const Burger = () => {
 				animate={isOpen ? "open" : "closed"}
 			>
 				<BurgerButton toggle={() => toggleOpen()} />
-				<Drawer toggle={() => toggleOpen()} />
+				<Drawer {...props} toggle={() => toggleOpen()} />
 			</StyledMotionDiv>
 		</Box>
 	)

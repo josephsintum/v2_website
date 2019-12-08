@@ -2,8 +2,10 @@ import * as React from "react"
 import { motion } from "framer-motion"
 import styled from "styled-components"
 import css from "@styled-system/css"
+import Box from "../box"
+import { BaseALink, BaseLink } from "../link"
 
-const Path = props => (
+const Path: React.FC<{}> = props => (
 	<motion.path
 		fill="transparent"
 		strokeWidth="2"
@@ -67,11 +69,13 @@ export const StyledMenu = styled(motion.div)(
 		right: 0,
 		zIndex: 2,
 		overflowX: "hidden",
-		px: 2,
-		py: 4,
+		px: 5,
+		py: 7,
 	})
 )
 
-export const Drawer = ({ toggle }) => (
-	<StyledMenu variants={variants} onClick={toggle} />
+export const Drawer: React.FC<{}> = (props, toggle) => (
+	<StyledMenu variants={variants} onClick={toggle}>
+		<Box>{props.children}</Box>
+	</StyledMenu>
 )

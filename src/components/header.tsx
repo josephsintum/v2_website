@@ -60,8 +60,6 @@ export const Menu = styled(Box)<MenuProps>(
 		bg: "primarys.0",
 		zIndex: 10,
 	})
-	// TODO: handle transform with props
-	// { transform: ({ open }) => (open ? "translateX(0)" : "translateX(100%)") }
 )
 
 const activeStyle = {
@@ -94,7 +92,9 @@ export default () => {
 					</NavALink>
 				</Box>
 				<Box display={["flex", "none"]}>
-					<Burger />
+					<Burger>
+						<p>hello world</p>
+					</Burger>
 				</Box>
 			</Nav>
 		</Container>
