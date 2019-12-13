@@ -41,9 +41,9 @@ export default {
 		highlight: "hsla(205, 100%, 40%, 0.125)",
 	},
 	fonts: {
-		body: "Work Sans",
-		heading: "Montserrat",
-		monospace: "monospace",
+		body: "Space Mono",
+		heading: "Montserrat Alternates",
+		monospace: "Space Mono",
 	},
 	fontSizes: {
 		overline: 12,

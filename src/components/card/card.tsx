@@ -22,6 +22,10 @@ export const Card = styled(BasicCard)<CardProps>(
 	})
 )
 
+Card.defaultProps = {
+	pt: 4,
+}
+
 // Card.defaultProps = {}
 
 export const CardButton = styled(Button)(css({}))
@@ -34,7 +38,8 @@ CardButton.defaultProps = {
 
 export const CardSection = styled(Box)(
 	css({
-		p: 4,
+		px: 5,
+		mb: 4,
 		P: {
 			m: 0,
 		},
