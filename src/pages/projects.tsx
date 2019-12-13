@@ -1,35 +1,53 @@
 import React from "react"
+import { MarkGithub } from "styled-icons/octicons/MarkGithub"
+import { ExternalLink } from "styled-icons/remix-line/ExternalLink"
 import Box, { Container, Row, Col } from "../components/box"
 import Text, { Title } from "../components/text"
 import Layout from "../components/layout"
+import { Card, CardSection } from "../components/card/card"
 import SEO from "../components/seo"
 
-interface bookListTypes
+interface projectListTypes
 	extends Array<{
 		title: string
-		author: string
-		genre: string
-		status?: boolean | 0 | 1
+		body: string
+		github?: string
+		link?: string
+		techStack: string
 	}> {}
 
-const bookList: bookListTypes = [
+const projectList: projectListTypes = [
 	{
-		title: "12 Rules for life",
-		author: "Jordan Peterson",
-		genre: "self-help",
-		status: false,
+		title: "Joseph Sintum Portfolio",
+		body:
+			"A minimal personal website built using gatsby and styled-systems and hosted on Zeit now.",
+		techStack: "TSX, Gatsby, Styled Components",
+		github: "https://github.com/josephsintum/josephsintum.github.io",
+		link: "https://josephsintum.now.sh/",
 	},
 	{
-		title: "Crime and Punishment",
-		author: "Fyodor Dostoyevsky",
-		genre: "Crime Fiction, Psychological Fiction",
-		status: false,
+		title: "Test",
+		body:
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+		techStack: "JS, Express, Docker",
+		github: "https://github.com/josephsintum/josephsintum.github.io",
+		link: "https://josephsintum.now.sh/",
 	},
 	{
-		title: "1984",
-		author: "George Orwell		",
-		genre: "Science, Dystopian, Social, Political fiction",
-		status: true,
+		title: "Test",
+		body:
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+		techStack: "JS, Express, Docker",
+		github: "https://github.com/josephsintum/josephsintum.github.io",
+		link: "https://josephsintum.now.sh/",
+	},
+	{
+		title: "Test",
+		body:
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+		techStack: "JS, Express, Docker",
+		github: "https://github.com/josephsintum/josephsintum.github.io",
+		link: "https://josephsintum.now.sh/",
 	},
 ]
 
@@ -45,46 +63,40 @@ export default () => (
 					</Title>
 					<Text>Lorem ipsum about projects</Text>
 				</Box>
-				<hr />
 				<Box>
-					<Title fontSize="h6" mb={5}>
-						Books
-					</Title>
-					<Box display={["none", "block"]}>
-						<Row color="grey" fontSize="caption">
-							<Col width={1 / 2}>
-								<Text>BOOK</Text>
+					<Row>
+						{projectList.map((project, index: number) => (
+							<Col
+								key={`project_${index}`}
+								width={["100%", "50%"]}
+								mb={5}
+							>
+								<Card height="100%">
+									<CardSection>
+										<Title fontSize="h6">
+											{project.title}
+										</Title>
+									</CardSection>
+									<CardSection>
+										<Text>{project.body}</Text>
+									</CardSection>
+									<CardSection>
+										<Text fontSize="caption" color="grey">
+											{project.techStack}
+										</Text>
+									</CardSection>
+									<CardSection display="flex" py={2}>
+										<Box mr={4}>
+											<MarkGithub size="18" />
+										</Box>
+										<Box mr={4}>
+											<ExternalLink size="18" />
+										</Box>
+									</CardSection>
+								</Card>
 							</Col>
-							<Col width={1 / 4}>
-								<Text>GENRE</Text>
-							</Col>
-							<Col width={1 / 4}>
-								<Text>STATUS</Text>
-							</Col>
-						</Row>
-					</Box>
-					{bookList.map((book, index: number) => (
-						<Row
-							bg={index % 2 == 0 ? "primarys.0" : "white"}
-							py={4}
-							key={`book_${index}`}
-						>
-							<Col width={[null, 1 / 2]}>
-								<Text fontWeight={500} mb={2}>
-									{book.title}
-								</Text>
-								<Text mb={0} fontSize="caption">
-									{book.author}
-								</Text>
-							</Col>
-							<Col width={[null, 1 / 4]}>
-								<Text mb={0}>{book.genre}</Text>
-							</Col>
-							<Col width={[null, 1 / 4]}>
-								<Text>{book.status ? "done" : "reading"}</Text>
-							</Col>
-						</Row>
-					))}
+						))}
+					</Row>
 				</Box>
 			</Box>
 		</Container>
