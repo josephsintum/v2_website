@@ -71,7 +71,11 @@ export default () => (
 								width={["100%", "50%"]}
 								mb={5}
 							>
-								<Card height="100%">
+								<Card
+									height="100%"
+									display="flex"
+									flexDirection="column"
+								>
 									<CardSection>
 										<Title fontSize="h6">
 											{project.title}
@@ -80,12 +84,12 @@ export default () => (
 									<CardSection>
 										<Text>{project.body}</Text>
 									</CardSection>
-									<CardSection>
+									<CardSection mt="auto">
 										<Text fontSize="caption" color="grey">
 											{project.techStack}
 										</Text>
 									</CardSection>
-									<CardSection display="flex" py={2}>
+									<CardSection display="inline-flex" py={2}>
 										<Box mr={4}>
 											<MarkGithub size="18" />
 										</Box>
