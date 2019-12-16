@@ -1,11 +1,11 @@
 import * as React from "react"
-import { motion } from "framer-motion"
+import { motion, MotionProps } from "framer-motion"
 import styled from "styled-components"
 import css from "@styled-system/css"
 import Box from "../box"
 import { BaseALink, BaseLink } from "../link"
 
-const Path: React.FC<{}> = props => (
+const Path: React.FC<MotionProps> = props => (
 	<motion.path
 		fill="transparent"
 		strokeWidth="2"
@@ -37,12 +37,17 @@ export const BurgerButton = ({ toggle }) => (
 				}}
 			/>
 			<Path
-				d="M 2 9.423 L 20 9.423"
 				variants={{
-					closed: { opacity: 1 },
-					open: { opacity: 0 },
+					closed: {
+						d: "M 2 9.423 L 20 9.423",
+						opacity: 1,
+					},
+					open: {
+						d: "M 2 9.423 L 20 9.423",
+						opacity: 0,
+					},
 				}}
-				transition={{ duration: 0.1 }}
+				transition={{ duration: 0.2 }}
 			/>
 			<Path
 				variants={{
@@ -55,20 +60,20 @@ export const BurgerButton = ({ toggle }) => (
 )
 
 export const variants = {
-	open: { right: 0 },
-	closed: { right: "-256px" },
+	open: { left: 0 },
+	closed: { left: "100vw" },
 }
 
 export const StyledMenu = styled(motion.div)(
 	css({
 		height: "100%",
-		width: 8,
-		bg: "primarys.2",
+		width: "100vw",
+		bg: "primarys.4",
 		position: "fixed",
-		top: 0,
-		right: 0,
-		zIndex: 2,
-		overflowX: "hidden",
+		// top: 0,
+		// right: 0,
+		zIndex: 8,
+		overflow: "hidden",
 		px: 5,
 		py: 7,
 	})
