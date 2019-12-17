@@ -60,7 +60,9 @@ export const BurgerButton = ({ toggle }) => (
 )
 
 export const variants = {
-	open: { left: 0 },
+	open: {
+		left: 0,
+	},
 	closed: { left: "100vw" },
 }
 

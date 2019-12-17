@@ -35,6 +35,9 @@ const GlobalStyles = createGlobalStyle(
 		"::selection": {
 			bg: "primarys.1",
 		},
+		"body.noScroll": {
+			position: ["fixed", "static"],
+		},
 	})
 )
 

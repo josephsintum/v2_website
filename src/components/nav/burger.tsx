@@ -4,6 +4,7 @@ import styled from "styled-components"
 import css from "@styled-system/css"
 import Box from "../box"
 import { BurgerButton, Drawer } from "./menuToggle"
+import Helmet from "react-helmet"
 
 const StyledMotionDiv = styled(motion.div)(
 	css({
@@ -25,6 +26,9 @@ export const Burger = props => {
 				initial={false}
 				animate={isOpen ? "open" : "closed"}
 			>
+				<Helmet>
+					<body className={isOpen ? "noScroll" : ""} />
+				</Helmet>
 				<BurgerButton toggle={() => toggleOpen()} />
 				<Drawer {...props} toggle={() => toggleOpen()} />
 			</StyledMotionDiv>
