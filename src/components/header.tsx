@@ -93,7 +93,23 @@ export default () => {
 				</Box>
 				<Box display={["flex", "none"]}>
 					<Burger>
-						<p>hello world</p>
+						<Box m="auto" maxWidth="90%" pt={7}>
+							<NavLink to="/about" color="white">
+								About
+							</NavLink>
+							<NavLink to="/experience/" color="white">
+								Experience
+							</NavLink>
+							<NavLink to="/projects" color="white">
+								Projects
+							</NavLink>
+							<NavALink
+								href="mailto:josephsintum@gmail.com"
+								color="white"
+							>
+								Contact
+							</NavALink>
+						</Box>
 					</Burger>
 				</Box>
 			</Nav>

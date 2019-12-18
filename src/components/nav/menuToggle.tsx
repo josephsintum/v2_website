@@ -27,7 +27,9 @@ const StyledBurgerButton = styled.button({
 	position: "relative",
 })
 
-export const BurgerButton = ({ toggle }) => (
+export const BurgerButton: React.FC<{
+	toggle: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
+}> = ({ toggle }) => (
 	<StyledBurgerButton onClick={toggle}>
 		<svg width="20" height="20" viewBox="0 0 20 20">
 			<Path
@@ -68,21 +70,19 @@ export const variants = {
 
 export const StyledMenu = styled(motion.div)(
 	css({
+		position: "fixed",
 		height: "100%",
 		width: "100vw",
-		bg: "primarys.4",
-		position: "fixed",
-		// top: 0,
-		// right: 0,
+		bg: "primary",
+		color: "white",
 		zIndex: 8,
-		overflow: "hidden",
-		px: 5,
-		py: 7,
 	})
 )
 
-export const Drawer: React.FC<{}> = (props, toggle) => (
+export const Drawer: React.FC<{
+	toggle: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void
+}> = ({ toggle, children }) => (
 	<StyledMenu variants={variants} onClick={toggle}>
-		<Box>{props.children}</Box>
+		{children}
 	</StyledMenu>
 )
