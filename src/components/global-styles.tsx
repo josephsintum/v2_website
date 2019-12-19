@@ -39,7 +39,7 @@ const GlobalStyles = createGlobalStyle(
 			bg: "primarys.1",
 		},
 		"body.noScroll": {
-			position: ["fixed", "static"],
+			overflow: ["hidden", "visible"],
 		},
 	})
 )
