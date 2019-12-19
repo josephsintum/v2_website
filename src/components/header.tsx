@@ -71,6 +71,11 @@ const activeStyle = {
 	borderTopStyle: "solid",
 }
 
+const activeMobileStyle = {
+	textDecoration: "line-through",
+	textDecorationColor: "primarys.0",
+}
+
 export default () => {
 	// TODO check url match validation
 	return (
@@ -93,14 +98,32 @@ export default () => {
 				</Box>
 				<Box display={["flex", "none"]}>
 					<Burger>
-						<Box m="auto" maxWidth="90%" pt={7}>
-							<NavLink to="/about" color="white">
+						<Box
+							m="auto"
+							maxWidth="90%"
+							pt={7}
+							fontWeight="bold"
+							fontSize="h4"
+						>
+							<NavLink
+								to="/about"
+								color="white"
+								activeStyle={activeMobileStyle}
+							>
 								About
 							</NavLink>
-							<NavLink to="/experience/" color="white">
+							<NavLink
+								to="/experience/"
+								color="white"
+								activeStyle={activeMobileStyle}
+							>
 								Experience
 							</NavLink>
-							<NavLink to="/projects" color="white">
+							<NavLink
+								to="/projects"
+								color="white"
+								activeStyle={activeMobileStyle}
+							>
 								Projects
 							</NavLink>
 							<NavALink
