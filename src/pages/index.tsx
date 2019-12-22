@@ -3,7 +3,9 @@ import Box, { Container } from "../components/box"
 import Text, { Title } from "../components/text"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Link, ALink } from "../components/link"
+// import { Link, ALink } from "../components/link"
+import { Button } from "../components"
+import { BaseALink } from "../components/link"
 
 const IndexPage = () => (
 	<Layout>
@@ -23,7 +25,12 @@ const IndexPage = () => (
 					applications.
 				</Text>
 			</Box>
-			<Box lineHeight={2}>
+			<Box>
+				<BaseALink href="mailto:josephsintum@gmail.com">
+					<Button>Say Hello</Button>
+				</BaseALink>
+			</Box>
+			{/* <Box lineHeight={2}>
 				<Link to="/about">About Me</Link>
 				<br />
 				<Link to="/experience">My Experience</Link>
@@ -39,7 +46,7 @@ const IndexPage = () => (
 				<ALink href="https://github.com/josephsintum/josephsintum.github.io">
 					Source Code
 				</ALink>
-			</Box>
+			</Box> */}
 		</Container>
 	</Layout>
 )

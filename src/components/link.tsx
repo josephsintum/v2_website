@@ -3,8 +3,6 @@ import styled from "styled-components"
 import css from "@styled-system/css"
 import { BoxStyleCompose, BoxProps } from "./box"
 
-export interface LinkProps extends BoxProps {}
-
 const linkStyle = css({
 	color: "text",
 	p: 0,
@@ -31,15 +29,21 @@ const linkStyle = css({
 	},
 })
 
-// TODO update types of links to require href
+export interface LinkProps extends BoxProps {}
+
+export interface LinkAProps extends BoxProps {
+	href: string
+}
+
+export const BaseALink = styled("a")<LinkAProps>(
+	BoxStyleCompose,
+	css({
+		textDecoration: "none",
+	})
+)
 
 /** ALink is a styled <a href="..."> */
-export const ALink = styled("a")<LinkProps>(BoxStyleCompose, linkStyle)
-
-/** Link is a styled Gatsby Link wrapper and it is intented only for internal links.
- * For links to pages on other domains or pages on the same domain not handled by the current Gatsby site, use the normal <ALink href="..."> element.
- */
-export const Link = styled(GatsbyLink)<LinkProps>(BoxStyleCompose, linkStyle)
+export const ALink = styled(BaseALink)<LinkAProps>(linkStyle)
 
 export const BaseLink = styled(GatsbyLink)<LinkProps>(
 	BoxStyleCompose,
@@ -48,9 +52,7 @@ export const BaseLink = styled(GatsbyLink)<LinkProps>(
 	})
 )
 
-export const BaseALink = styled("a")<LinkProps>(
-	BoxStyleCompose,
-	css({
-		textDecoration: "none",
-	})
-)
+/** Link is a styled Gatsby Link wrapper and it is intented only for internal links.
+ * For links to pages on other domains or pages on the same domain not handled by the current Gatsby site, use the normal <ALink href="..."> element.
+ */
+export const Link = styled(BaseLink)<LinkProps>(linkStyle)

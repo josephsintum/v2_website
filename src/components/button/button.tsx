@@ -30,14 +30,20 @@ export const Button = styled(BasicButton)<ButtonProps>(
 		variants: {
 			primary: {
 				color: "white",
-				bg: "primary",
-				borderColor: "primary",
+				bg: "black",
+				borderColor: "black",
+				":hover": {
+					bg: "primary",
+				},
 			},
 			outline: {
 				color: "text",
 				bg: "transparent",
 				borderWidth: 2,
 				borderColor: "black",
+				":hover": {
+					bg: "primarys.1",
+				},
 				":disabled": {
 					bg: "transparent",
 					color: "grays.6",
@@ -65,9 +71,7 @@ export const Button = styled(BasicButton)<ButtonProps>(
 )
 
 Button.defaultProps = {
-	color: "white",
-	bg: "black",
-	borderColor: "black",
+	variant: "primary",
 	borderRadius: "default",
 	fontWeight: "bold",
 	px: 4,
