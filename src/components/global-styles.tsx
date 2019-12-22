@@ -33,7 +33,7 @@ const GlobalStyles = createGlobalStyle(
 			borderColor: "black",
 		},
 		a: {
-			color: "black",
+			color: "unset",
 		},
 		"::selection": {
 			bg: "primarys.1",

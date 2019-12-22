@@ -71,8 +71,8 @@ export const StyledMenu = styled(motion.div)(
 		position: "fixed",
 		height: "100%",
 		width: "100vw",
-		bg: "primary",
-		color: "white",
+		bg: "primarys.2",
+		color: "black",
 		zIndex: 8,
 	})
 )

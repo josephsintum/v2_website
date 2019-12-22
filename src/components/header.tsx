@@ -53,17 +53,13 @@ export const Menu = styled(Box)<MenuProps>(
 )
 
 const activeStyle = {
-	borderBottomColor: "black",
-	borderBottomWidth: 2,
-	borderBottomStyle: "solid",
-	borderTopColor: "transparent",
-	borderTopWidth: 2,
-	borderTopStyle: "solid",
+	textDecoration: "line-through",
+	color: "#3b5bdb",
 }
 
 const activeMobileStyle = {
 	textDecoration: "line-through",
-	textDecorationColor: "primarys.0",
+	color: "white",
 }
 
 export default () => {
@@ -82,14 +78,14 @@ export default () => {
 				>
 					JOSEPH SINTUM
 				</BaseLink>
-				<Box display={["none", "flex"]}>
-					<NavLink to="/about" activeStyle={activeStyle}>
+				<Box display={["none", "flex"]} fontWeight="bold" color="black">
+					<NavLink to="/about/" activeStyle={activeStyle}>
 						About
 					</NavLink>
 					<NavLink to="/experience/" activeStyle={activeStyle}>
 						Experience
 					</NavLink>
-					<NavLink to="/projects" activeStyle={activeStyle}>
+					<NavLink to="/projects/" activeStyle={activeStyle}>
 						Projects
 					</NavLink>
 					<NavALink href="mailto:josephsintum@gmail.com">
@@ -106,30 +102,24 @@ export default () => {
 							fontSize="h4"
 						>
 							<NavLink
-								to="/about"
-								color="white"
+								to="/about/"
 								activeStyle={activeMobileStyle}
 							>
 								About
 							</NavLink>
 							<NavLink
 								to="/experience/"
-								color="white"
 								activeStyle={activeMobileStyle}
 							>
 								Experience
 							</NavLink>
 							<NavLink
-								to="/projects"
-								color="white"
+								to="/projects/"
 								activeStyle={activeMobileStyle}
 							>
 								Projects
 							</NavLink>
-							<NavALink
-								href="mailto:josephsintum@gmail.com"
-								color="white"
-							>
+							<NavALink href="mailto:josephsintum@gmail.com">
 								Contact
 							</NavALink>
 						</Box>
