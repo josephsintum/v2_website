@@ -5,21 +5,11 @@ import styled from "styled-components"
 import css from "@styled-system/css"
 import { Burger } from "./nav/burger"
 
+// TODO: Update to <nav/> component
 export const Nav = styled(Box)(
 	css({
 		width: "100%",
 		display: "flex",
-	})
-)
-
-export const BrandLink = styled(BaseLink)(
-	css({
-		display: "flex",
-		alignItems: "center",
-		mr: "auto",
-		p: 3,
-		fontWeight: 700,
-		letterSpacing: 2,
 	})
 )
 
@@ -80,8 +70,18 @@ export default () => {
 	// TODO check url match validation
 	return (
 		<Container>
-			<Nav py={5} width="100%">
-				<BrandLink to="/">JOSEPH SINTUM</BrandLink>
+			<Nav py={4} width="100%">
+				<BaseLink
+					to="/"
+					display="flex"
+					alignItems="center"
+					mr="auto"
+					p={3}
+					fontWeight={700}
+					letterSpacing={2}
+				>
+					JOSEPH SINTUM
+				</BaseLink>
 				<Box display={["none", "flex"]}>
 					<NavLink to="/about" activeStyle={activeStyle}>
 						About

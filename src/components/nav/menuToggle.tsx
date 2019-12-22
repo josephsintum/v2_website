@@ -2,8 +2,6 @@ import * as React from "react"
 import { motion, MotionProps } from "framer-motion"
 import styled from "styled-components"
 import css from "@styled-system/css"
-import Box from "../box"
-import { BaseALink, BaseLink } from "../link"
 
 const Path: React.FC<MotionProps> = props => (
 	<motion.path
