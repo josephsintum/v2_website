@@ -12,10 +12,10 @@ const IndexPage = () => (
 		<SEO title="Home" />
 		<Container>
 			<Box pt={7} pb={6}>
-				<Title fontSize="h3" fontWeight={900} mb={0}>
+				<Title fontSize={["h4", "h3"]} fontWeight={900} mb={0}>
 					Hello, I'm Joseph Sintum.
 				</Title>
-				<Title fontSize="h3" color="primary" fontWeight={900}>
+				<Title fontSize={["h4", "h3"]} color="primary" fontWeight={900}>
 					I build beautiful web applications.
 				</Title>
 				<Text>
