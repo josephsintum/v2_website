@@ -10,11 +10,17 @@ const IndexPage = () => (
 		<SEO title="Home" />
 		<Container>
 			<Box pt={7} pb={6}>
-				<Title fontSize="h3" fontWeight={900}>
+				<Title fontSize="h3" fontWeight={900} mb={0}>
 					Hello, I'm Joseph Sintum.
 				</Title>
+				<Title fontSize="h3" color="primary" fontWeight={900}>
+					I build beautiful web applications.
+				</Title>
 				<Text>
-					I am fullstack Javascript developer based in San Jose, CA
+					I am a frontend web developer based in San Jose, CA
+					<br />
+					specializing in building outstanding websites and
+					applications.
 				</Text>
 			</Box>
 			<Box lineHeight={2}>
