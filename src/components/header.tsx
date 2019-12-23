@@ -29,11 +29,6 @@ const activeStyle = {
 	color: "#3b5bdb",
 }
 
-const activeMobileStyle = {
-	textDecoration: "line-through",
-	color: "white",
-}
-
 export const MotionMenu = styled(motion.div)(
 	css({
 		position: "sticky",
@@ -112,21 +107,18 @@ export default () => {
 								fontWeight="bold"
 								fontSize="h4"
 							>
-								<NavLink
-									to="/about/"
-									activeStyle={activeMobileStyle}
-								>
+								<NavLink to="/about/" activeStyle={activeStyle}>
 									About
 								</NavLink>
 								<NavLink
 									to="/experience/"
-									activeStyle={activeMobileStyle}
+									activeStyle={activeStyle}
 								>
 									Experience
 								</NavLink>
 								<NavLink
 									to="/projects/"
-									activeStyle={activeMobileStyle}
+									activeStyle={activeStyle}
 								>
 									Projects
 								</NavLink>
