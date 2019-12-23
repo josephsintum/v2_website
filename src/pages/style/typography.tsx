@@ -40,7 +40,7 @@ export default () => (
 	<Layout>
 		<SEO title="Typography" />
 		<Container>
-			<Title fontSize="h3" my={6}>
+			<Title fontSize={["h4", "h3"]} my={6}>
 				Typography
 			</Title>
 

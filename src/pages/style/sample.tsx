@@ -8,7 +8,7 @@ import { Card, CardSection, CardButton, CardMedia } from "../../components"
 export default () => (
 	<Layout>
 		<Container>
-			<Title fontSize="h3" my={6}>
+			<Title fontSize={["h4", "h3"]} my={6}>
 				Sample
 			</Title>
 			{/* black section */}

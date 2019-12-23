@@ -12,7 +12,7 @@ export default () => (
 		<Container py={7}>
 			<Box m="auto" maxWidth={680} justifyContent="center">
 				<Box mb={5}>
-					<Title fontSize="h3" fontWeight={900} mb={6}>
+					<Title fontSize={["h4", "h3"]} fontWeight={900} mb={6}>
 						Experience
 					</Title>
 					<Text>Download a copy of my CV below.</Text>
