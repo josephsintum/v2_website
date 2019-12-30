@@ -16,7 +16,7 @@ export default () => (
 						Experience
 					</Title>
 					<Text>Download a copy of my CV below.</Text>
-					<ALink>Download CV &#x21E9;</ALink>
+					<ALink href="#">Download CV &#x21E9;</ALink>
 					<Box my={5}>
 						<hr />
 					</Box>
@@ -104,7 +104,7 @@ export default () => (
 							OCT 2019 - PRESENT
 						</Text>
 						<Text>
-							<ALink to="http://iknite.studio/">
+							<ALink href="http://iknite.studio/">
 								Iknite Studio
 							</ALink>{" "}
 							is a design company in Cameroon, Africa
