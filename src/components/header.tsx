@@ -39,9 +39,9 @@ export const MotionMenu = styled(motion.div)(
 export default () => {
 	const [showMenu, setShowMenu] = useState(true)
 
-	let position = document.documentElement.scrollTop
-
 	React.useEffect(() => {
+		let position = document.documentElement.scrollTop
+
 		const handleScroll = () => {
 			let scroll = document.documentElement.scrollTop
 			scroll < position ? setShowMenu(true) : setShowMenu(false)
