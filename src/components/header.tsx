@@ -69,17 +69,16 @@ export default () => {
 		>
 			<Container>
 				<Box as="nav" display="flex" py={4} width="100%">
-					<BaseLink
-						to="/"
-						display="flex"
-						alignItems="center"
-						mr="auto"
-						p={3}
-						fontWeight={700}
-						letterSpacing={2}
-					>
-						JOSEPH SINTUM
-					</BaseLink>
+					<Box alignItems="center" display="flex" mr="auto">
+						<BaseLink
+							to="/"
+							p={3}
+							fontWeight={700}
+							letterSpacing={2}
+						>
+							JOSEPH SINTUM
+						</BaseLink>
+					</Box>
 					<Box
 						display={["none", "flex"]}
 						fontWeight="bold"

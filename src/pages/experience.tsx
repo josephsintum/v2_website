@@ -43,7 +43,7 @@ export default () => (
 						<Text fontSize="caption" color="gray">
 							JUNE 2018 - JULY 2019
 						</Text>
-						<Text>
+						<Text as="span">
 							<ALink href="https://thriveagric.com/">
 								Thrive Agric
 							</ALink>{" "}
@@ -103,7 +103,7 @@ export default () => (
 						<Text fontSize="caption" color="gray">
 							OCT 2019 - PRESENT
 						</Text>
-						<Text>
+						<Text as="span">
 							<ALink href="http://iknite.studio/">
 								Iknite Studio
 							</ALink>{" "}
