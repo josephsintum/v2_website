@@ -16,7 +16,7 @@ export const Button = styled(BasicButton)<ButtonProps>(
 		minWidth: 0,
 		borderWidth: 2,
 		borderStyle: "solid",
-		textTransform: "uppercase",
+		// textTransform: "uppercase",
 		":focus": {
 			outline: "none",
 		},

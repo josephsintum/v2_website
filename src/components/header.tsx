@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import Box, { Container } from "./box"
 import { BaseLink, BaseALink } from "../components/link"
 import { Burger } from "./nav/burger"
+import { Button } from "."
 
 export const NavLink = styled(BaseLink)(
 	css({
@@ -96,6 +97,9 @@ export default () => {
 						<NavALink href="mailto:josephsintum@gmail.com">
 							Contact
 						</NavALink>
+						<NavALink href="#">
+							<Button variant="outline">Resume</Button>
+						</NavALink>
 					</Box>
 					<Box display={["flex", "none"]}>
 						<Burger>
@@ -104,7 +108,7 @@ export default () => {
 								maxWidth="90%"
 								pt={7}
 								fontWeight="bold"
-								fontSize="h4"
+								fontSize="h6"
 							>
 								<NavLink to="/about/" activeStyle={activeStyle}>
 									About
@@ -123,6 +127,9 @@ export default () => {
 								</NavLink>
 								<NavALink href="mailto:josephsintum@gmail.com">
 									Contact
+								</NavALink>
+								<NavALink href="#">
+									<Button variant="outline">Resume</Button>
 								</NavALink>
 							</Box>
 						</Burger>
