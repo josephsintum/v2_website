@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import css from "@styled-system/css"
-import { BoxProps, BoxStyleCompose } from "../box"
+import { BoxProps, BoxStyleCompose } from "./box"
 import { variant } from "styled-system"
 
 export interface ButtonProps extends BoxProps {

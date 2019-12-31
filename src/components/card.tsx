@@ -1,8 +1,8 @@
 import styled from "styled-components"
 import css from "@styled-system/css"
-import Box, { BoxProps, BoxStyleCompose } from "../box"
+import Box, { BoxProps, BoxStyleCompose } from "./box"
 import { variant } from "styled-system"
-import { Button } from "../button/button"
+import { Button } from "./button"
 
 interface CardProps extends BoxProps {
 	variant?: "vertical" | "horizontal" | "text"
