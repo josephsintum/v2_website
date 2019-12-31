@@ -1,10 +1,11 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import css from "@styled-system/css"
-import { motion } from "framer-motion"
+import { motion, useCycle } from "framer-motion"
+import { BurgerButton, Drawer } from "./menuToggle"
+import Helmet from "react-helmet"
 import Box, { Container } from "./box"
 import { BaseLink, BaseALink } from "../components/link"
-import { Burger } from "./nav/burger"
 import { Button } from "."
 
 export const NavLink = styled(BaseLink)(
@@ -36,6 +37,24 @@ export const MotionMenu = styled(motion.div)(
 		bg: "white",
 	})
 )
+
+// export interface BurgerProps { }
+
+export const Burger = props => {
+	const [isOpen, toggleOpen] = useCycle(false, true)
+
+	return (
+		<Box>
+			<motion.div initial={false} animate={isOpen ? "open" : "closed"}>
+				<Helmet>
+					<body className={isOpen ? "noScroll" : ""} />
+				</Helmet>
+				<BurgerButton toggle={() => toggleOpen()} />
+				<Drawer {...props} toggle={() => toggleOpen()} />
+			</motion.div>
+		</Box>
+	)
+}
 
 export default () => {
 	const [showMenu, setShowMenu] = useState(true)

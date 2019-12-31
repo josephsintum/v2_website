@@ -4,7 +4,7 @@ import { ExternalLink } from "styled-icons/remix-line/ExternalLink"
 import Box, { Container, Row, Col } from "../components/box"
 import Text, { Title } from "../components/text"
 import Layout from "../components/layout"
-import { Card, CardSection } from "../components/card/card"
+import { Card, CardSection } from "../components/card"
 import SEO from "../components/seo"
 
 interface projectListTypes
