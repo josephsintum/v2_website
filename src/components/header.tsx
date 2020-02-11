@@ -116,7 +116,7 @@ export default () => {
 						<NavALink href="mailto:josephsintum@gmail.com">
 							Contact
 						</NavALink>
-						<NavALink href="#">
+						<NavALink href="https://docs.google.com/document/d/1TLKoDJgQC2NwV33Dq5M0UynCcnr5GLrJP7ASlLIa5Wg/edit?usp=sharing">
 							<Button variant="outline">Resume</Button>
 						</NavALink>
 					</Box>
@@ -147,7 +147,7 @@ export default () => {
 								<NavALink href="mailto:josephsintum@gmail.com">
 									Contact
 								</NavALink>
-								<NavALink href="#">
+								<NavALink href="https://docs.google.com/document/d/1TLKoDJgQC2NwV33Dq5M0UynCcnr5GLrJP7ASlLIa5Wg/edit?usp=sharing">
 									<Button variant="outline">Resume</Button>
 								</NavALink>
 							</Box>
