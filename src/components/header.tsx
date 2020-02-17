@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import css from "@styled-system/css"
 import { motion, useCycle } from "framer-motion"
-import { BurgerButton, Drawer } from "./menuToggle"
+import { BurgerButton } from "./menuToggle"
 import Helmet from "react-helmet"
 import Box, { Container } from "./box"
 import { BaseLink, BaseALink } from "../components/link"
@@ -26,11 +26,6 @@ export const NavALink = styled(BaseALink)(
 	})
 )
 
-const activeStyle = {
-	textDecoration: "line-through",
-	color: "#3b5bdb",
-}
-
 export const MotionMenu = styled(motion.div)(
 	css({
 		position: "sticky",
@@ -38,9 +33,46 @@ export const MotionMenu = styled(motion.div)(
 	})
 )
 
+export const StyledMenu = styled(motion.div)(
+	css({
+		position: "fixed",
+		height: "100%",
+		width: "100vw",
+		bg: "primarys.2",
+		zIndex: 8,
+		top: 84,
+	})
+)
+
+export const Drawer: React.FC<{
+	toggle: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void
+}> = ({ toggle, children }) => {
+	const variants = {
+		open: {
+			left: 0,
+		},
+		closed: { left: "100vw" },
+	}
+
+	return (
+		<StyledMenu variants={variants} onClick={toggle}>
+			<Box
+				color="black"
+				m="auto"
+				maxWidth="90%"
+				pt={7}
+				fontWeight="bold"
+				fontSize="h6"
+			>
+				{children}
+			</Box>
+		</StyledMenu>
+	)
+}
+
 // export interface BurgerProps { }
 
-export const Burger = props => {
+export const Burger: React.FC<{}> = props => {
 	const [isOpen, toggleOpen] = useCycle(false, true)
 
 	return (
@@ -55,6 +87,31 @@ export const Burger = props => {
 		</Box>
 	)
 }
+
+interface menuLinksTypes
+	extends Array<{
+		name: string
+		url: string
+	}> {}
+
+const menuLinks: menuLinksTypes = [
+	{
+		name: "About",
+		url: "/about/",
+	},
+	{
+		name: "Experience",
+		url: "/experience/",
+	},
+	{
+		name: "Work",
+		url: "/work/",
+	},
+	{
+		name: "Contact",
+		url: "mailto:josephsintum@gmail.com",
+	},
+]
 
 export default () => {
 	const [showMenu, setShowMenu] = useState(true)
@@ -80,6 +137,11 @@ export default () => {
 		visible: { top: 0 },
 	}
 
+	const activeStyle = {
+		textDecoration: "line-through",
+		color: "#3b5bdb",
+	}
+
 	// TODO check url match validation
 	return (
 		<MotionMenu
@@ -99,58 +161,49 @@ export default () => {
 							JOSEPH SINTUM
 						</BaseLink>
 					</Box>
-					<Box
-						display={["none", "flex"]}
-						fontWeight="bold"
-						color="black"
-					>
-						<NavLink to="/about/" activeStyle={activeStyle}>
-							About
-						</NavLink>
-						<NavLink to="/experience/" activeStyle={activeStyle}>
-							Experience
-						</NavLink>
-						<NavLink to="/projects/" activeStyle={activeStyle}>
-							Projects
-						</NavLink>
-						<NavALink href="mailto:josephsintum@gmail.com">
-							Contact
-						</NavALink>
+					<Box display={["none", "flex"]} fontWeight="bold">
+						{menuLinks.map((link, index) => {
+							link.url.includes(":") ? (
+								<NavALink
+									key={`menualink_${index}`}
+									href={link.url}
+								>
+									{link.name}
+								</NavALink>
+							) : (
+								<NavLink
+									key={`menulink_${index}`}
+									to={link.url}
+									activeStyle={activeStyle}
+								>
+									{link.name}
+								</NavLink>
+							)
+						})}
 						<NavALink href="#">
 							<Button variant="outline">Resume</Button>
 						</NavALink>
 					</Box>
 					<Box display={["flex", "none"]}>
 						<Burger>
-							<Box
-								m="auto"
-								maxWidth="90%"
-								pt={7}
-								fontWeight="bold"
-								fontSize="h6"
+							<NavLink to="/about/" activeStyle={activeStyle}>
+								About
+							</NavLink>
+							<NavLink
+								to="/experience/"
+								activeStyle={activeStyle}
 							>
-								<NavLink to="/about/" activeStyle={activeStyle}>
-									About
-								</NavLink>
-								<NavLink
-									to="/experience/"
-									activeStyle={activeStyle}
-								>
-									Experience
-								</NavLink>
-								<NavLink
-									to="/projects/"
-									activeStyle={activeStyle}
-								>
-									Projects
-								</NavLink>
-								<NavALink href="mailto:josephsintum@gmail.com">
-									Contact
-								</NavALink>
-								<NavALink href="#">
-									<Button variant="outline">Resume</Button>
-								</NavALink>
-							</Box>
+								Experience
+							</NavLink>
+							<NavLink to="/work/" activeStyle={activeStyle}>
+								Work
+							</NavLink>
+							<NavALink href="mailto:josephsintum@gmail.com">
+								Contact
+							</NavALink>
+							<NavALink href="#">
+								<Button variant="outline">Resume</Button>
+							</NavALink>
 						</Burger>
 					</Box>
 				</Box>

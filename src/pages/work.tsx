@@ -7,7 +7,7 @@ import Layout from "../components/layout"
 import { Card, CardSection } from "../components/card"
 import SEO from "../components/seo"
 
-interface projectListTypes
+interface workListTypes
 	extends Array<{
 		title: string
 		body: string
@@ -16,7 +16,7 @@ interface projectListTypes
 		techStack: string
 	}> {}
 
-const projectList: projectListTypes = [
+const workList: workListTypes = [
 	{
 		title: "Joseph Sintum Portfolio",
 		body:
@@ -53,21 +53,21 @@ const projectList: projectListTypes = [
 
 export default () => (
 	<Layout>
-		<SEO title="Projects" />
+		<SEO title="Work" />
 
 		<Container py={7}>
 			<Box m="auto" maxWidth={680} justifyContent="center">
 				<Box mb={5}>
 					<Title fontSize={["h4", "h3"]} fontWeight={900} mb={6}>
-						Projects
+						Work
 					</Title>
-					<Text>Lorem ipsum about projects</Text>
+					<Text>Lorem ipsum about works</Text>
 				</Box>
 				<Box>
 					<Row>
-						{projectList.map((project, index: number) => (
+						{workList.map((work, index: number) => (
 							<Col
-								key={`project_${index}`}
+								key={`work_${index}`}
 								width={["100%", "50%"]}
 								mb={5}
 							>
@@ -78,15 +78,15 @@ export default () => (
 								>
 									<CardSection>
 										<Title fontSize="h6">
-											{project.title}
+											{work.title}
 										</Title>
 									</CardSection>
 									<CardSection>
-										<Text>{project.body}</Text>
+										<Text>{work.body}</Text>
 									</CardSection>
 									<CardSection mt="auto">
 										<Text fontSize="caption" color="grey">
-											{project.techStack}
+											{work.techStack}
 										</Text>
 									</CardSection>
 									<CardSection display="inline-flex" py={2}>
