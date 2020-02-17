@@ -1,6 +1,6 @@
 # Joseph Sintum's Portfolio
 
-Personal website and work: [josephsintum.github.io](https://josephsintum.github.io/). Built with [GatsbyJS](https://www.gatsbyjs.org/)
+Personal website and projects: [josephsintum.now.sh](https://josephsintum.now.sh/). Built with [GatsbyJS](https://www.gatsbyjs.org/)
 
 ## Stack
 
@@ -9,4 +9,4 @@ Personal website and work: [josephsintum.github.io](https://josephsintum.github.
 -   GatsbyJS
 -   Styled Component
 -   Styled System
--   Github Pages
+-   Zeit Now

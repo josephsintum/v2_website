@@ -161,26 +161,24 @@ export default () => {
 							JOSEPH SINTUM
 						</BaseLink>
 					</Box>
-					<Box display={["none", "flex"]} fontWeight="bold">
-						{menuLinks.map((link, index) => {
-							link.url.includes(":") ? (
-								<NavALink
-									key={`menualink_${index}`}
-									href={link.url}
-								>
-									{link.name}
-								</NavALink>
-							) : (
-								<NavLink
-									key={`menulink_${index}`}
-									to={link.url}
-									activeStyle={activeStyle}
-								>
-									{link.name}
-								</NavLink>
-							)
-						})}
-						<NavALink href="#">
+					<Box
+						display={["none", "flex"]}
+						fontWeight="bold"
+						color="black"
+					>
+						<NavLink to="/about/" activeStyle={activeStyle}>
+							About
+						</NavLink>
+						<NavLink to="/experience/" activeStyle={activeStyle}>
+							Experience
+						</NavLink>
+						<NavLink to="/projects/" activeStyle={activeStyle}>
+							Projects
+						</NavLink>
+						<NavALink href="mailto:josephsintum@gmail.com">
+							Contact
+						</NavALink>
+						<NavALink href="https://docs.google.com/document/d/1TLKoDJgQC2NwV33Dq5M0UynCcnr5GLrJP7ASlLIa5Wg/edit?usp=sharing">
 							<Button variant="outline">Resume</Button>
 						</NavALink>
 					</Box>
@@ -193,17 +191,28 @@ export default () => {
 								to="/experience/"
 								activeStyle={activeStyle}
 							>
-								Experience
-							</NavLink>
-							<NavLink to="/work/" activeStyle={activeStyle}>
-								Work
-							</NavLink>
-							<NavALink href="mailto:josephsintum@gmail.com">
-								Contact
-							</NavALink>
-							<NavALink href="#">
-								<Button variant="outline">Resume</Button>
-							</NavALink>
+								<NavLink to="/about/" activeStyle={activeStyle}>
+									About
+								</NavLink>
+								<NavLink
+									to="/experience/"
+									activeStyle={activeStyle}
+								>
+									Experience
+								</NavLink>
+								<NavLink
+									to="/projects/"
+									activeStyle={activeStyle}
+								>
+									Projects
+								</NavLink>
+								<NavALink href="mailto:josephsintum@gmail.com">
+									Contact
+								</NavALink>
+								<NavALink href="https://docs.google.com/document/d/1TLKoDJgQC2NwV33Dq5M0UynCcnr5GLrJP7ASlLIa5Wg/edit?usp=sharing">
+									<Button variant="outline">Resume</Button>
+								</NavALink>
+							</Box>
 						</Burger>
 					</Box>
 				</Box>
