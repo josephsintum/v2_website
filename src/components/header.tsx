@@ -5,7 +5,7 @@ import { motion, useCycle } from "framer-motion"
 import { BurgerButton } from "./menuToggle"
 import Helmet from "react-helmet"
 import Box, { Container } from "./box"
-import { BaseLink, BaseALink } from "../components/link"
+import { BaseLink, BaseALink } from "./link"
 import { Button } from "."
 
 export const NavLink = styled(BaseLink)(
@@ -88,31 +88,6 @@ export const Burger: React.FC<{}> = props => {
 	)
 }
 
-interface menuLinksTypes
-	extends Array<{
-		name: string
-		url: string
-	}> {}
-
-const menuLinks: menuLinksTypes = [
-	{
-		name: "About",
-		url: "/about/",
-	},
-	{
-		name: "Experience",
-		url: "/experience/",
-	},
-	{
-		name: "Work",
-		url: "/work/",
-	},
-	{
-		name: "Contact",
-		url: "mailto:josephsintum@gmail.com",
-	},
-]
-
 export default () => {
 	const [showMenu, setShowMenu] = useState(true)
 
@@ -161,6 +136,7 @@ export default () => {
 							JOSEPH SINTUM
 						</BaseLink>
 					</Box>
+					{/*Desktop menu*/}
 					<Box
 						display={["none", "flex"]}
 						fontWeight="bold"
@@ -172,16 +148,17 @@ export default () => {
 						<NavLink to="/experience/" activeStyle={activeStyle}>
 							Experience
 						</NavLink>
-						<NavLink to="/projects/" activeStyle={activeStyle}>
-							Projects
+						<NavLink to="/work/" activeStyle={activeStyle}>
+							Work
 						</NavLink>
 						<NavALink href="mailto:josephsintum@gmail.com">
 							Contact
 						</NavALink>
-						<NavALink href="https://docs.google.com/document/d/1TLKoDJgQC2NwV33Dq5M0UynCcnr5GLrJP7ASlLIa5Wg/edit?usp=sharing">
+						<NavALink href="https://docs.google.com/document/d/1TLKoDJgQC2NwV33Dq5M0UynCcnr5GLrJP7ASlLIa5Wg/export?format=pdf">
 							<Button variant="outline">Resume</Button>
 						</NavALink>
 					</Box>
+					{/*Mobile menu*/}
 					<Box display={["flex", "none"]}>
 						<Burger>
 							<NavLink to="/about/" activeStyle={activeStyle}>
@@ -191,28 +168,17 @@ export default () => {
 								to="/experience/"
 								activeStyle={activeStyle}
 							>
-								<NavLink to="/about/" activeStyle={activeStyle}>
-									About
-								</NavLink>
-								<NavLink
-									to="/experience/"
-									activeStyle={activeStyle}
-								>
-									Experience
-								</NavLink>
-								<NavLink
-									to="/projects/"
-									activeStyle={activeStyle}
-								>
-									Projects
-								</NavLink>
-								<NavALink href="mailto:josephsintum@gmail.com">
-									Contact
-								</NavALink>
-								<NavALink href="https://docs.google.com/document/d/1TLKoDJgQC2NwV33Dq5M0UynCcnr5GLrJP7ASlLIa5Wg/edit?usp=sharing">
-									<Button variant="outline">Resume</Button>
-								</NavALink>
-							</Box>
+								Experience
+							</NavLink>
+							<NavLink to="/work/" activeStyle={activeStyle}>
+								Work
+							</NavLink>
+							<NavALink href="mailto:josephsintum@gmail.com">
+								Contact
+							</NavALink>
+							<NavALink href="https://docs.google.com/document/d/1TLKoDJgQC2NwV33Dq5M0UynCcnr5GLrJP7ASlLIa5Wg/export?format=pdf">
+								<Button variant="outline">Resume</Button>
+							</NavALink>
 						</Burger>
 					</Box>
 				</Box>

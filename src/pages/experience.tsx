@@ -4,6 +4,7 @@ import Text, { Title } from "../components/text"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { ALink } from "../components/link"
+import { FileDownload } from "styled-icons/fa-solid/FileDownload"
 
 export default () => (
 	<Layout>
@@ -16,7 +17,9 @@ export default () => (
 						Experience
 					</Title>
 					<Text>Download a copy of my CV below.</Text>
-					<ALink href="#">Download CV &#x21E9;</ALink>
+					<ALink href="https://docs.google.com/document/d/1TLKoDJgQC2NwV33Dq5M0UynCcnr5GLrJP7ASlLIa5Wg/export?format=pdf">
+						Download Resume <FileDownload size={18} />
+					</ALink>
 					<Box my={5}>
 						<hr />
 					</Box>
