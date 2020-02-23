@@ -17,7 +17,10 @@ export default () => (
 						Experience
 					</Title>
 					<Text>Download a copy of my CV below.</Text>
-					<ALink href="https://docs.google.com/document/d/1TLKoDJgQC2NwV33Dq5M0UynCcnr5GLrJP7ASlLIa5Wg/export?format=pdf">
+					<ALink
+						href="https://docs.google.com/document/d/1TLKoDJgQC2NwV33Dq5M0UynCcnr5GLrJP7ASlLIa5Wg/export?format=pdf"
+						target="_blank"
+					>
 						Download Resume <FileDownload size={18} />
 					</ALink>
 					<Box my={5}>
@@ -57,17 +60,23 @@ export default () => (
 						<br />
 						<Text>
 							Golang web scraper:
-							<ALink href="https://github.com/josephsintum/go-webscraper">
+							<ALink
+								href="https://github.com/josephsintum/go-webscraper"
+								target="_blank"
+							>
 								https://github.com/josephsintum/go-webscraper
 							</ALink>
 							<br />
 							SJCC website:
-							<ALink href="https://www.sjcc.edu/">
+							<ALink href="https://www.sjcc.edu/" target="_blank">
 								https://www.sjcc.edu/
 							</ALink>
 							<br />
 							Athletics website:
-							<ALink href="https://sjccjaguars.com/">
+							<ALink
+								href="https://sjccjaguars.com/"
+								target="_blank"
+							>
 								{" "}
 								https://sjccjaguars.com/
 							</ALink>
@@ -128,7 +137,10 @@ export default () => (
 						</ul>
 						<Text>
 							Thrive Agric:{" "}
-							<ALink href={"https://thriveagric.com/"}>
+							<ALink
+								href={"https://thriveagric.com/"}
+								target="_blank"
+							>
 								https://thriveagric.com/
 							</ALink>
 						</Text>
@@ -165,27 +177,42 @@ export default () => (
 							Links to work
 							<br />
 							Iknite Studio:{" "}
-							<ALink href={"http://iknite.studio/home/"}>
+							<ALink
+								href={"http://iknite.studio/home/"}
+								target="_blank"
+							>
 								http://iknite.studio/home/
 							</ALink>
 							<br />
 							Colorfluid:{" "}
-							<ALink href={"http://colorfluid.com/"}>
+							<ALink
+								href={"http://colorfluid.com/"}
+								target="_blank"
+							>
 								http://colorfluid.com/
 							</ALink>{" "}
 							<br />
 							Motion Fountain:{" "}
-							<ALink href={"http://motionfountain.net"}>
+							<ALink
+								href={"http://motionfountain.net"}
+								target="_blank"
+							>
 								http://motionfountain.net
 							</ALink>{" "}
 							/<br />
 							Afya Tea:{" "}
-							<ALink href={"https://afyatea.com/"}>
+							<ALink
+								href={"https://afyatea.com/"}
+								target="_blank"
+							>
 								https://afyatea.com/
 							</ALink>
 							<br />
 							Karawa Diary Blog:{" "}
-							<ALink href={"https://karawadiary.life/"}>
+							<ALink
+								href={"https://karawadiary.life/"}
+								target="_blank"
+							>
 								https://karawadiary.life/
 							</ALink>
 							<br />
