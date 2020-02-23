@@ -28,7 +28,7 @@ const bookList: bookListTypes = [
 	},
 	{
 		title: "1984",
-		author: "George Orwell		",
+		author: "George Orwell",
 		genre: "Science, Dystopian, Social, Political fiction",
 		status: true,
 	},
