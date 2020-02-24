@@ -4,8 +4,9 @@ import { ExternalLink } from "styled-icons/remix-line/ExternalLink"
 import Box, { Container, Row, Col } from "../components/box"
 import Text, { Title } from "../components/text"
 import Layout from "../components/layout"
-import { Card, CardSection } from "../components/card"
+import { Card, CardSection } from "../components"
 import SEO from "../components/seo"
+import { BaseALink } from "../components/link"
 
 interface workListTypes
 	extends Array<{
@@ -26,28 +27,13 @@ const workList: workListTypes = [
 		link: "https://josephsintum.now.sh/",
 	},
 	{
-		title: "Test",
+		title: "Go Webscraper",
 		body:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
-		techStack: "JS, Express, Docker",
-		github: "https://github.com/josephsintum/josephsintum.github.io",
-		link: "https://josephsintum.now.sh/",
-	},
-	{
-		title: "Test",
-		body:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
-		techStack: "JS, Express, Docker",
-		github: "https://github.com/josephsintum/josephsintum.github.io",
-		link: "https://josephsintum.now.sh/",
-	},
-	{
-		title: "Test",
-		body:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
-		techStack: "JS, Express, Docker",
-		github: "https://github.com/josephsintum/josephsintum.github.io",
-		link: "https://josephsintum.now.sh/",
+			"Simple webscraper built in Golang. It searches for all forms on the San Jose City College website.",
+		techStack: "Go\n",
+		github: "https://github.com/josephsintum/go-webscraper",
+		link:
+			"https://docs.google.com/spreadsheets/d/1FE3UxyOIzQB-UZhXE1mffMr5B2kP7k9xhUa2NnxVIjA/edit?usp=sharing",
 	},
 ]
 
@@ -59,9 +45,8 @@ export default () => (
 			<Box m="auto" maxWidth={680} justifyContent="center">
 				<Box mb={5}>
 					<Title fontSize={["h4", "h3"]} fontWeight={900} mb={6}>
-						Work
+						Some Things I have built
 					</Title>
-					<Text>Lorem ipsum about works</Text>
 				</Box>
 				<Box>
 					<Row>
@@ -91,10 +76,20 @@ export default () => (
 									</CardSection>
 									<CardSection display="inline-flex" py={2}>
 										<Box mr={4}>
-											<MarkGithub size="18" />
+											<BaseALink
+												href={work.github}
+												target="_blank"
+											>
+												<MarkGithub size="18" />
+											</BaseALink>
 										</Box>
 										<Box mr={4}>
-											<ExternalLink size="18" />
+											<BaseALink
+												href={work.link}
+												target="_blank"
+											>
+												<ExternalLink size="18" />
+											</BaseALink>
 										</Box>
 									</CardSection>
 								</Card>
