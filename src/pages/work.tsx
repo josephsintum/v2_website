@@ -30,7 +30,7 @@ const workList: workListTypes = [
 		title: "Go Webscraper",
 		body:
 			"Simple webscraper built in Golang. It searches for all forms on the San Jose City College website.",
-		techStack: "Gonpm update -g\n",
+		techStack: "Go\n",
 		github: "https://github.com/josephsintum/go-webscraper",
 		link:
 			"https://docs.google.com/spreadsheets/d/1FE3UxyOIzQB-UZhXE1mffMr5B2kP7k9xhUa2NnxVIjA/edit?usp=sharing",
