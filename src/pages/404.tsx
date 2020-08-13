@@ -12,7 +12,7 @@ const NotFoundPage = () => (
 			<Title fontSize="h1" fontWeight={900}>
 				404
 			</Title>
-			<Text>The page you were looking for could not be found.</Text>
+			<Text>The page you were looking for was not found.</Text>
 			<br />
 			<Link to="/">Return Home</Link>
 		</Container>
