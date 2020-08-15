@@ -1,22 +1,17 @@
 import React from "react"
-import { Link } from "../components/link"
-import Layout from "../components/layout"
-import { Container } from "../components/box"
-import Text, { Title } from "../components/text"
 import SEO from "../components/seo"
+import { Link } from "gatsby"
 
 const NotFoundPage = () => (
-	<Layout>
+	<div>
 		<SEO title="404: Not found" />
-		<Container my="auto">
-			<Title fontSize="h1" fontWeight={900}>
-				404
-			</Title>
-			<Text>The page you were looking for was not found.</Text>
+		<div>
+			<h1>404</h1>
+			<p>The page you were looking for was not found.</p>
 			<br />
 			<Link to="/">Return Home</Link>
-		</Container>
-	</Layout>
+		</div>
+	</div>
 )
 
 export default NotFoundPage
