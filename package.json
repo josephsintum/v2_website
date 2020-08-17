@@ -5,9 +5,6 @@
   "version": "0.1.0",
   "author": "@josephsintum",
   "dependencies": {
-    "@types/styletron-engine-atomic": "^1.1.0",
-    "@types/styletron-react": "^5.0.2",
-    "@types/styletron-standard": "^2.0.1",
     "baseui": "^9.95.1",
     "gatsby": "^2.13.64",
     "gatsby-image": "^2.2.8",
@@ -24,6 +21,9 @@
     "@types/react": "^16.8.8",
     "@types/react-dom": "^16.8.2",
     "@types/react-helmet": "^5.0.8",
+    "@types/styletron-engine-atomic": "^1.1.0",
+    "@types/styletron-react": "^5.0.2",
+    "@types/styletron-standard": "^2.0.1",
     "gatsby-plugin-google-analytics": "^2.0.20",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-manifest": "^2.2.5",
@@ -38,8 +38,7 @@
     "tslint": "^6.0.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-plugin-prettier": "^2.0.1",
-    "tslint-react": "^4.1.0",
-    "typescript": "^3.8.2"
+    "typescript": "^3.9.7"
   },
   "keywords": [
     "joseph sintum",

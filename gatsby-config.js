@@ -3,7 +3,7 @@ module.exports = {
 		title: `Joseph Sintum`,
 		description: `My portfolio`,
 		author: `@josephsintum`,
-		siteUrl: `https://josephsintum.now.sh/`,
+		siteUrl: `https://sintum.vercel.app/`,
 	},
 	plugins: [
 		`gatsby-plugin-typescript`,
