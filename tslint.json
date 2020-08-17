@@ -2,6 +2,8 @@
 	"rulesDirectory": ["tslint-plugin-prettier"],
 	"extends": ["tslint-react", "tslint-config-prettier"],
 	"rules": {
-		"prettier": true
+		"prettier": {
+			"severity": "warning"
+		}
 	}
 }

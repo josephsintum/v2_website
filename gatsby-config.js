@@ -7,7 +7,6 @@ module.exports = {
 	},
 	plugins: [
 		`gatsby-plugin-typescript`,
-		`gatsby-plugin-styled-components`,
 		`gatsby-plugin-react-helmet`,
 		{
 			resolve: `gatsby-source-filesystem`,
@@ -53,6 +52,14 @@ module.exports = {
 					`Nunito Sans\:300,300i,400,400i,600,600i,700,700i,800,800i,900,900i`,
 				],
 				display: "swap",
+			},
+		},
+		{
+			resolve: "gatsby-plugin-styletron",
+			options: {
+				// You can pass options to Styletron.
+				// Prefix all generated classNames:
+				prefix: "_",
 			},
 		},
 		// this (optional) plugin enables Progressive Web App + Offline functionality

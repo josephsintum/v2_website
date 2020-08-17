@@ -1,25 +1,20 @@
-import React from "react"
-import { ThemeProvider } from "styled-components"
-import Box from "../components/box"
-import theme from "./theme"
-
-import GlobalStyles from "./global-styles"
+import * as React from "react"
+import { Client as Styletron } from "styletron-engine-atomic"
+import { Provider as StyletronProvider } from "styletron-react"
+import { LightTheme, BaseProvider } from "baseui"
+import Header from "./header"
 import Footer from "./footer"
-import Header from "../components/header"
 
-const Layout = ({ children }: LayoutProps) => (
-	<ThemeProvider theme={theme}>
-		<Box minHeight="100vh" display="flex" flexDirection="column">
-			<GlobalStyles />
+const engine = new Styletron()
+
+const Layout: React.FC = ({ children }) => (
+	<StyletronProvider value={engine}>
+		<BaseProvider theme={LightTheme}>
 			<Header />
 			{children}
 			<Footer />
-		</Box>
-	</ThemeProvider>
+		</BaseProvider>
+	</StyletronProvider>
 )
-
-interface LayoutProps {
-	children: React.ReactNode
-}
 
 export default Layout

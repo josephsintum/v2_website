@@ -7,6 +7,5 @@ Personal website and work: [josephsintum.now.sh](https://josephsintum.now.sh/). 
 -   Typescript
 -   React.js
 -   GatsbyJS
--   Styled Component
--   Styled System
--   Zeit Now
+-   Base web
+-   Verce
