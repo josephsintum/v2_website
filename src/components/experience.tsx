@@ -1,9 +1,10 @@
 import * as React from "react"
 import { Section } from "./section"
 import { H3, Label3, H6, Paragraph2 } from "baseui/typography"
-import { Tabs, Tab, FILL } from "baseui/tabs-motion"
+import { Tabs, Tab } from "baseui/tabs-motion"
 import { StyledLink as Link } from "baseui/link"
 import { Li } from "./list"
+import { Block } from "baseui/block"
 
 const work = [
 	{
@@ -96,39 +97,39 @@ export const Experience = () => {
 	return (
 		<Section padding={["100px 0px", "150px 0px"]}>
 			<H3>Where I have worked</H3>
-			<Tabs
-				activeKey={activeKey}
-				onChange={({ activeKey }) => {
-					setActiveKey(activeKey)
-				}}
-				fill={FILL.fixed}
-				activateOnFocus
-				renderAll
-			>
-				{work.map((data, index) => (
-					<Tab title={data.company} key={index}>
-						<H6 marginBottom="5px">
-							{data.position} @ {data.company}, {data.location}
-						</H6>
-						<Label3>
-							{data.startTime} - {data.endTime}
-						</Label3>
-						<ul>
-							{data.tasks.map((task, index) => (
-								<Li key={`${index}_task`}>{task}</Li>
+			<Block maxWidth="600px">
+				<Tabs
+					activeKey={activeKey}
+					onChange={({ activeKey }) => setActiveKey(activeKey)}
+					activateOnFocus
+					renderAll
+				>
+					{work.map((data, index) => (
+						<Tab title={data.company} key={index}>
+							<H6 marginBottom="5px">
+								{data.position} @ {data.company},{" "}
+								{data.location}
+							</H6>
+							<Label3>
+								{data.startTime} - {data.endTime}
+							</Label3>
+							<ul>
+								{data.tasks.map((task, index) => (
+									<Li key={`${index}_task`}>{task}</Li>
+								))}
+							</ul>
+							{data.links.map((link, index) => (
+								<Paragraph2 key={`${index}_link`} margin={0}>
+									{link.name}
+									{": "}
+									<Link href={link.url}>{link.url}</Link>
+									<br />
+								</Paragraph2>
 							))}
-						</ul>
-						{data.links.map((link, index) => (
-							<Paragraph2 key={`${index}_link`}>
-								{link.name}
-								{": "}
-								<Link href={link.url}>{link.url}</Link>
-								<br />
-							</Paragraph2>
-						))}
-					</Tab>
-				))}
-			</Tabs>
+						</Tab>
+					))}
+				</Tabs>
+			</Block>
 		</Section>
 	)
 }
