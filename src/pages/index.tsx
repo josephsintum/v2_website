@@ -5,6 +5,8 @@ import { Block } from "baseui/block"
 import { styled } from "baseui"
 import { Hero } from "../components/hero"
 import { About } from "../components/about"
+import { H3 } from "baseui/typography"
+import { Tabs, Tab } from "baseui/tabs-motion"
 
 export default () => (
 	<Layout>
@@ -17,6 +19,7 @@ export default () => (
 		>
 			<Hero />
 			<About />
+			<Experience />
 		</Block>
 	</Layout>
 )
@@ -31,3 +34,23 @@ export const Section = styled(Block, {
 	margin: "0px auto",
 	maxWidth: "1000px",
 })
+
+export const Experience = () => {
+	const [activeKey, setActiveKey] = React.useState<React.Key>(0)
+
+	return (
+		<Section padding={["100px 0px", "150px 0px"]}>
+			<H3>Where I have worked</H3>
+			<Tabs
+				activeKey={activeKey}
+				onChange={({ activeKey }) => setActiveKey(activeKey)}
+			>
+				<Tab title="First">I must not fear.</Tab>
+				<Tab title="Second">Fear is the mind-killer.</Tab>
+				<Tab title="Third">
+					Fear is the little-death that brings total obliteration.
+				</Tab>
+			</Tabs>
+		</Section>
+	)
+}
