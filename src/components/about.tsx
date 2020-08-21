@@ -44,7 +44,6 @@ export const About = () => {
 						className={css({
 							textAlign: "justify",
 							display: "grid",
-							listStyle: "none",
 							gridTemplateColumns: "200px 200px",
 							padding: "0px",
 						})}

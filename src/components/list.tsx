@@ -12,6 +12,7 @@ export const Li: React.FC = ({ children }) => {
 				textAlign: "justify",
 				paddingLeft: "25px",
 				marginBottom: "10px",
+				listStyle: "none",
 				fontFamily: theme.typography.ParagraphMedium.fontFamily,
 				"::before": {
 					content: '"✱"',
