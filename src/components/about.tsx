@@ -1,12 +1,13 @@
 import * as React from "react"
 import { H3, Paragraph2 } from "baseui/typography"
 import { useStyletron } from "baseui"
-import { FlexGridItem, FlexGrid } from "baseui/flex-grid"
+import { FlexGrid, FlexGridItem } from "baseui/flex-grid"
 import { Skeleton } from "baseui/skeleton"
-import { Section } from "../pages"
+import { Section } from "./section"
+import { Li } from "./list"
 
 export const About = () => {
-	const [css, theme] = useStyletron()
+	const [css] = useStyletron()
 
 	return (
 		<Section padding={["100px 0px", "150px 0px"]}>
@@ -58,31 +59,7 @@ export const About = () => {
 							"Mongoose (MongoDB)",
 							"Figma",
 						].map((item, index) => (
-							<li
-								key={index}
-								className={css({
-									listStylePosition: "outside",
-									position: "relative",
-									textAlign: "justify",
-									paddingLeft: "25px",
-									marginBottom: "10px",
-									fontFamily:
-										theme.typography.ParagraphMedium
-											.fontFamily,
-									"::before": {
-										content: '"👉"',
-										ariaLabel: "finger pointing right",
-										role: "img",
-										boxSizing: "border-box",
-										color: "#000",
-										position: "absolute",
-										lineHeight: "18px",
-										left: "0px",
-									},
-								})}
-							>
-								{item}
-							</li>
+							<Li key={index}>{item}</Li>
 						))}
 					</ul>
 				</FlexGridItem>
@@ -93,3 +70,4 @@ export const About = () => {
 		</Section>
 	)
 }
+

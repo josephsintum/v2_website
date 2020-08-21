@@ -1,8 +1,8 @@
 import * as React from "react"
-import { Section } from "../pages"
 import { Label2, H2, Paragraph2 } from "baseui/typography"
 import { Block } from "baseui/block"
 import { Button } from "baseui/button"
+import { Section } from "./section"
 
 export const Hero = () => (
 	<Section minHeight="100vh">
