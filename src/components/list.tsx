@@ -7,7 +7,6 @@ export const Li: React.FC = ({ children }) => {
 	return (
 		<li
 			className={css({
-				listStylePosition: "outside",
 				position: "relative",
 				textAlign: "justify",
 				paddingLeft: "25px",
