@@ -1,9 +1,15 @@
 import * as React from "react"
 import { Provider as StyletronProvider } from "styletron-react"
 import { Client } from "styletron-engine-atomic"
-import { LightTheme, BaseProvider } from "baseui"
+import { BaseProvider, createTheme, lightThemePrimitives } from "baseui"
 import Header from "./header"
 import Footer from "./footer"
+
+const primitives = {
+	...lightThemePrimitives,
+	primaryFontFamily: "karla",
+}
+const theme = createTheme(primitives)
 
 const Layout: React.FC = ({ children }) => {
 	const [engine, setEngine] = React.useState<Client | null>(null)
@@ -23,7 +29,7 @@ const Layout: React.FC = ({ children }) => {
 
 	return (
 		<StyletronProvider value={engine}>
-			<BaseProvider theme={LightTheme}>
+			<BaseProvider theme={theme}>
 				<Header />
 				{children}
 				<Footer />
