@@ -1,10 +1,11 @@
-import React from "react"
+import * as React from "react"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { Block } from "baseui/block"
 import { Hero } from "../components/hero"
 import { About } from "../components/about"
 import { Experience } from "../components/experience"
+import { Projects } from "../components/projects"
 
 export default () => (
 	<Layout>
@@ -18,7 +19,7 @@ export default () => (
 			<Hero />
 			<About />
 			<Experience />
+			<Projects />
 		</Block>
 	</Layout>
 )
-
