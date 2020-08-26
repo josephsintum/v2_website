@@ -58,7 +58,7 @@ export const About = () => {
 							"Mongoose (MongoDB)",
 							"Figma",
 						].map((item, index) => (
-							<Li key={index}>{item}</Li>
+							<Li key={`${index}list`}>{item}</Li>
 						))}
 					</ul>
 				</FlexGridItem>
@@ -69,4 +69,3 @@ export const About = () => {
 		</Section>
 	)
 }
-
