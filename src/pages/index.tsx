@@ -19,8 +19,8 @@ export default () => (
 		>
 			<Hero />
 			<About />
-			<Experience />
 			<Projects />
+			<Experience />
 			<Contact />
 		</Block>
 	</Layout>
