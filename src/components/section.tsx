@@ -6,7 +6,6 @@ export const Section = styled(Block, {
 	display: "flex",
 	justifyContent: "center",
 	flexDirection: "column",
-	alignItems: "flex-start",
 
 	margin: "0px auto",
 	maxWidth: "1000px",
