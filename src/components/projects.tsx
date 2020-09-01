@@ -49,7 +49,7 @@ const data = [
 			},
 		],
 		image:
-			"https://images.unsplash.com/photo-1597858715706-fb50f241946e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2851&q=80",
+			"https://raw.githubusercontent.com/josephsintum/v2_website/master/src/images/Screen%20Shot%202020-09-01%20at%2012.03.05%20AM.png",
 	},
 ]
 
@@ -75,7 +75,12 @@ export const Projects = () => {
 							/>
 						</FlexGridItem>
 						<FlexGridItem>
-							<H4 font="HeadingMedium">{project.name}</H4>
+							<H4
+								font="HeadingMedium"
+								$style={{ fontWeight: "bold" }}
+							>
+								{project.name}
+							</H4>
 							<Paragraph2>{project.description}</Paragraph2>
 							<Paragraph2 $style={{ fontFamily: "Space Mono" }}>
 								{project.tags.map((tag, tIndex) => (
