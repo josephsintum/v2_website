@@ -8,4 +8,9 @@ Personal website and work: [josephsintum.now.sh](https://josephsintum.now.sh/). 
 -   React.js
 -   GatsbyJS
 -   Base web
--   Verce
+-   Vercel
+
+Screenshot
+
+![Screenshot](https://raw.githubusercontent.com/josephsintum/v2_website/master/src/images/Screen%20Shot%202020-09-01%20at%2012.03.05%20AM.png)
+
