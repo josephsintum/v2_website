@@ -11,7 +11,9 @@ export const About = () => {
 
 	return (
 		<Section padding={["100px 0px", "150px 0px"]}>
-			<H3>About Me</H3>
+			<H3 font="HeadingLarge" $style={{ fontWeight: "bold" }}>
+				About Me
+			</H3>
 			<FlexGrid
 				flexGridColumnCount={[1, 1, 2]}
 				flexGridColumnGap="scale2400"

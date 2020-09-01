@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Block } from "baseui/block"
 import { Section } from "./section"
-import { H3, H2, Paragraph2 } from "baseui/typography"
+import { H3, H4, Paragraph2 } from "baseui/typography"
 import { FlexGrid, FlexGridItem } from "baseui/flex-grid"
 import { styled } from "baseui"
 import { Tag } from "baseui/tag"
@@ -56,7 +56,9 @@ const data = [
 export const Projects = () => {
 	return (
 		<Section padding={["100px 0px", "150px 0px"]}>
-			<H3>Some Projects</H3>
+			<H3 font="HeadingLarge" $style={{ fontWeight: "bold" }}>
+				Some Projects
+			</H3>
 			<Block maxWidth="1000px">
 				{data.map((project, pIndex) => (
 					<FlexGrid
@@ -66,7 +68,6 @@ export const Projects = () => {
 						marginBottom="scale1000"
 						key={`${pIndex}.Project`}
 					>
-						{/*<React.Fragment >*/}
 						<FlexGridItem display="flex">
 							<Image
 								style={{ margin: "auto" }}
@@ -74,13 +75,25 @@ export const Projects = () => {
 							/>
 						</FlexGridItem>
 						<FlexGridItem>
-							<H2>{project.name}</H2>
+							<H4 font="HeadingMedium">{project.name}</H4>
 							<Paragraph2>{project.description}</Paragraph2>
-							<Paragraph2>
+							<Paragraph2 $style={{ fontFamily: "Space Mono" }}>
 								{project.tags.map((tag, tIndex) => (
 									<Tag
 										key={`${tIndex}${pIndex}tag`}
 										closeable={false}
+										overrides={{
+											Text: {
+												style: ({ $theme }) => {
+													return {
+														fontFamily:
+															$theme.typography
+																.LabelXSmall
+																.fontFamily,
+													}
+												},
+											},
+										}}
 									>
 										{tag}
 									</Tag>
@@ -93,7 +106,6 @@ export const Projects = () => {
 								</React.Fragment>
 							))}
 						</FlexGridItem>
-						{/*</React.Fragment>*/}
 					</FlexGrid>
 				))}
 			</Block>
@@ -101,8 +113,12 @@ export const Projects = () => {
 	)
 }
 
-export const Image = styled("img", {
-			width: "100%",
-			height: "auto",
-			maxWidth: "500px",
-		})
+export const Image = styled("img", ({ $theme }) => {
+	return {
+		width: "100%",
+		height: "auto",
+		maxWidth: "500px",
+		boxShadow: $theme.lighting.shadow700,
+		borderRadius: "5px",
+	}
+})

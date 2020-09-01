@@ -8,8 +8,27 @@ import Footer from "./footer"
 const primitives = {
 	...lightThemePrimitives,
 	primaryFontFamily: "karla",
+	secondaryFontFamily: "Space Mono",
 }
-const theme = createTheme(primitives)
+
+const overrides = {
+	typography: {
+		DisplayMedium: {
+			fontFamily: "Space Mono",
+		},
+		HeadingLarge: {
+			fontFamily: "Space Mono",
+		},
+		HeadingMedium: {
+			fontFamily: "Space Mono",
+		},
+		LabelXSmall: {
+			fontFamily: "Space Mono",
+		},
+	},
+}
+
+const theme = createTheme(primitives, overrides)
 
 const Layout: React.FC = ({ children }) => {
 	const [engine, setEngine] = React.useState<Client | null>(null)
