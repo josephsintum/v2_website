@@ -32,7 +32,7 @@ const data = [
 			},
 		],
 		image:
-			"https://images.unsplash.com/photo-1597858715706-fb50f241946e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2851&q=80",
+			"https://raw.githubusercontent.com/josephsintum/words-visualizations/master/public/screenshot.png",
 	},
 	{
 		name: "josephsintum.now.sh",
@@ -56,7 +56,7 @@ const data = [
 export const Projects = () => {
 	return (
 		<Section padding={["100px 0px", "150px 0px"]}>
-			<H3>Some projects</H3>
+			<H3>Some Projects</H3>
 			<Block maxWidth="1000px">
 				{data.map((project, pIndex) => (
 					<FlexGrid
