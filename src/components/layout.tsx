@@ -22,6 +22,9 @@ const overrides = {
 		HeadingMedium: {
 			fontFamily: "Space Mono",
 		},
+		LabelMedium: {
+			fontFamily: "Space Mono",
+		},
 		LabelXSmall: {
 			fontFamily: "Space Mono",
 		},

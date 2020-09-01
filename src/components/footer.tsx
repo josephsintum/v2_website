@@ -1,4 +1,15 @@
 import React from "react"
-import { H4 } from "baseui/typography"
+import { LabelMedium } from "baseui/typography"
+import { Block } from "baseui/block"
+import { StyledLink } from "baseui/link"
 
-export default () => <H4>Footer</H4>
+export default () => (
+	<Block $style={{ textAlign: "center" }} marginBottom="50px">
+		<LabelMedium>
+			Made with ❤️ by Joseph Sintum with{" "}
+			<StyledLink href="https://www.gatsbyjs.com/">Gatsby</StyledLink>
+			{" and "}
+			<StyledLink href="https://baseweb.design/">Baseweb</StyledLink>
+		</LabelMedium>
+	</Block>
+)
