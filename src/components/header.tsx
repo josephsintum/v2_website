@@ -1,94 +1,99 @@
 import * as React from "react"
+import {
+	HeaderNavigation,
+	ALIGN,
+	StyledNavigationItem as NavigationItem,
+	StyledNavigationList as NavigationList,
+} from "baseui/header-navigation"
+import { Button } from "baseui/button"
 import { useStyletron } from "baseui"
 import { StyledLink } from "baseui/link"
-import { Layer } from "baseui/layer"
-import { Unstable_AppNavBar as AppNavBar } from "baseui/app-nav-bar"
-
-function renderItem(item: any) {
-	return item.label
-}
-
-const MAIN_NAV = [
-	{
-		item: { label: "About" },
-		href: "#about",
-		mapItemToNode: renderItem,
-		mapItemToString: renderItem,
-	},
-	{
-		item: { label: "Work" },
-		mapItemToNode: renderItem,
-		mapItemToString: renderItem,
-	},
-	{
-		item: { label: "Experience" },
-		mapItemToNode: renderItem,
-		mapItemToString: renderItem,
-	},
-	{
-		item: { label: "Contact" },
-		mapItemToNode: renderItem,
-		mapItemToString: renderItem,
-	},
-]
-
-function isActive(arr: Array<any>, item: any, activeItem: any): boolean {
-	let active = false
-	for (let i = 0; i < arr.length; i++) {
-		const elm = arr[i]
-		if (elm === item) {
-			if (item === activeItem) return true
-			return isActive((item && item.nav) || [], activeItem, activeItem)
-		} else if (elm.nav) {
-			active = isActive(elm.nav || [], item, activeItem)
-		}
-	}
-	return active
-}
+import { Block } from "baseui/block"
 
 export default () => {
-	const [css] = useStyletron()
-	const [activeNavItem, setActiveNavItem] = React.useState()
-	const containerStyles = css({
-		boxSizing: "border-box",
-		width: "100vw",
-		position: "fixed",
-		top: "0",
-		left: "0",
-	})
-	const appDisplayName = (
-		<StyledLink
-			$style={{
-				textDecoration: "none",
-				fontWeight: "bold",
-				color: "inherit",
-				":hover": { color: "inherit" },
-				":visited": { color: "inherit" },
-			}}
-			href={"#"}
-		>
-			Joseph Sintum
-		</StyledLink>
-	)
+	const [css, theme] = useStyletron()
 	return (
-		<Layer>
-			<div className={containerStyles}>
-				<AppNavBar
-					appDisplayName={appDisplayName}
-					mainNav={MAIN_NAV}
-					isNavItemActive={({ item }) => {
-						return (
-							item === activeNavItem ||
-							isActive(MAIN_NAV, item, activeNavItem)
-						)
-					}}
-					onNavItemSelect={({ item }) => {
-						if (item === activeNavItem) return
-						// @ts-ignore
-						setActiveNavItem(item)
-					}}
-				/>
-			</div>
-		</Layer>
+		<Block
+			position="fixed"
+			top={0}
+			left={0}
+			width="100vw"
+			$style={{ zIndex: 100 }}
+		>
+			<HeaderNavigation
+				overrides={{
+					Root: {
+						style: {
+							padding: "12px 50px",
+							maxWidth: "1400px",
+							margin: "auto",
+							backgroundColor: "#fff",
+						},
+					},
+				}}
+			>
+				<NavigationList $align={ALIGN.left}>
+					<NavigationItem>
+						<StyledLink
+							href="#"
+							$style={({ $theme }) => ({
+								textDecoration: "none",
+								fontSize:
+									$theme.typography.HeadingMedium.fontSize,
+								fontWeight: "bold",
+								color: "#000",
+								":visited": {
+									color: "none",
+								},
+								":hover": {
+									color: "#000",
+								},
+							})}
+						>
+							Joseph Sintum
+						</StyledLink>
+					</NavigationItem>
+				</NavigationList>
+				<NavigationList $align={ALIGN.center} />
+				<NavigationList $align={ALIGN.right}>
+					{[
+						{ text: "About", href: "#about" },
+						{ text: "Work", href: "#work" },
+						{ text: "Experience", href: "#experience" },
+						{ text: "Contact", href: "#contact" },
+					].map((link) => (
+						<NavigationItem key={`${link}`}>
+							<a
+								className={css({
+									textDecoration: "none",
+									color: "#757575",
+									padding: "0 10px",
+									fontSize:
+										theme.typography.ParagraphMedium
+											.fontSize,
+									fontFamily:
+										theme.typography.ParagraphMedium
+											.fontFamily,
+									":hover": {
+										color: "#000",
+									},
+								})}
+								href={link.href}
+							>
+								{link.text}
+							</a>
+						</NavigationItem>
+					))}
+					<NavigationItem>
+						<Button
+							$as="a"
+							href="https://docs.google.com/document/d/1TLKoDJgQC2NwV33Dq5M0UynCcnr5GLrJP7ASlLIa5Wg/export?format=pdf"
+						>
+							Resume
+						</Button>
+					</NavigationItem>
+				</NavigationList>
+			</HeaderNavigation>
+		</Block>
 	)
 }
