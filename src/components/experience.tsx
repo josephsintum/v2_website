@@ -96,9 +96,11 @@ export const Experience = () => {
 
 	return (
 		<Section padding={["100px 0px", "150px 0px"]}>
-			<H3 font="HeadingLarge" $style={{ fontWeight: "bold" }}>
-				Where I have worked
-			</H3>
+			<div id="experience">
+				<H3 font="HeadingLarge" $style={{ fontWeight: "bold" }}>
+					Where I have worked
+				</H3>
+			</div>
 			<Block maxWidth="600px">
 				<Tabs
 					activeKey={activeKey}

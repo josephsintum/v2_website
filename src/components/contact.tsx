@@ -12,9 +12,11 @@ export const Contact = () => {
 			$style={{ textAlign: "justify" }}
 			maxWidth="600px"
 		>
-			<H3 font="HeadingLarge" $style={{ fontWeight: "bold" }}>
-				Say Hello
-			</H3>
+			<div id="contact">
+				<H3 font="HeadingLarge" $style={{ fontWeight: "bold" }}>
+					Say Hello
+				</H3>
+			</div>
 			<Block maxWidth="1000px">
 				<Paragraph2>
 					I am open to hiring opportunities, conversations, books,
