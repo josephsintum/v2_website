@@ -56,9 +56,11 @@ const data = [
 export const Projects = () => {
 	return (
 		<Section padding={["100px 0px", "150px 0px"]}>
-			<H3 font="HeadingLarge" $style={{ fontWeight: "bold" }}>
-				Some Projects
-			</H3>
+			<div id="work">
+				<H3 font="HeadingLarge" $style={{ fontWeight: "bold" }}>
+					Some Projects
+				</H3>
+			</div>
 			<Block maxWidth="1000px">
 				{data.map((project, pIndex) => (
 					<FlexGrid

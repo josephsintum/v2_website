@@ -25,7 +25,7 @@ export default () => {
 					Root: {
 						style: {
 							padding: "12px 50px",
-							maxWidth: "1400px",
+							maxWidth: "1000px",
 							margin: "auto",
 							backgroundColor: "#fff",
 						},
