@@ -68,7 +68,7 @@ export const About = () => {
 					</ul>
 				</FlexGridItem>
 				<FlexGridItem>
-					<Skeleton height="400px" animation />
+					<Skeleton height="400px" />
 				</FlexGridItem>
 			</FlexGrid>
 		</Section>
