@@ -95,12 +95,14 @@ export const Experience = () => {
 	const [activeKey, setActiveKey] = React.useState<React.Key>(0)
 
 	return (
-		<Section padding={["100px 0px", "150px 0px"]} maxWidth="600px">
-			<div id="experience">
-				<H3 font="HeadingLarge" $style={{ fontWeight: "bold" }}>
-					Where I have worked
-				</H3>
-			</div>
+		<Section
+			padding={["100px 0px", "150px 0px"]}
+			maxWidth="600px"
+			overrides={{ Block: { props: { id: "experience" } } }}
+		>
+			<H3 font="HeadingLarge" $style={{ fontWeight: "bold" }}>
+				Where I have worked
+			</H3>
 			<Block maxWidth="600px">
 				<Tabs
 					activeKey={activeKey}

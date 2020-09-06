@@ -55,12 +55,13 @@ const data = [
 
 export const Projects = () => {
 	return (
-		<Section padding={["100px 0px", "150px 0px"]}>
-			<div id="work">
-				<H3 font="HeadingLarge" $style={{ fontWeight: "bold" }}>
-					Some Projects
-				</H3>
-			</div>
+		<Section
+			padding={["100px 0px", "150px 0px"]}
+			overrides={{ Block: { props: { id: "work" } } }}
+		>
+			<H3 font="HeadingLarge" $style={{ fontWeight: "bold" }}>
+				Some Projects
+			</H3>
 			<Block maxWidth="1000px">
 				{data.map((project, pIndex) => (
 					<FlexGrid

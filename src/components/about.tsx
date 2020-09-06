@@ -10,12 +10,14 @@ export const About = () => {
 	const [css] = useStyletron()
 
 	return (
-		<Section padding={["100px 0px", "150px 0px"]}>
-			<div id="about">
-				<H3 font="HeadingLarge" $style={{ fontWeight: "bold" }}>
-					About Me
-				</H3>
-			</div>
+		<Section
+			padding={["100px 0px", "150px 0px"]}
+			overrides={{ Block: { props: { id: "about" } } }}
+		>
+			<H3 font="HeadingLarge" $style={{ fontWeight: "bold" }}>
+				About Me
+			</H3>
+
 			<FlexGrid
 				flexGridColumnCount={[1, 1, 2]}
 				flexGridColumnGap="scale2400"

@@ -9,15 +9,13 @@ export const Contact = () => {
 	return (
 		<Section
 			padding={["100px 0px", "150px 0px"]}
-			$style={{ textAlign: "justify" }}
 			maxWidth="600px"
+			overrides={{ Block: { props: { id: "contact" } } }}
 		>
-			<div id="contact">
-				<H3 font="HeadingLarge" $style={{ fontWeight: "bold" }}>
-					Say Hello
-				</H3>
-			</div>
-			<Block maxWidth="1000px">
+			<H3 font="HeadingLarge" $style={{ fontWeight: "bold" }}>
+				Say Hello
+			</H3>
+			<Block maxWidth="1000px" $style={{ textAlign: "justify" }}>
 				<Paragraph2>
 					I am open to hiring opportunities, conversations, books,
 					art, cutting edge tech or the future. So, please feel free
