@@ -1,7 +1,14 @@
 import * as React from "react"
 import { Provider as StyletronProvider } from "styletron-react"
 import { Client } from "styletron-engine-atomic"
-import { BaseProvider, createTheme, lightThemePrimitives } from "baseui"
+import {
+	BaseProvider,
+	createTheme,
+	lightThemePrimitives,
+	LightTheme,
+	useStyletron,
+} from "baseui"
+import Helmet from "react-helmet"
 import Header from "./header"
 import Footer from "./footer"
 
@@ -14,7 +21,14 @@ const primitives = {
 const overrides = {
 	typography: {
 		DisplayMedium: {
+			...LightTheme.typography.DisplayMedium,
 			fontFamily: "Space Mono",
+			fontWeight: "bold",
+		},
+		DisplaySmall: {
+			...LightTheme.typography.DisplaySmall,
+			fontFamily: "Space Mono",
+			fontWeight: "bold",
 		},
 		HeadingLarge: {
 			fontFamily: "Space Mono",
@@ -34,6 +48,8 @@ const overrides = {
 const theme = createTheme(primitives, overrides)
 
 const Layout: React.FC = ({ children }) => {
+	const [css] = useStyletron()
+
 	const [engine, setEngine] = React.useState<Client | null>(null)
 
 	React.useEffect(() => {
@@ -52,6 +68,11 @@ const Layout: React.FC = ({ children }) => {
 	return (
 		<StyletronProvider value={engine}>
 			<BaseProvider theme={theme}>
+				<Helmet
+					bodyAttributes={{
+						css: css({ margin: "0px" }),
+					}}
+				/>
 				<Header />
 				{children}
 				<Footer />

@@ -24,7 +24,7 @@ export const Contact = () => {
 					to reach me at the email below and I will make sure to
 					respond ASAP.
 				</Paragraph2>
-				<ul>
+				<ul style={{ padding: "0px", wordWrap: "break-word" }}>
 					<Li>
 						<Link href="mailto:josephsintum@gmail.com">
 							josephsintum@gmail.com

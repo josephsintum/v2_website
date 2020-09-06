@@ -95,7 +95,7 @@ export const Experience = () => {
 	const [activeKey, setActiveKey] = React.useState<React.Key>(0)
 
 	return (
-		<Section padding={["100px 0px", "150px 0px"]}>
+		<Section padding={["100px 0px", "150px 0px"]} maxWidth="600px">
 			<div id="experience">
 				<H3 font="HeadingLarge" $style={{ fontWeight: "bold" }}>
 					Where I have worked
@@ -117,7 +117,7 @@ export const Experience = () => {
 							<Label3>
 								{data.startTime} - {data.endTime}
 							</Label3>
-							<ul>
+							<ul style={{ padding: "0px" }}>
 								{data.tasks.map((task, index) => (
 									<Li key={`${index}_task`}>{task}</Li>
 								))}
