@@ -24,7 +24,7 @@ export default () => {
 		{ text: "Experience", href: "#experience" },
 		{ text: "Contact", href: "#contact" },
 		{
-			text: "*Resume*",
+			text: "Resume",
 			href:
 				"https://docs.google.com/document/d/1TLKoDJgQC2NwV33Dq5M0UynCcnr5GLrJP7ASlLIa5Wg/export?format=pdf",
 			target: "_blank",
@@ -46,8 +46,7 @@ export default () => {
 							maxWidth: "1400px",
 							margin: "auto",
 							backgroundColor: "#fff",
-							paddingRight: "20px",
-							paddingLeft: "20px",
+							padding: "20px",
 						},
 					},
 				}}
@@ -78,7 +77,7 @@ export default () => {
 
 				<NavigationList $align={ALIGN.right}>
 					{/*Desktop Header*/}
-					<Block display={["none", "none", "none", "block"]}>
+					<Block display={["none", "none", "none", "flex"]}>
 						<NavigationList $align={ALIGN.right}>
 							{headerMenu.map((link) => (
 								<NavigationItem key={`${link.text}_desktop`}>
@@ -108,12 +107,12 @@ export default () => {
 					</Block>
 
 					{/*Mobile Header*/}
-					<Block display={["block", "block", "block", "none"]}>
+					<Block display={["flex", "flex", "flex", "none"]}>
 						<Button
 							kind="tertiary"
 							onClick={() => setIsOpen(!isOpen)}
 						>
-							<Menu />
+							<Menu size={28} />
 						</Button>
 						<Drawer
 							isOpen={isOpen}
