@@ -15,8 +15,8 @@ export const Contact = () => {
 			<H3 font="HeadingLarge" $style={{ fontWeight: "bold" }}>
 				Say Hello
 			</H3>
-			<Block maxWidth="1000px" $style={{ textAlign: "justify" }}>
-				<Paragraph2>
+			<Block maxWidth="1000px">
+				<Paragraph2 $style={{ textAlign: "justify" }}>
 					I am open to hiring opportunities, conversations, books,
 					art, cutting edge tech or the future. So, please feel free
 					to reach me at the email below and I will make sure to

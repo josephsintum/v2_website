@@ -6,6 +6,7 @@ module.exports = {
 		siteUrl: `https://sintum.vercel.app/`,
 	},
 	plugins: [
+		`gatsby-plugin-smoothscroll`,
 		`gatsby-plugin-typescript`,
 		`gatsby-plugin-react-helmet`,
 		{

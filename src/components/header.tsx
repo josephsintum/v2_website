@@ -5,7 +5,7 @@ import {
 	StyledNavigationItem as NavigationItem,
 	StyledNavigationList as NavigationList,
 } from "baseui/header-navigation"
-import { Button } from "baseui/button"
+import { Button, KIND } from "baseui/button"
 import { Drawer } from "baseui/drawer"
 import { ListItem, ListItemLabel } from "baseui/list"
 import { useStyletron } from "baseui"
@@ -13,6 +13,7 @@ import { StyledLink } from "baseui/link"
 import { Block } from "baseui/block"
 import { Menu } from "baseui/icon"
 import { HeadingSmall } from "baseui/typography"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 export default () => {
 	const [css, theme] = useStyletron()
@@ -25,9 +26,9 @@ export default () => {
 		{ text: "Contact", href: "#contact" },
 		{
 			text: "Resume",
+			external: true,
 			href:
 				"https://docs.google.com/document/d/1TLKoDJgQC2NwV33Dq5M0UynCcnr5GLrJP7ASlLIa5Wg/export?format=pdf",
-			target: "_blank",
 		},
 	]
 
@@ -46,7 +47,10 @@ export default () => {
 							maxWidth: "1400px",
 							margin: "auto",
 							backgroundColor: "#fff",
-							padding: "20px",
+							paddingTop: "12px",
+							paddingBottom: "12px",
+							paddingLeft: "20px",
+							paddingRight: "20px",
 						},
 					},
 				}}
@@ -81,26 +85,37 @@ export default () => {
 						<NavigationList $align={ALIGN.right}>
 							{headerMenu.map((link) => (
 								<NavigationItem key={`${link.text}_desktop`}>
-									<a
-										className={css({
-											textDecoration: "none",
-											color: "#757575",
-											padding: "0 10px",
-											fontSize:
-												theme.typography.ParagraphMedium
-													.fontSize,
-											fontFamily:
-												theme.typography.DisplayMedium
-													.fontFamily,
-											":hover": {
-												color: "#000",
-											},
-										})}
-										href={link.href}
-										target={link.target ?? ""}
-									>
-										{link.text}
-									</a>
+									{link.external ? (
+										<a
+											className={css({
+												textDecoration: "none",
+												color: "#757575",
+												padding: "0 10px",
+												fontSize:
+													theme.typography
+														.ParagraphMedium
+														.fontSize,
+												fontFamily:
+													theme.typography
+														.DisplayMedium
+														.fontFamily,
+												":hover": {
+													color: "#000",
+												},
+											})}
+											href={link.href}
+											target="_blank"
+										>
+											{link.text}
+										</a>
+									) : (
+										<Button
+											kind={KIND.minimal}
+											onClick={() => scrollTo(link.href)}
+										>
+											{link.text}
+										</Button>
+									)}
 								</NavigationItem>
 							))}
 						</NavigationList>
@@ -134,29 +149,47 @@ export default () => {
 									paddingRight: 0,
 								})}
 							>
-								{headerMenu.map((link) => (
-									<ListItem
-										key={`${link.text}_mobile`}
-										overrides={{
-											Content: {
-												style: {
-													textDecoration: "none",
+								{headerMenu.map((link) =>
+									link.external ? (
+										<ListItem
+											key={`${link.text}_mobile`}
+											overrides={{
+												Content: {
+													style: {
+														textDecoration: "none",
+													},
+													props: {
+														$as: "a",
+														href: link.href,
+														target: "_blank",
+													},
 												},
-												props: {
-													$as: "a",
-													// onClick: () =>
-													// 	setIsOpen(false),
-													href: link.href,
-													target: link.target ?? "",
+											}}
+										>
+											<ListItemLabel>
+												{link.text}
+											</ListItemLabel>
+										</ListItem>
+									) : (
+										<ListItem
+											key={`${link.text}_mobile`}
+											overrides={{
+												Content: {
+													props: {
+														onClick: () => {
+															setIsOpen(false)
+															scrollTo(link.href)
+														},
+													},
 												},
-											},
-										}}
-									>
-										<ListItemLabel>
-											{link.text}
-										</ListItemLabel>
-									</ListItem>
-								))}
+											}}
+										>
+											<ListItemLabel>
+												{link.text}
+											</ListItemLabel>
+										</ListItem>
+									)
+								)}
 							</ul>
 						</Drawer>
 					</Block>
