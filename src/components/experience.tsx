@@ -123,7 +123,11 @@ export const Experience = () => {
 								))}
 							</ul>
 							{data.links.map((link, index) => (
-								<Paragraph2 key={`${index}_link`} margin={0}>
+								<Paragraph2
+									key={`${index}_link`}
+									margin={0}
+									$style={{ wordWrap: "break-word" }}
+								>
 									{link.name}
 									{": "}
 									<Link href={link.url}>{link.url}</Link>
