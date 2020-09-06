@@ -5,7 +5,7 @@ import { H3, H4, Paragraph2 } from "baseui/typography"
 import { FlexGrid, FlexGridItem } from "baseui/flex-grid"
 import { styled } from "baseui"
 import { Tag } from "baseui/tag"
-import { StyledLink as Link } from "baseui/link"
+import { Button } from "baseui/button"
 
 const data = [
 	{
@@ -85,7 +85,7 @@ export const Projects = () => {
 								{project.name}
 							</H4>
 							<Paragraph2>{project.description}</Paragraph2>
-							<Paragraph2 $style={{ fontFamily: "Space Mono" }}>
+							<Paragraph2>
 								{project.tags.map((tag, tIndex) => (
 									<Tag
 										key={`${tIndex}${pIndex}tag`}
@@ -108,10 +108,18 @@ export const Projects = () => {
 								))}
 							</Paragraph2>
 							{project.links.map((link, lIndex) => (
-								<React.Fragment key={`${lIndex}${pIndex}link`}>
-									<Link href={link.url}>{link.name}</Link>
-									<br />
-								</React.Fragment>
+								<Button
+									key={`${lIndex}${pIndex}_link`}
+									$as="a"
+									href={link.url}
+									target="_blank"
+									$style={{
+										float: "right",
+										marginLeft: "10px",
+									}}
+								>
+									{link.name}
+								</Button>
 							))}
 						</FlexGridItem>
 					</FlexGrid>

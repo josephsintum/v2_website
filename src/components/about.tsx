@@ -48,7 +48,6 @@ export const About = () => {
 					</Paragraph2>
 					<ul
 						className={css({
-							textAlign: "justify",
 							display: "grid",
 							gridTemplateColumns:
 								"repeat(2, minmax(140px, 200px))",
