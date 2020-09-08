@@ -59,7 +59,7 @@ export default () => {
 					<NavigationItem>
 						<HeadingSmall margin={0}>
 							<StyledLink
-								href="#"
+								href="/"
 								$style={{
 									textDecoration: "none",
 									color: "#000",

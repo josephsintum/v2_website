@@ -115,7 +115,7 @@ export const Projects = () => {
 									target="_blank"
 									$style={{
 										float: "right",
-										marginLeft: "10px",
+										marginLeft: "15px",
 									}}
 								>
 									{link.name}
