@@ -71,7 +71,7 @@ export const Projects = () => {
 						marginBottom="scale1000"
 						key={`${pIndex}.Project`}
 					>
-						<FlexGridItem display="flex">
+						<FlexGridItem display="inline-grid">
 							<Image
 								style={{ margin: "auto" }}
 								src={project.image}
