@@ -71,7 +71,7 @@ export default () => {
 									},
 								}}
 							>
-								Joseph Sintum
+								JOSEPH SINTUM
 							</StyledLink>
 						</HeadingSmall>
 					</NavigationItem>
@@ -157,6 +157,8 @@ export default () => {
 												Content: {
 													style: {
 														textDecoration: "none",
+														outline:
+															"0px transparent",
 													},
 													props: {
 														$as: "a",

@@ -92,7 +92,7 @@ const work = [
 ]
 
 export const Experience = () => {
-	const [activeKey, setActiveKey] = React.useState<React.Key>(0)
+	const [activeKey, setActiveKey] = React.useState<React.Key>(1)
 
 	return (
 		<Section
