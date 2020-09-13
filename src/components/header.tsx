@@ -16,7 +16,7 @@ import { HeadingSmall } from "baseui/typography"
 import scrollTo from "gatsby-plugin-smoothscroll"
 
 export default () => {
-	const [css, theme] = useStyletron()
+	const [css] = useStyletron()
 	const [isOpen, setIsOpen] = React.useState(false)
 
 	const headerMenu = [
@@ -81,48 +81,38 @@ export default () => {
 
 				<NavigationList $align={ALIGN.right}>
 					{/*Desktop Header*/}
-					<Block display={["none", "none", "none", "flex"]}>
+					<Block
+						display={["none", "none", "none", "flex"]}
+						padding="0px 30px"
+					>
 						<NavigationList $align={ALIGN.right}>
 							{headerMenu.map((link) => (
 								<NavigationItem key={`${link.text}_desktop`}>
-									{link.external ? (
-										<a
-											className={css({
-												textDecoration: "none",
-												color: "#757575",
-												padding: "0 10px",
-												fontSize:
-													theme.typography
-														.ParagraphMedium
-														.fontSize,
-												fontFamily:
-													theme.typography
-														.DisplayMedium
-														.fontFamily,
-												":hover": {
-													color: "#000",
-												},
-											})}
-											href={link.href}
-											target="_blank"
-										>
-											{link.text}
-										</a>
-									) : (
-										<Button
-											kind={KIND.minimal}
-											onClick={() => scrollTo(link.href)}
-										>
-											{link.text}
-										</Button>
-									)}
+									<Button
+										{...(link.external
+											? {
+													$as: "a",
+													href: link.href,
+													target: "_blank",
+											  }
+											: {
+													onClick: () =>
+														scrollTo(link.href),
+											  })}
+										kind={KIND.minimal}
+									>
+										{link.text}
+									</Button>
 								</NavigationItem>
 							))}
 						</NavigationList>
 					</Block>
 
 					{/*Mobile Header*/}
-					<Block display={["flex", "flex", "flex", "none"]}>
+					<Block
+						display={["flex", "flex", "flex", "none"]}
+						padding="0px 15px"
+					>
 						<Button
 							kind="tertiary"
 							onClick={() => setIsOpen(!isOpen)}
@@ -149,49 +139,41 @@ export default () => {
 									paddingRight: 0,
 								})}
 							>
-								{headerMenu.map((link) =>
-									link.external ? (
-										<ListItem
-											key={`${link.text}_mobile`}
-											overrides={{
-												Content: {
-													style: {
-														textDecoration: "none",
-														outline:
-															"0px transparent",
-													},
-													props: {
-														$as: "a",
-														href: link.href,
-														target: "_blank",
-													},
-												},
-											}}
-										>
-											<ListItemLabel>
-												{link.text}
-											</ListItemLabel>
-										</ListItem>
-									) : (
-										<ListItem
-											key={`${link.text}_mobile`}
-											overrides={{
-												Content: {
-													props: {
-														onClick: () => {
-															setIsOpen(false)
-															scrollTo(link.href)
+								{headerMenu.map((link) => (
+									<ListItem
+										key={`${link.text}_mobile`}
+										overrides={{
+											Content: link.external
+												? {
+														style: {
+															textDecoration:
+																"none",
+															outline:
+																"0px transparent",
 														},
-													},
-												},
-											}}
-										>
-											<ListItemLabel>
-												{link.text}
-											</ListItemLabel>
-										</ListItem>
-									)
-								)}
+														props: {
+															$as: "a",
+															href: link.href,
+															target: "_blank",
+														},
+												  }
+												: {
+														props: {
+															onClick: () => {
+																setIsOpen(false)
+																scrollTo(
+																	link.href
+																)
+															},
+														},
+												  },
+										}}
+									>
+										<ListItemLabel>
+											{link.text}
+										</ListItemLabel>
+									</ListItem>
+								))}
 							</ul>
 						</Drawer>
 					</Block>
