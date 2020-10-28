@@ -5,45 +5,17 @@ import {
 	BaseProvider,
 	createTheme,
 	lightThemePrimitives,
-	LightTheme,
 } from "baseui"
 import Header from "./header"
 import Footer from "./footer"
 
 const primitives = {
 	...lightThemePrimitives,
-	primaryFontFamily: "karla",
+	primaryFontFamily: "Space Mono",
 	secondaryFontFamily: "Space Mono",
 }
 
-const overrides = {
-	typography: {
-		DisplayMedium: {
-			...LightTheme.typography.DisplayMedium,
-			fontFamily: "Space Mono",
-			fontWeight: "bold",
-		},
-		DisplaySmall: {
-			...LightTheme.typography.DisplaySmall,
-			fontFamily: "Space Mono",
-			fontWeight: "bold",
-		},
-		HeadingLarge: {
-			fontFamily: "Space Mono",
-		},
-		HeadingMedium: {
-			fontFamily: "Space Mono",
-		},
-		LabelMedium: {
-			fontFamily: "Space Mono",
-		},
-		LabelXSmall: {
-			fontFamily: "Space Mono",
-		},
-	},
-}
-
-const theme = createTheme(primitives, overrides)
+const theme = createTheme(primitives)
 
 const Layout: React.FC = ({ children }) => {
 	const [engine, setEngine] = React.useState<Client | null>(null)
