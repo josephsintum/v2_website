@@ -10,7 +10,7 @@ import { Contact } from "../components/contact"
 
 export default () => (
 	<Layout>
-		<SEO title="Home" />
+		<SEO title="Home" description="Home page" />
 		<Block
 			as="main"
 			padding={["0px 15px", "0px 25px", "0px 50px", "0px 150px"]}

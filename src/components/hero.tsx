@@ -8,7 +8,8 @@ export const Hero = () => (
 	<Section minHeight="80vh" margin={["100px auto", "100px auto"]}>
 		<Label2 as="h1">Hello, my name is</Label2>
 		<H2
-			font={["DisplaySmall", "DisplaySmall", "DisplayMedium"]}
+			$style={{ fontWeight: "bold" }}
+			font="DisplaySmall"
 			marginTop="scale500"
 			marginBottom="scale500"
 		>
@@ -25,11 +26,7 @@ export const Hero = () => (
 			applications.
 		</Paragraph2>
 		<Block paddingTop="scale1000">
-			<Button
-				$as="a"
-				href="mailto:josephsintum@gmail.com"
-				$style={{ fontFamily: "Space Mono" }}
-			>
+			<Button $as="a" href="mailto:josephsintum@gmail.com">
 				Get in touch
 			</Button>
 		</Block>

@@ -13,7 +13,6 @@ import { StyledLink } from "baseui/link"
 import { Block } from "baseui/block"
 import { Menu } from "baseui/icon"
 import { HeadingSmall } from "baseui/typography"
-import scrollTo from "gatsby-plugin-smoothscroll"
 
 export default () => {
 	const [css] = useStyletron()
@@ -89,16 +88,9 @@ export default () => {
 							{headerMenu.map((link) => (
 								<NavigationItem key={`${link.text}_desktop`}>
 									<Button
-										{...(link.external
-											? {
-													$as: "a",
-													href: link.href,
-													target: "_blank",
-											  }
-											: {
-													onClick: () =>
-														scrollTo(link.href),
-											  })}
+										$as="a"
+										href={link.href}
+										target="_blank"
 										kind={KIND.minimal}
 									>
 										{link.text}
@@ -143,30 +135,17 @@ export default () => {
 									<ListItem
 										key={`${link.text}_mobile`}
 										overrides={{
-											Content: link.external
-												? {
-														style: {
-															textDecoration:
-																"none",
-															outline:
-																"0px transparent",
-														},
-														props: {
-															$as: "a",
-															href: link.href,
-															target: "_blank",
-														},
-												  }
-												: {
-														props: {
-															onClick: () => {
-																setIsOpen(false)
-																scrollTo(
-																	link.href
-																)
-															},
-														},
-												  },
+											Content: {
+												style: {
+													textDecoration: "none",
+													outline: "0px transparent",
+												},
+												props: {
+													$as: "a",
+													href: link.href,
+													target: "_blank",
+												},
+											},
 										}}
 									>
 										<ListItemLabel>
