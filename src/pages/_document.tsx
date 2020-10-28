@@ -1,20 +1,16 @@
-import Document, {
-	Html,
-	Head,
-	Main,
-	NextScript,
-} from "next/document"
+import Document, { Html, Head, Main, NextScript } from "next/document"
 import { Provider as StyletronProvider } from "styletron-react"
+import { Server, Sheet } from "styletron-engine-atomic"
 import { styletron } from "../styletron"
 
-class MyDocument extends Document {
-	static getInitialProps(props) {
-		const page = props.renderPage((App) => (props) => (
+class MyDocument extends Document<{ stylesheets: Sheet[] }> {
+	static getInitialProps(props: any) {
+		const page = props.renderPage((App: any) => (props: any) => (
 			<StyletronProvider value={styletron}>
 				<App {...props} />
 			</StyletronProvider>
 		))
-		const stylesheets = styletron.getStylesheets() || []
+		const stylesheets = (styletron as Server).getStylesheets() || []
 		return { ...page, stylesheets }
 	}
 
