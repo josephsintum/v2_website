@@ -14,7 +14,7 @@ import { Block } from "baseui/block"
 import { Menu } from "baseui/icon"
 import { HeadingSmall } from "baseui/typography"
 
-export default () => {
+export const Header = () => {
 	const [css] = useStyletron()
 	const [isOpen, setIsOpen] = React.useState(false)
 

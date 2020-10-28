@@ -8,7 +8,7 @@ import { Experience } from "../components/experience"
 import { Projects } from "../components/projects"
 import { Contact } from "../components/contact"
 
-export default () => (
+const Index = () => (
 	<Layout>
 		<SEO title="Home" description="Home page" />
 		<Block
@@ -25,3 +25,5 @@ export default () => (
 		</Block>
 	</Layout>
 )
+
+export default Index

@@ -3,7 +3,7 @@ import { LabelMedium } from "baseui/typography"
 import { Block } from "baseui/block"
 import { StyledLink } from "baseui/link"
 
-export default () => (
+export const Footer = () => (
 	<Block $style={{ textAlign: "center" }} margin="20px 0">
 		<LabelMedium>
 			Made with ❤️ by Joseph Sintum with{" "}

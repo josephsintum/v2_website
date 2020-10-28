@@ -1,13 +1,9 @@
 import * as React from "react"
 import { Provider as StyletronProvider } from "styletron-react"
 import { Client } from "styletron-engine-atomic"
-import {
-	BaseProvider,
-	createTheme,
-	lightThemePrimitives,
-} from "baseui"
-import Header from "./header"
-import Footer from "./footer"
+import { BaseProvider, createTheme, lightThemePrimitives } from "baseui"
+import { Header } from "./header"
+import { Footer } from "./footer"
 
 const primitives = {
 	...lightThemePrimitives,
