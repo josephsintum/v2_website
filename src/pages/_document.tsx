@@ -3,7 +3,6 @@ import Document, {
 	Head,
 	Main,
 	NextScript,
-	DocumentContext,
 } from "next/document"
 import { Provider as StyletronProvider } from "styletron-react"
 import { styletron } from "../styletron"
