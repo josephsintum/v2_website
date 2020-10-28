@@ -97,13 +97,12 @@ export const Experience = () => {
 	return (
 		<Section
 			padding={["100px 0px", "150px 0px"]}
-			maxWidth="600px"
 			overrides={{ Block: { props: { id: "experience" } } }}
 		>
 			<H3 font="HeadingLarge" $style={{ fontWeight: "bold" }}>
 				Where I have worked
 			</H3>
-			<Block maxWidth="600px">
+			<Block maxWidth="1000px">
 				<Tabs
 					activeKey={activeKey}
 					onChange={({ activeKey }) => setActiveKey(activeKey)}
