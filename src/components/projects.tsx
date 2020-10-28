@@ -37,7 +37,7 @@ const data = [
 	{
 		name: "josephsintum.now.sh",
 		description: "Personal Website \n" + "Open Sourced on github.",
-		tags: ["React", "Gatsby", "Baseweb UI", "TypeScript"],
+		tags: ["React", "Next.js", "Baseweb UI", "TypeScript"],
 		links: [
 			{
 				name: "Github",

@@ -7,9 +7,11 @@ export default () => (
 	<Block $style={{ textAlign: "center" }} margin="20px 0">
 		<LabelMedium>
 			Made with ❤️ by Joseph Sintum with{" "}
-			<StyledLink href="https://www.gatsbyjs.com/">Gatsby</StyledLink>
-			{" and "}
+			<StyledLink href="https://nextjs.org/">Next.js</StyledLink>
+			{", "}
 			<StyledLink href="https://baseweb.design/">Baseweb</StyledLink>
+			{", and hosted by "}
+			<StyledLink href="https://vercel.com/">Vercel</StyledLink>
 		</LabelMedium>
 	</Block>
 )
