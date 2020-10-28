@@ -70,3 +70,29 @@ yarn-error.log
 
 # Webstorm files IDEA
 .idea
+
+# vercel
+.vercel
+
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# dependencies
+/.pnp
+*.pem
+
+# local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
